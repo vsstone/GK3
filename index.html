@@ -1,1 +1,418 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GK3 | Marketing & Intelligence</title>
+
+  <meta name="description"
+    content="GK3 connects businesses and sponsors through innovative marketing partnerships and measurable customer engagement. Grow Together.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       GK3 BRAND VARIABLES
+    ========================= */
+
+    :root {
+      --black: #101010;
+      --white: #ffffff;
+      --gold: #D5A52E;
+      --light: #F6F5F1;
+      --gray: #777777;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    header {
+      width: 100%;
+      background: var(--white);
+      border-bottom: 1px solid #eeeeee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -3px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 700;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      background: var(--black);
+      color: var(--white) !important;
+      padding: 15px 22px;
+      font-size: 12px !important;
+      letter-spacing: .5px;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--black) !important;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: var(--black);
+      color: var(--white);
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(70px, 10vw, 150px);
+      font-weight: 800;
+      letter-spacing: -8px;
+      line-height: .95;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-description {
+      font-size: 21px;
+      line-height: 1.6;
+      color: #cccccc;
+      max-width: 650px;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      padding: 19px 28px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      transition: .2s;
+    }
+
+    .btn-primary:hover {
+      background: #F0C65A;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1px solid #777;
+      color: var(--white);
+      padding: 19px 28px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      transition: .2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero-note {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 1px;
+    }
+
+    /* Decorative background */
+
+    .hero-background {
+      position: absolute;
+      right: -70px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Manrope', sans-serif;
+      font-size: 700px;
+      font-weight: 800;
+      color: #1c1a14;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width: 900px) {
+
+      .navbar {
+        height: auto;
+        min-height: 75px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero h1 {
+        letter-spacing: -4px;
+      }
+
+      .hero-description {
+        font-size: 18px;
+      }
+
+      .hero-background {
+        font-size: 450px;
+        right: -100px;
+      }
+
+    }
+
+    @media(max-width: 600px) {
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .logo {
+        font-size: 32px;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        font-size: 65px;
+        letter-spacing: -4px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .hero-background {
+        font-size: 350px;
+        right: -120px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <a href="/" class="logo">
+        GK<span>3</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+
+        <a href="#about">ABOUT</a>
+
+        <a href="#activations">ACTIVATIONS</a>
+
+        <a href="#sponsors">FOR SPONSORS</a>
+
+        <a href="#partners">FOR BUSINESSES</a>
+
+        <a
+          href="https://tally.so/r/m6glkk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-cta">
+          JOIN THE NETWORK ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO SECTION
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-background">
+      3
+    </div>
+
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        GK3 / MARKETING & INTELLIGENCE
+      </div>
+
+      <h1>
+        GROW<br>
+        <span>TOGETHER.</span>
+      </h1>
+
+      <p class="hero-description">
+
+        Sponsored growth networks connecting businesses,
+        sponsors, and customers through measurable engagement.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="https://tally.so/r/m6glkk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary">
+
+          JOIN THE NETWORK ↗
+
+        </a>
+
+        <a href="#about" class="btn-secondary">
+
+          EXPLORE GK3 →
+
+        </a>
+
+      </div>
+
+      <div class="hero-note">
+
+        LAUNCHING IN CHARLESTON, SOUTH CAROLINA
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- NEXT SECTION WILL GO HERE -->
+
+
+</body>
+</html>
