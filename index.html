@@ -7,8 +7,7 @@
 
 <title>GK3 | Marketing & Intelligence</title>
 
-<meta name="description"
-content="GK3 connects businesses and sponsors through sponsored growth networks and measurable customer engagement. Grow Together.">
+<meta name="description" content="GK3 connects businesses and sponsors through sponsored growth networks, customer engagement, and marketing intelligence. Grow Together.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +17,7 @@ content="GK3 connects businesses and sponsors through sponsored growth networks 
 <style>
 
 /* =====================================
-   GK3 BRAND
+   GLOBAL
 ===================================== */
 
 :root {
@@ -60,12 +59,55 @@ section {
   scroll-margin-top: 90px;
 }
 
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  padding: 19px 28px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: .2s;
+}
+
+.btn-primary:hover {
+  background: #F0C65A;
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  padding: 19px 28px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: .2s;
+}
+
+.btn-dark:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.section-label {
+  color: #B88A20;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
 /* =====================================
    NAVIGATION
 ===================================== */
 
 header {
-  width: 100%;
   background: var(--white);
   border-bottom: 1px solid #eeeeee;
   position: sticky;
@@ -106,7 +148,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: var(--gold);
+  color: #B88A20;
 }
 
 .nav-cta {
@@ -124,7 +166,7 @@ header {
 }
 
 /* =====================================
-   HERO
+   SECTION 1 — HERO
 ===================================== */
 
 .hero {
@@ -152,7 +194,6 @@ header {
 }
 
 .hero h1 {
-  font-family: 'Manrope', sans-serif;
   font-size: clamp(70px, 10vw, 150px);
   font-weight: 800;
   letter-spacing: -8px;
@@ -176,22 +217,6 @@ header {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-}
-
-.btn-primary {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--black);
-  padding: 19px 28px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  transition: .2s;
-}
-
-.btn-primary:hover {
-  background: #F0C65A;
-  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -232,7 +257,7 @@ header {
 }
 
 /* =====================================
-   SECTION 2 — GK3 NETWORK
+   SECTION 2 — NETWORK
 ===================================== */
 
 .network-section {
@@ -240,16 +265,7 @@ header {
   padding: 120px 0;
 }
 
-.section-label {
-  color: #B88A20;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 25px;
-}
-
 .network-title {
-  font-family: 'Manrope', sans-serif;
   font-size: clamp(42px, 6vw, 78px);
   font-weight: 800;
   line-height: 1.08;
@@ -300,7 +316,6 @@ header {
 }
 
 .network-node h3 {
-  font-family: 'Manrope', sans-serif;
   font-size: 25px;
   font-weight: 800;
   letter-spacing: -1px;
@@ -341,30 +356,13 @@ header {
   color: #B88A20;
 }
 
-.network-link {
-  display: inline-block;
-  background: var(--black);
-  color: var(--white);
-  padding: 18px 26px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  transition: .2s;
-}
-
-.network-link:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-
 /* =====================================
-   SECTION 3 — GK3 ACTIVATIONS
+   SECTION 3 — ACTIVATIONS
 ===================================== */
 
 .activations-section {
-  background: #101010;
-  color: #ffffff;
+  background: var(--black);
+  color: var(--white);
   padding: 130px 0;
   overflow: hidden;
 }
@@ -383,7 +381,6 @@ header {
 }
 
 .activations-title {
-  font-family: 'Manrope', sans-serif;
   font-size: clamp(48px, 7vw, 95px);
   font-weight: 800;
   line-height: 1.05;
@@ -435,7 +432,6 @@ header {
 }
 
 .activation-icon {
-  font-family: 'Manrope', sans-serif;
   font-size: 70px;
   font-weight: 800;
   color: #333333;
@@ -451,7 +447,6 @@ header {
 }
 
 .activation-card h3 {
-  font-family: 'Manrope', sans-serif;
   font-size: 32px;
   font-weight: 800;
   letter-spacing: -1.5px;
@@ -476,13 +471,9 @@ header {
   margin-top: auto;
   border-top: 1px solid #333;
   padding-top: 25px;
-}
-
-.activation-bottom span {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
-  color: #ffffff;
 }
 
 .activations-footer {
@@ -539,7 +530,6 @@ header {
 }
 
 .domination-title {
-  font-family: 'Manrope', sans-serif;
   font-size: clamp(52px, 8vw, 108px);
   font-weight: 800;
   line-height: .98;
@@ -560,10 +550,8 @@ header {
   margin-bottom: 75px;
 }
 
-/* Three-channel visual */
-
 .domination-visual {
-  background: #F6F5F1;
+  background: var(--light);
   border: 1px solid #E8E5DC;
   padding: 65px 55px;
   margin-bottom: 65px;
@@ -606,7 +594,6 @@ header {
 }
 
 .domination-channel h3 {
-  font-family: 'Manrope', sans-serif;
   font-size: 28px;
   font-weight: 800;
   letter-spacing: -1px;
@@ -619,12 +606,7 @@ header {
   line-height: 1.6;
 }
 
-/* Connecting visual */
-
 .domination-connect {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 65px;
   position: relative;
 }
@@ -634,8 +616,9 @@ header {
   position: absolute;
   width: 66%;
   height: 1px;
+  left: 17%;
   top: 0;
-  background: #D5A52E;
+  background: var(--gold);
 }
 
 .domination-connect::after {
@@ -643,12 +626,13 @@ header {
   position: absolute;
   width: 1px;
   height: 65px;
-  background: #D5A52E;
+  background: var(--gold);
+  left: 50%;
   top: 0;
 }
 
 .domination-result {
-  background: #101010;
+  background: var(--black);
   color: #fff;
   padding: 50px;
   text-align: center;
@@ -663,7 +647,6 @@ header {
 }
 
 .domination-result h3 {
-  font-family: 'Manrope', sans-serif;
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 800;
   letter-spacing: -2px;
@@ -677,8 +660,6 @@ header {
   max-width: 600px;
   margin: auto;
 }
-
-/* Bottom */
 
 .domination-bottom {
   display: flex;
@@ -699,21 +680,170 @@ header {
   color: #B88A20;
 }
 
-.domination-cta {
-  display: inline-block;
-  background: var(--black);
-  color: var(--white);
-  padding: 19px 28px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  transition: .2s;
+/* =====================================
+   SECTION 5 — INTELLIGENCE
+===================================== */
+
+.intelligence-section {
+  background: #111111;
+  color: #ffffff;
+  padding: 140px 0;
+  overflow: hidden;
 }
 
-.domination-cta:hover {
-  background: var(--gold);
-  color: var(--black);
+.intelligence-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.intelligence-title {
+  font-size: clamp(48px, 7vw, 95px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -5px;
+  max-width: 1100px;
+  margin-bottom: 40px;
+}
+
+.intelligence-title span {
+  color: var(--gold);
+}
+
+.intelligence-intro {
+  font-size: 21px;
+  line-height: 1.7;
+  color: #aaaaaa;
+  max-width: 760px;
+  margin-bottom: 85px;
+}
+
+/* Six-step process */
+
+.intelligence-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 85px;
+}
+
+.flow-step {
+  background: #1d1d1d;
+  border: 1px solid #333;
+  padding: 30px 18px;
+  min-height: 210px;
+  position: relative;
+  transition: .3s;
+}
+
+.flow-step:hover {
+  background: #26231b;
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.flow-number {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 800;
+  margin-bottom: 55px;
+}
+
+.flow-step h3 {
+  font-size: clamp(15px, 1.6vw, 20px);
+  font-weight: 800;
+  letter-spacing: -.5px;
+  margin-bottom: 12px;
+}
+
+.flow-step p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #999;
+}
+
+/* Intelligence explanation */
+
+.intelligence-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  padding-top: 70px;
+  border-top: 1px solid #333;
+}
+
+.intelligence-details h3 {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.intelligence-details h3 span {
+  color: var(--gold);
+}
+
+.intelligence-details p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.intelligence-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.metric-box {
+  border: 1px solid #333;
+  padding: 28px;
+  background: #1b1b1b;
+}
+
+.metric-symbol {
+  color: var(--gold);
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.metric-box h4 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.metric-box p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #999;
+  margin: 0;
+}
+
+.intelligence-bottom {
+  margin-top: 80px;
+  padding: 45px 0 0;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.intelligence-bottom p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.intelligence-bottom p span {
+  color: var(--gold);
 }
 
 /* =====================================
@@ -740,6 +870,10 @@ header {
 
   .activation-card h3 {
     font-size: 27px;
+  }
+
+  .intelligence-flow {
+    grid-template-columns: repeat(3, 1fr);
   }
 
 }
@@ -859,6 +993,24 @@ header {
     align-items: flex-start;
   }
 
+  .intelligence-section {
+    padding: 90px 0;
+  }
+
+  .intelligence-title {
+    letter-spacing: -3px;
+  }
+
+  .intelligence-details {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .intelligence-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 }
 
 @media(max-width: 600px) {
@@ -933,6 +1085,40 @@ header {
     font-size: 20px;
   }
 
+  .intelligence-title {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .intelligence-intro {
+    font-size: 17px;
+  }
+
+  .intelligence-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-step {
+    padding: 25px 15px;
+    min-height: 185px;
+  }
+
+  .flow-number {
+    margin-bottom: 35px;
+  }
+
+  .flow-step h3 {
+    font-size: 16px;
+  }
+
+  .intelligence-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .intelligence-bottom p {
+    font-size: 20px;
+  }
+
 }
 
 @media(prefers-reduced-motion: reduce) {
@@ -945,7 +1131,8 @@ header {
   .network-node,
   .activation-card,
   .activation-icon,
-  .domination-channel {
+  .domination-channel,
+  .flow-step {
     transition: none;
   }
 
@@ -972,6 +1159,7 @@ header {
 
       <a href="#about">ABOUT</a>
       <a href="#activations">ACTIVATIONS</a>
+      <a href="#intelligence">INTELLIGENCE</a>
       <a href="#sponsors">FOR SPONSORS</a>
       <a href="#partners">FOR BUSINESSES</a>
 
@@ -1114,7 +1302,7 @@ header {
         href="https://tally.so/r/m6glkk"
         target="_blank"
         rel="noopener noreferrer"
-        class="network-link">
+        class="btn-dark">
         JOIN THE NETWORK ↗
       </a>
 
@@ -1125,7 +1313,7 @@ header {
 </section>
 
 <!-- =====================================
-     SECTION 3 — GK3 ACTIVATIONS
+     SECTION 3 — ACTIVATIONS
 ===================================== -->
 
 <section class="activations-section" id="activations">
@@ -1173,7 +1361,7 @@ header {
         </p>
 
         <div class="activation-bottom">
-          <span>IN-STORE ENGAGEMENT ↗</span>
+          IN-STORE ENGAGEMENT ↗
         </div>
 
       </article>
@@ -1199,7 +1387,7 @@ header {
         </p>
 
         <div class="activation-bottom">
-          <span>SPONSORED DISTRIBUTION ↗</span>
+          SPONSORED DISTRIBUTION ↗
         </div>
 
       </article>
@@ -1225,7 +1413,7 @@ header {
         </p>
 
         <div class="activation-bottom">
-          <span>CUSTOMER ACTIVATION ↗</span>
+          CUSTOMER ACTIVATION ↗
         </div>
 
       </article>
@@ -1283,8 +1471,6 @@ header {
       permission-based digital engagement.
     </p>
 
-    <!-- INTEGRATED CHANNEL VISUAL -->
-
     <div class="domination-visual">
 
       <div class="domination-visual-header">
@@ -1294,48 +1480,21 @@ header {
       <div class="domination-channels">
 
         <div class="domination-channel">
-
-          <div class="domination-channel-number">
-            CHANNEL 01
-          </div>
-
+          <div class="domination-channel-number">CHANNEL 01</div>
           <h3>COUNTER</h3>
-
-          <p>
-            In-store visibility, social growth,
-            and customer engagement.
-          </p>
-
+          <p>In-store visibility, social growth, and customer engagement.</p>
         </div>
 
         <div class="domination-channel">
-
-          <div class="domination-channel-number">
-            CHANNEL 02
-          </div>
-
+          <div class="domination-channel-number">CHANNEL 02</div>
           <h3>REACH</h3>
-
-          <p>
-            Sponsored packaging and QR-enabled
-            physical distribution.
-          </p>
-
+          <p>Sponsored packaging and QR-enabled physical distribution.</p>
         </div>
 
         <div class="domination-channel">
-
-          <div class="domination-channel-number">
-            CHANNEL 03
-          </div>
-
+          <div class="domination-channel-number">CHANNEL 03</div>
           <h3>ENGAGE</h3>
-
-          <p>
-            Permission-based customer communication
-            and reactivation campaigns.
-          </p>
-
+          <p>Permission-based customer communication and reactivation campaigns.</p>
         </div>
 
       </div>
@@ -1361,8 +1520,6 @@ header {
 
     </div>
 
-    <!-- CTA -->
-
     <div class="domination-bottom">
 
       <p>
@@ -1374,8 +1531,235 @@ header {
         href="https://tally.so/r/m6glkk"
         target="_blank"
         rel="noopener noreferrer"
-        class="domination-cta">
+        class="btn-dark">
         EXPLORE SPONSORSHIP ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+     SECTION 5 — GK3 INTELLIGENCE
+===================================== -->
+
+<section class="intelligence-section" id="intelligence">
+
+  <div class="container">
+
+    <div class="intelligence-label">
+      GK3 / MARKETING INTELLIGENCE
+    </div>
+
+    <h2 class="intelligence-title">
+      EVERY INTERACTION<br>
+      <span>TELLS A STORY.</span>
+    </h2>
+
+    <p class="intelligence-intro">
+      Traditional advertising often ends with exposure.
+
+      GK3 connects physical marketing with digital
+      engagement, creating measurable signals that
+      help participating businesses and sponsors
+      understand campaign performance and make
+      smarter marketing decisions.
+    </p>
+
+    <!-- SIX-STAGE GROWTH CYCLE -->
+
+    <div class="intelligence-flow">
+
+      <div class="flow-step">
+
+        <div class="flow-number">01 / DISCOVER</div>
+
+        <h3>ATTENTION</h3>
+
+        <p>
+          Customers encounter sponsored campaigns
+          through participating businesses.
+        </p>
+
+      </div>
+
+      <div class="flow-step">
+
+        <div class="flow-number">02 / CONNECT</div>
+
+        <h3>SCAN</h3>
+
+        <p>
+          QR codes create a measurable entry point
+          into the campaign experience.
+        </p>
+
+      </div>
+
+      <div class="flow-step">
+
+        <div class="flow-number">03 / INTERACT</div>
+
+        <h3>ENGAGE</h3>
+
+        <p>
+          Customers explore offers, content,
+          and relevant opportunities.
+        </p>
+
+      </div>
+
+      <div class="flow-step">
+
+        <div class="flow-number">04 / VALUE</div>
+
+        <h3>REWARD</h3>
+
+        <p>
+          Incentives encourage participation
+          and help create customer value.
+        </p>
+
+      </div>
+
+      <div class="flow-step">
+
+        <div class="flow-number">05 / LEARN</div>
+
+        <h3>INTELLIGENCE</h3>
+
+        <p>
+          Campaign interactions generate
+          performance insights.
+        </p>
+
+      </div>
+
+      <div class="flow-step">
+
+        <div class="flow-number">06 / IMPROVE</div>
+
+        <h3>GROWTH</h3>
+
+        <p>
+          Insights inform future campaigns,
+          partnerships, and opportunities.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- INTELLIGENCE DETAILS -->
+
+    <div class="intelligence-details">
+
+      <div>
+
+        <h3>
+          FROM EXPOSURE<br>
+          <span>TO UNDERSTANDING.</span>
+        </h3>
+
+        <p>
+          GK3 connects sponsored marketing
+          touchpoints to measurable digital
+          interactions.
+        </p>
+
+        <p>
+          Instead of relying solely on estimated
+          impressions, campaigns can be evaluated
+          using observable engagement signals,
+          including QR activity, landing-page
+          interactions, and reward participation
+          where tracking is available.
+        </p>
+
+        <p>
+          These insights can help identify
+          which placements, messages, and
+          incentives deserve further investment.
+        </p>
+
+      </div>
+
+      <div class="intelligence-metrics">
+
+        <div class="metric-box">
+
+          <div class="metric-symbol">↗</div>
+
+          <h4>CAMPAIGN ACTIVITY</h4>
+
+          <p>
+            Understand interaction volume
+            across participating touchpoints.
+          </p>
+
+        </div>
+
+        <div class="metric-box">
+
+          <div class="metric-symbol">◎</div>
+
+          <h4>QR ENGAGEMENT</h4>
+
+          <p>
+            Measure scan activity and
+            campaign entry points.
+          </p>
+
+        </div>
+
+        <div class="metric-box">
+
+          <div class="metric-symbol">◇</div>
+
+          <h4>REWARD ACTIVITY</h4>
+
+          <p>
+            Evaluate reward claims and
+            redemptions where measurable.
+          </p>
+
+        </div>
+
+        <div class="metric-box">
+
+          <div class="metric-symbol">＋</div>
+
+          <h4>CAMPAIGN LEARNING</h4>
+
+          <p>
+            Use available performance data
+            to inform future activations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- INTELLIGENCE CTA -->
+
+    <div class="intelligence-bottom">
+
+      <p>
+        Sponsorship funds the network.<br>
+        Distribution creates opportunity.<br>
+        <span>Intelligence makes it smarter.</span>
+      </p>
+
+      <a
+        href="https://tally.so/r/m6glkk"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary">
+        JOIN THE NETWORK ↗
       </a>
 
     </div>
