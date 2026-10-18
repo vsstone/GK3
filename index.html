@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -49,11 +48,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
 }
 
 .container {
@@ -372,7 +366,6 @@ header {
   background: #101010;
   color: #ffffff;
   padding: 130px 0;
-  position: relative;
   overflow: hidden;
 }
 
@@ -414,8 +407,6 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
-
-/* Individual activation cards */
 
 .activation-card {
   background: #1b1b1b;
@@ -494,8 +485,6 @@ header {
   color: #ffffff;
 }
 
-/* Bottom section */
-
 .activations-footer {
   margin-top: 75px;
   padding-top: 45px;
@@ -516,6 +505,215 @@ header {
 
 .activations-footer p span {
   color: var(--gold);
+}
+
+/* =====================================
+   SECTION 4 — MARKET DOMINATION
+===================================== */
+
+.domination-section {
+  background: #ffffff;
+  padding: 140px 0;
+  overflow: hidden;
+}
+
+.domination-topline {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.domination-topline::before {
+  content: "";
+  width: 45px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.domination-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #A77B16;
+}
+
+.domination-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(52px, 8vw, 108px);
+  font-weight: 800;
+  line-height: .98;
+  letter-spacing: -6px;
+  max-width: 1100px;
+  margin-bottom: 45px;
+}
+
+.domination-title span {
+  color: #C99B29;
+}
+
+.domination-description {
+  font-size: 21px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 760px;
+  margin-bottom: 75px;
+}
+
+/* Three-channel visual */
+
+.domination-visual {
+  background: #F6F5F1;
+  border: 1px solid #E8E5DC;
+  padding: 65px 55px;
+  margin-bottom: 65px;
+}
+
+.domination-visual-header {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #777;
+  margin-bottom: 45px;
+}
+
+.domination-channels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.domination-channel {
+  background: #fff;
+  border: 1px solid #E5E2D9;
+  padding: 35px 28px;
+  min-height: 200px;
+  transition: .3s;
+}
+
+.domination-channel:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.domination-channel-number {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #B88A20;
+  margin-bottom: 30px;
+}
+
+.domination-channel h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.domination-channel p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Connecting visual */
+
+.domination-connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  position: relative;
+}
+
+.domination-connect::before {
+  content: "";
+  position: absolute;
+  width: 66%;
+  height: 1px;
+  top: 0;
+  background: #D5A52E;
+}
+
+.domination-connect::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 65px;
+  background: #D5A52E;
+  top: 0;
+}
+
+.domination-result {
+  background: #101010;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.domination-result-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.domination-result h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.domination-result p {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Bottom */
+
+.domination-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.domination-bottom p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.5;
+  max-width: 650px;
+}
+
+.domination-bottom p span {
+  color: #B88A20;
+}
+
+.domination-cta {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  padding: 19px 28px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: .2s;
+}
+
+.domination-cta:hover {
+  background: var(--gold);
+  color: var(--black);
 }
 
 /* =====================================
@@ -632,6 +830,35 @@ header {
     align-items: flex-start;
   }
 
+  .domination-section {
+    padding: 90px 0;
+  }
+
+  .domination-title {
+    letter-spacing: -3px;
+  }
+
+  .domination-visual {
+    padding: 40px 25px;
+  }
+
+  .domination-channels {
+    grid-template-columns: 1fr;
+  }
+
+  .domination-channel {
+    min-height: auto;
+  }
+
+  .domination-connect::before {
+    display: none;
+  }
+
+  .domination-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 }
 
 @media(max-width: 600px) {
@@ -689,6 +916,23 @@ header {
     font-size: 21px;
   }
 
+  .domination-title {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .domination-description {
+    font-size: 18px;
+  }
+
+  .domination-result {
+    padding: 40px 22px;
+  }
+
+  .domination-bottom p {
+    font-size: 20px;
+  }
+
 }
 
 @media(prefers-reduced-motion: reduce) {
@@ -700,16 +944,15 @@ header {
   .btn-primary,
   .network-node,
   .activation-card,
-  .activation-icon {
+  .activation-icon,
+  .domination-channel {
     transition: none;
   }
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
@@ -728,11 +971,8 @@ header {
     <nav class="nav-links" aria-label="Main navigation">
 
       <a href="#about">ABOUT</a>
-
       <a href="#activations">ACTIVATIONS</a>
-
       <a href="#sponsors">FOR SPONSORS</a>
-
       <a href="#partners">FOR BUSINESSES</a>
 
       <a
@@ -749,7 +989,6 @@ header {
 
 </header>
 
-
 <main>
 
 <!-- =====================================
@@ -758,9 +997,7 @@ header {
 
 <section class="hero">
 
-  <div class="hero-background" aria-hidden="true">
-    3
-  </div>
+  <div class="hero-background" aria-hidden="true">3</div>
 
   <div class="container hero-content">
 
@@ -802,7 +1039,6 @@ header {
 
 </section>
 
-
 <!-- =====================================
      SECTION 2 — GK3 NETWORK
 ===================================== -->
@@ -811,9 +1047,7 @@ header {
 
   <div class="container">
 
-    <div class="section-label">
-      THE GK3 MODEL
-    </div>
+    <div class="section-label">THE GK3 MODEL</div>
 
     <h2 class="network-title">
       THREE PARTNERS.<br>
@@ -827,85 +1061,53 @@ header {
       GK3 brings the network together.
     </p>
 
-
     <div class="network-diagram">
 
       <div class="network-node">
-
-        <div class="node-number">
-          01 / DISTRIBUTION
-        </div>
-
+        <div class="node-number">01 / DISTRIBUTION</div>
         <h3>BUSINESS PARTNERS</h3>
-
         <p>
           Restaurants and participating businesses provide
           approved customer touchpoints while gaining
           access to sponsor-funded marketing and
           engagement opportunities.
         </p>
-
       </div>
 
-
-      <div class="network-arrow" aria-hidden="true">
-        ↔
-      </div>
-
+      <div class="network-arrow" aria-hidden="true">↔</div>
 
       <div class="network-node">
-
-        <div class="node-number">
-          02 / THE NETWORK
-        </div>
-
+        <div class="node-number">02 / THE NETWORK</div>
         <h3>GK3</h3>
-
         <p>
           We coordinate sponsor relationships,
           campaign strategy, physical distribution,
           QR-enabled experiences, and
           performance measurement.
         </p>
-
       </div>
 
-
-      <div class="network-arrow" aria-hidden="true">
-        ↔
-      </div>
-
+      <div class="network-arrow" aria-hidden="true">↔</div>
 
       <div class="network-node">
-
-        <div class="node-number">
-          03 / SPONSORSHIP
-        </div>
-
+        <div class="node-number">03 / SPONSORSHIP</div>
         <h3>SPONSORS</h3>
-
         <p>
           Advertisers fund relevant campaigns
           that reach customers through participating
           businesses and create opportunities
           for measurable engagement.
         </p>
-
       </div>
 
     </div>
 
-
     <div class="network-bottom">
 
       <div class="network-statement">
-
         <span>Sponsorship funds the opportunity.</span><br>
-
         GK3 connects the network.<br>
-
         Together, we create opportunities for growth.
-
       </div>
 
       <a
@@ -922,7 +1124,6 @@ header {
 
 </section>
 
-
 <!-- =====================================
      SECTION 3 — GK3 ACTIVATIONS
 ===================================== -->
@@ -933,9 +1134,7 @@ header {
 
     <div class="activations-header">
 
-      <div class="activations-label">
-        GK3 ACTIVATIONS
-      </div>
+      <div class="activations-label">GK3 ACTIVATIONS</div>
 
       <h2 class="activations-title">
         THREE WAYS.<br>
@@ -951,20 +1150,14 @@ header {
 
     </div>
 
-
     <div class="activations-grid">
 
-      <!-- GK3 COUNTER -->
+      <!-- COUNTER -->
 
       <article class="activation-card">
 
-        <div class="activation-icon" aria-hidden="true">
-          01
-        </div>
-
-        <div class="activation-number">
-          01 / IN-STORE
-        </div>
+        <div class="activation-icon" aria-hidden="true">01</div>
+        <div class="activation-number">01 / IN-STORE</div>
 
         <h3>GK3 COUNTER</h3>
 
@@ -985,18 +1178,12 @@ header {
 
       </article>
 
-
-      <!-- GK3 REACH -->
+      <!-- REACH -->
 
       <article class="activation-card">
 
-        <div class="activation-icon" aria-hidden="true">
-          02
-        </div>
-
-        <div class="activation-number">
-          02 / DISTRIBUTION
-        </div>
+        <div class="activation-icon" aria-hidden="true">02</div>
+        <div class="activation-number">02 / DISTRIBUTION</div>
 
         <h3>GK3 REACH</h3>
 
@@ -1017,18 +1204,12 @@ header {
 
       </article>
 
-
-      <!-- GK3 ENGAGE -->
+      <!-- ENGAGE -->
 
       <article class="activation-card">
 
-        <div class="activation-icon" aria-hidden="true">
-          03
-        </div>
-
-        <div class="activation-number">
-          03 / DIGITAL
-        </div>
+        <div class="activation-icon" aria-hidden="true">03</div>
+        <div class="activation-number">03 / DIGITAL</div>
 
         <h3>GK3 ENGAGE</h3>
 
@@ -1051,9 +1232,6 @@ header {
 
     </div>
 
-
-    <!-- ACTIVATIONS CTA -->
-
     <div class="activations-footer">
 
       <p>
@@ -1067,6 +1245,137 @@ header {
         rel="noopener noreferrer"
         class="btn-primary">
         JOIN THE NETWORK ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+     SECTION 4 — MARKET DOMINATION
+===================================== -->
+
+<section class="domination-section" id="market-domination">
+
+  <div class="container">
+
+    <div class="domination-topline">
+      <div class="domination-label">
+        GK3 MARKET DOMINATION
+      </div>
+    </div>
+
+    <h2 class="domination-title">
+      THREE CHANNELS.<br>
+      ONE MARKET.<br>
+      <span>MAXIMUM IMPACT.</span>
+    </h2>
+
+    <p class="domination-description">
+      GK3 Market Domination brings Counter, Reach,
+      and Engage together into one coordinated
+      local sponsorship campaign.
+
+      Connect with customers inside businesses,
+      beyond the storefront, and through
+      permission-based digital engagement.
+    </p>
+
+    <!-- INTEGRATED CHANNEL VISUAL -->
+
+    <div class="domination-visual">
+
+      <div class="domination-visual-header">
+        ONE COORDINATED CAMPAIGN
+      </div>
+
+      <div class="domination-channels">
+
+        <div class="domination-channel">
+
+          <div class="domination-channel-number">
+            CHANNEL 01
+          </div>
+
+          <h3>COUNTER</h3>
+
+          <p>
+            In-store visibility, social growth,
+            and customer engagement.
+          </p>
+
+        </div>
+
+        <div class="domination-channel">
+
+          <div class="domination-channel-number">
+            CHANNEL 02
+          </div>
+
+          <h3>REACH</h3>
+
+          <p>
+            Sponsored packaging and QR-enabled
+            physical distribution.
+          </p>
+
+        </div>
+
+        <div class="domination-channel">
+
+          <div class="domination-channel-number">
+            CHANNEL 03
+          </div>
+
+          <h3>ENGAGE</h3>
+
+          <p>
+            Permission-based customer communication
+            and reactivation campaigns.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="domination-connect" aria-hidden="true"></div>
+
+      <div class="domination-result">
+
+        <div class="domination-result-label">
+          THE GK3 ADVANTAGE
+        </div>
+
+        <h3>CONNECTED MARKET ACTIVATION.</h3>
+
+        <p>
+          One campaign strategy across multiple
+          customer touchpoints, with coordinated
+          messaging, engagement opportunities,
+          and performance measurement.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+
+    <div class="domination-bottom">
+
+      <p>
+        More than individual advertisements.<br>
+        <span>A coordinated approach to local growth.</span>
+      </p>
+
+      <a
+        href="https://tally.so/r/m6glkk"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="domination-cta">
+        EXPLORE SPONSORSHIP ↗
       </a>
 
     </div>
