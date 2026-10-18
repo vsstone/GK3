@@ -4,15 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
 
 <title>GK3 — Marketing & Intelligence | Grow Together</title>
 
-<meta name="description" content="GK3 connects businesses and sponsors through sponsored growth networks, coordinated marketing, and measurable customer engagement. Grow Together.">
+<meta name="description" content="GK3 is a marketing and intelligence network connecting businesses and sponsors through coordinated, measurable growth partnerships.">
+
+<meta name="theme-color" content="#080808">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="GK3 — Marketing & Intelligence">
-<meta property="og:description" content="The intelligence of connection. Sponsored growth networks designed to help businesses and sponsors grow together.">
+<meta property="og:description" content="The Intelligence of Connection. Sponsored Growth Networks. Grow Together.">
 <meta property="og:url" content="https://g-k-3.com/">
 
 <link rel="canonical" href="https://g-k-3.com/">
@@ -24,24 +25,32 @@
 
 <style>
 
-/* ==========================================================
-   GK3 V2 — DESIGN SYSTEM
-========================================================== */
+/* =====================================================
+   GK3 V3 — CONNECTED INTELLIGENCE
+   DESIGN SYSTEM
+===================================================== */
 
 :root {
-  --black: #090909;
-  --black-2: #111111;
-  --black-3: #191919;
+  --black: #080808;
+  --black2: #101010;
+  --black3: #181818;
+
   --white: #ffffff;
-  --cream: #f7f6f2;
-  --gold: #d5a52e;
-  --gold-light: #f1cd72;
+  --cream: #f6f5f1;
+
+  --gold: #d7a936;
+  --gold-light: #f3d78b;
   --gold-dark: #a77b16;
+
   --gray: #777777;
-  --line: #e8e6df;
+  --gray-light: #aaaaaa;
+
+  --border: #e7e5df;
+
   --display: 'Manrope', sans-serif;
   --body: 'DM Sans', sans-serif;
-  --max: 1220px;
+
+  --max: 1280px;
 }
 
 *,
@@ -57,9 +66,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--white);
-  color: var(--black);
   font-family: var(--body);
+  color: var(--black);
+  background: white;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -83,13 +92,13 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 2px solid var(--gold);
   outline-offset: 4px;
 }
 
 ::selection {
   background: var(--gold);
-  color: var(--black);
+  color: black;
 }
 
 .container {
@@ -101,52 +110,45 @@ section {
   position: relative;
 }
 
+.gold {
+  color: var(--gold);
+}
+
+.gold-dark {
+  color: var(--gold-dark);
+}
+
 .eyebrow {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 11px;
+  gap: 13px;
+
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: .19em;
+  letter-spacing: .22em;
   text-transform: uppercase;
 }
 
 .eyebrow::before {
   content: "";
-  width: 24px;
-  height: 2px;
+  width: 26px;
+  height: 1px;
   background: currentColor;
 }
 
-.eyebrow.gold {
-  color: var(--gold);
-}
-
-.eyebrow.dark-gold {
-  color: var(--gold-dark);
-}
-
-.section-title {
+.section-heading {
   font-family: var(--display);
-  font-size: clamp(43px, 6vw, 80px);
-  font-weight: 800;
+  font-size: clamp(42px, 6vw, 82px);
   line-height: 1.07;
-  letter-spacing: -.065em;
-  margin: 25px 0;
-}
-
-.section-title .gold {
-  color: var(--gold);
-}
-
-.section-title .dark-gold {
-  color: var(--gold-dark);
+  letter-spacing: -.07em;
+  font-weight: 800;
+  margin: 26px 0;
 }
 
 .section-copy {
-  max-width: 700px;
-  font-size: clamp(16px, 1.6vw, 19px);
-  line-height: 1.85;
+  max-width: 690px;
+  font-size: 17px;
+  line-height: 1.9;
   color: #666;
 }
 
@@ -154,150 +156,167 @@ section {
   color: #aaa;
 }
 
-.button {
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  gap: 24px;
+  justify-content: center;
+  gap: 25px;
+
   min-height: 54px;
   padding: 17px 25px;
+
   border: 1px solid transparent;
-  font-size: 11px;
+
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: .11em;
+  letter-spacing: .13em;
+
   text-transform: uppercase;
   transition: .25s ease;
 }
 
-.button:hover {
-  transform: translateY(-2px);
+.btn:hover {
+  transform: translateY(-3px);
 }
 
-.button-gold {
+.btn-gold {
   background: var(--gold);
-  color: var(--black);
+  color: black;
 }
 
-.button-gold:hover {
+.btn-gold:hover {
   background: var(--gold-light);
+  box-shadow: 0 8px 35px rgba(215,169,54,.17);
 }
 
-.button-dark {
-  background: var(--black);
-  color: var(--white);
+.btn-outline {
+  border-color: #555;
+  color: white;
 }
 
-.button-dark:hover {
-  background: #303030;
-}
-
-.button-outline {
-  border-color: #666;
-  color: var(--white);
-}
-
-.button-outline:hover {
+.btn-outline:hover {
   border-color: var(--gold);
   color: var(--gold);
 }
 
-.button-outline-dark {
-  border-color: #aaa;
-  color: var(--black);
-}
-
-.button-outline-dark:hover {
-  border-color: var(--black);
-  background: var(--black);
-  color: var(--white);
-}
-
-/* ==========================================================
-   NAVIGATION
-========================================================== */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(9,9,9,.96);
-  border-bottom: 1px solid #242424;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.nav-inner {
-  min-height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
-  flex-shrink: 0;
-}
-
-.brand-mark {
-  font-family: var(--display);
-  font-size: 39px;
-  font-weight: 800;
-  letter-spacing: -.12em;
-  line-height: 1;
+.btn-black {
+  background: black;
   color: white;
 }
 
-.brand-mark span {
-  color: var(--gold);
+.btn-black:hover {
+  background: #333;
 }
 
-.brand-label {
-  border-left: 1px solid #49402b;
-  padding-left: 17px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .15em;
-  line-height: 1.55;
-  color: var(--gold);
+.btn-outline-dark {
+  border-color: #aaa;
+  color: black;
 }
 
-.desktop-nav {
+.btn-outline-dark:hover {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(8,8,8,.96);
+  border-bottom: 1px solid #242424;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.nav {
   display: flex;
   align-items: center;
-  gap: 29px;
+  justify-content: space-between;
+
+  min-height: 86px;
+  gap: 25px;
 }
 
-.desktop-nav > a:not(.button) {
-  font-size: 11px;
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  color: white;
+  font-family: var(--display);
+  font-size: 40px;
   font-weight: 800;
-  letter-spacing: .045em;
+  letter-spacing: -.12em;
+  line-height: 1;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.logo-divider {
+  width: 1px;
+  height: 34px;
+  background: #49402b;
+}
+
+.logo-description {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  line-height: 1.65;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links > a:not(.btn) {
   color: #ccc;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .07em;
   transition: color .2s;
 }
 
-.desktop-nav > a:not(.button):hover {
+.nav-links > a:not(.btn):hover {
   color: var(--gold);
 }
 
-.desktop-nav .button {
-  min-height: 44px;
-  padding: 13px 18px;
-  font-size: 10px;
+.nav-links .btn {
+  min-height: 43px;
+  padding: 13px 17px;
+  font-size: 9px;
 }
 
 .menu-toggle {
   display: none;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #444;
-  background: transparent;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
+
+  width: 45px;
+  height: 45px;
+
+  background: transparent;
+  border: 1px solid #444;
 }
 
 .menu-toggle span {
@@ -323,106 +342,134 @@ section {
   display: none;
 }
 
-/* ==========================================================
-   HERO — GOLD BRAIN
-========================================================== */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
-  min-height: 780px;
+  position: relative;
+  min-height: 820px;
+
   display: flex;
   align-items: center;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 78% 46%, rgba(170,120,25,.12), transparent 34%),
-    #090909;
+
+  background: #080808;
   color: white;
+  overflow: hidden;
 }
 
-.hero-grid {
+.hero::before {
+  content: "";
+
   position: absolute;
   inset: 0;
-  pointer-events: none;
+
   background-image:
-    linear-gradient(rgba(213,165,46,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(213,165,46,.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(to right, transparent 10%, black 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 10%, black 100%);
+    linear-gradient(rgba(215,169,54,.027) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(215,169,54,.027) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(90deg, transparent, black);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black);
+
+  pointer-events: none;
 }
 
-.hero-glow {
+.hero::after {
+  content: "";
+
   position: absolute;
-  width: 750px;
-  height: 750px;
-  right: -170px;
+  width: 850px;
+  height: 850px;
+
+  right: -220px;
   top: 50%;
+
   transform: translateY(-50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(213,165,46,.11), transparent 65%);
+
+  background: radial-gradient(
+    circle,
+    rgba(215,169,54,.10),
+    rgba(215,169,54,.025) 40%,
+    transparent 70%
+  );
+
   pointer-events: none;
 }
 
 .hero-inner {
   position: relative;
   z-index: 2;
+
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   align-items: center;
-  min-height: 780px;
-  gap: 0;
+
+  min-height: 820px;
 }
 
 .hero-content {
   position: relative;
-  z-index: 3;
-  padding: 100px 0;
+  z-index: 5;
+  padding: 110px 0;
 }
 
 .hero-kicker {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   color: var(--gold);
+
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .23em;
-  margin-bottom: 32px;
+
+  margin-bottom: 37px;
 }
 
 .hero-kicker::before {
   content: "";
-  width: 34px;
-  height: 2px;
+
+  display: inline-block;
+
+  width: 30px;
+  height: 1px;
+
   background: var(--gold);
+
+  vertical-align: middle;
+  margin-right: 14px;
 }
 
 .hero h1 {
-  margin: 0 0 34px;
   font-family: var(--display);
-  font-size: clamp(66px, 8.5vw, 122px);
+  font-size: clamp(70px, 8.7vw, 126px);
+
   font-weight: 800;
-  line-height: .96;
-  letter-spacing: -.085em;
+  line-height: .94;
+  letter-spacing: -.09em;
+
+  margin: 0 0 35px;
 }
 
 .hero h1 span {
   color: var(--gold);
 }
 
-.hero-subtitle {
-  margin: 0 0 20px;
-  color: #f2f2f2;
+.hero-statement {
   font-family: var(--display);
   font-size: clamp(19px, 2vw, 26px);
   font-weight: 700;
-  letter-spacing: -.04em;
+  letter-spacing: -.045em;
+
+  margin-bottom: 19px;
 }
 
 .hero-description {
-  max-width: 560px;
-  color: #a8a8a8;
+  max-width: 530px;
+
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.85;
+
+  color: #aaa;
   margin: 0;
 }
 
@@ -430,299 +477,358 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 13px;
+
   margin-top: 40px;
 }
 
-.hero-location {
+.hero-bottom {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 70px;
-  color: #777;
+  gap: 13px;
+
+  margin-top: 75px;
+
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .15em;
+
+  color: #777;
 }
 
-.hero-location::before {
+.hero-bottom::before {
   content: "";
-  width: 30px;
+  width: 32px;
   height: 1px;
   background: var(--gold);
 }
 
-/* Brain stage */
+/* =====================================================
+   GOLD BRAIN STAGE
+===================================================== */
 
 .brain-stage {
   position: relative;
+
   width: 100%;
-  height: 650px;
+  height: 690px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
 }
 
-.brain-canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
+#brainCanvas {
   position: relative;
   z-index: 2;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
 }
 
-.brain-orbit {
+.brain-ring {
   position: absolute;
-  width: 94%;
+
+  width: 93%;
   aspect-ratio: 1;
-  border: 1px solid rgba(213,165,46,.12);
+
+  border: 1px solid rgba(215,169,54,.11);
   border-radius: 50%;
-  left: 3%;
-  top: 50%;
-  transform: translateY(-50%);
+
   pointer-events: none;
 }
 
-.brain-orbit::before {
+.brain-ring::before {
   content: "";
+
   position: absolute;
   inset: 12%;
-  border: 1px dashed rgba(213,165,46,.12);
+
+  border: 1px dashed rgba(215,169,54,.13);
   border-radius: 50%;
 }
 
-.brain-orbit::after {
+.brain-ring::after {
   content: "";
+
   position: absolute;
-  inset: 26%;
-  border: 1px solid rgba(213,165,46,.08);
+  inset: 25%;
+
+  border: 1px solid rgba(215,169,54,.09);
   border-radius: 50%;
 }
 
-.brain-label {
+.brain-annotation {
   position: absolute;
-  z-index: 4;
+  z-index: 3;
+
   color: var(--gold);
+
   font-size: 9px;
   font-weight: 800;
   letter-spacing: .2em;
-  white-space: nowrap;
 }
 
-.brain-label.top {
-  top: 8%;
-  right: 5%;
+.brain-annotation.top {
+  right: 3%;
+  top: 10%;
 }
 
-.brain-label.bottom {
-  bottom: 8%;
-  left: 5%;
+.brain-annotation.bottom {
+  left: 3%;
+  bottom: 10%;
 }
 
-.brain-label::before {
+.brain-annotation::before {
   content: "";
+
   display: inline-block;
+
   width: 6px;
   height: 6px;
-  margin-right: 10px;
-  border-radius: 50%;
+
   background: var(--gold);
-  box-shadow: 0 0 12px var(--gold);
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px var(--gold);
+
+  margin-right: 10px;
   vertical-align: middle;
 }
 
-.brain-caption {
+.brain-footnote {
   position: absolute;
-  z-index: 4;
-  bottom: 13%;
+  z-index: 3;
+
   right: 0;
+  bottom: 16%;
+
   color: #555;
   font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .15em;
-  text-align: right;
+  font-weight: 800;
+  letter-spacing: .13em;
 }
 
-/* ==========================================================
+/* =====================================================
+   MANIFESTO STRIP
+===================================================== */
+
+.manifesto {
+  background: var(--gold);
+  padding: 25px 0;
+}
+
+.manifesto-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.manifesto-item {
+  font-family: var(--display);
+  font-size: clamp(10px, 1.15vw, 14px);
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.manifesto-divider {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.45);
+}
+
+/* =====================================================
    NETWORK MODEL
-========================================================== */
+===================================================== */
 
-.network-section {
-  padding: 130px 0;
+.network {
   background: var(--cream);
+  padding: 135px 0;
 }
 
-.network-header {
+.network-heading {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 70px;
   align-items: end;
+
   margin-bottom: 65px;
 }
 
-.network-header .section-title {
+.network-heading .section-heading {
   margin-bottom: 0;
 }
 
-.network-header .section-copy {
+.network-heading .section-copy {
   margin-bottom: 0;
 }
 
-.network-visual {
+.network-diagram {
   position: relative;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
-.network-visual::before {
+.network-diagram::before {
   content: "";
+
   position: absolute;
-  top: 63px;
-  left: 16%;
-  right: 16%;
+  top: 67px;
+  left: 17%;
+  right: 17%;
+
   height: 1px;
   background: var(--gold);
-  z-index: 0;
 }
 
-.network-node {
+.network-card {
   position: relative;
   z-index: 1;
+
   background: white;
-  border: 1px solid #e4e1d9;
-  padding: 38px 30px 40px;
-  min-height: 305px;
-  transition: .3s;
+  border: 1px solid #e5e2da;
+
+  padding: 38px 32px 45px;
+
+  transition: .3s ease;
 }
 
-.network-node:hover {
+.network-card:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
-  box-shadow: 0 18px 35px rgba(0,0,0,.05);
 }
 
-.network-node.center {
+.network-card.featured {
   background: var(--black);
-  color: white;
   border-color: var(--black);
+  color: white;
 }
 
-.node-icon {
+.network-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+
+  width: 58px;
+  height: 58px;
+
+  background: white;
   border: 1px solid var(--gold);
   border-radius: 50%;
+
   color: var(--gold-dark);
+
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
-  margin-bottom: 45px;
-  background: white;
+
+  margin-bottom: 55px;
 }
 
-.network-node.center .node-icon {
+.network-card.featured .network-icon {
   background: var(--black);
   color: var(--gold);
 }
 
-.node-index {
+.network-label {
   color: var(--gold-dark);
+
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .17em;
-  margin-bottom: 12px;
+
+  margin-bottom: 15px;
 }
 
-.network-node.center .node-index {
+.network-card.featured .network-label {
   color: var(--gold);
 }
 
-.network-node h3 {
+.network-card h3 {
   font-family: var(--display);
   font-size: 26px;
   font-weight: 800;
-  letter-spacing: -.045em;
-  margin: 0 0 17px;
+  letter-spacing: -.05em;
+
+  margin: 0 0 18px;
 }
 
-.network-node p {
-  color: #666;
+.network-card p {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.85;
+  color: #666;
   margin: 0;
 }
 
-.network-node.center p {
+.network-card.featured p {
   color: #aaa;
 }
 
-.network-statement {
+.network-summary {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 35px;
-  border-top: 1px solid #d9d6ce;
+  align-items: center;
+  gap: 40px;
+
+  border-top: 1px solid #d8d5cc;
   margin-top: 55px;
   padding-top: 35px;
 }
 
-.network-statement p {
+.network-summary p {
   font-family: var(--display);
-  font-size: clamp(20px, 2.1vw, 26px);
+  font-size: clamp(20px, 2.1vw, 27px);
   font-weight: 800;
-  letter-spacing: -.04em;
+  letter-spacing: -.045em;
   line-height: 1.5;
+
   margin: 0;
 }
 
-.network-statement span {
-  color: var(--gold-dark);
-}
-
-/* ==========================================================
+/* =====================================================
    ACTIVATIONS
-========================================================== */
+===================================================== */
 
 .activations {
-  padding: 130px 0;
   background: white;
+  padding: 135px 0;
 }
 
-.activations-header {
-  display: flex;
-  justify-content: space-between;
+.activations-intro {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
   align-items: end;
-  gap: 60px;
+  gap: 70px;
+
   margin-bottom: 65px;
 }
 
-.activations-header .section-title {
+.activations-intro .section-heading {
   margin-bottom: 0;
 }
 
-.activations-header .section-copy {
-  max-width: 440px;
-}
-
 .activation-list {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
 }
 
-.activation-row {
+.activation {
   display: grid;
-  grid-template-columns: 65px 1fr 1.15fr 60px;
+  grid-template-columns: 65px 1fr 1.1fr 50px;
   align-items: center;
   gap: 25px;
-  padding: 42px 12px;
-  border-bottom: 1px solid var(--line);
-  transition: .25s;
+
+  padding: 44px 10px;
+  border-bottom: 1px solid var(--border);
+
+  transition: .25s ease;
 }
 
-.activation-row:hover {
+.activation:hover {
   background: var(--cream);
   padding-left: 25px;
   padding-right: 25px;
@@ -734,119 +840,146 @@ section {
   font-weight: 800;
 }
 
-.activation-name {
+.activation h3 {
   font-family: var(--display);
-  font-size: clamp(29px, 3.3vw, 44px);
+  font-size: clamp(29px, 3.5vw, 46px);
   font-weight: 800;
-  letter-spacing: -.055em;
+  letter-spacing: -.06em;
+  margin: 0;
 }
 
-.activation-description {
-  max-width: 460px;
+.activation p {
+  max-width: 480px;
   color: #666;
   font-size: 15px;
   line-height: 1.8;
+  margin: 0;
 }
 
 .activation-arrow {
-  color: var(--gold-dark);
-  font-size: 30px;
   text-align: right;
+  color: var(--gold-dark);
+  font-size: 29px;
 }
 
-/* ==========================================================
+/* =====================================================
    MARKET DOMINATION
-========================================================== */
+===================================================== */
 
 .domination {
+  position: relative;
+
   background: var(--black);
   color: white;
-  padding: 135px 0;
+
+  padding: 140px 0;
   overflow: hidden;
+}
+
+.domination::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 80% 50%, rgba(215,169,54,.08), transparent 40%);
+
+  pointer-events: none;
 }
 
 .domination::after {
   content: "GK3";
+
   position: absolute;
-  right: -2%;
-  bottom: -10%;
+  right: -3%;
+  bottom: -13%;
+
   font-family: var(--display);
-  font-size: clamp(200px, 27vw, 430px);
+  font-size: clamp(220px, 28vw, 450px);
   font-weight: 800;
   letter-spacing: -.12em;
+
   color: #151515;
+
   pointer-events: none;
 }
 
-.domination-inner {
+.domination-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.domination .section-title {
-  max-width: 1050px;
-  font-size: clamp(50px, 7.5vw, 100px);
+.domination .section-heading {
+  font-size: clamp(52px, 7.5vw, 100px);
 }
 
 .domination .section-copy {
-  max-width: 750px;
+  max-width: 760px;
 }
 
-.channel-grid {
+.domination-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
+
   background: #383838;
   border: 1px solid #383838;
-  margin: 65px 0 45px;
+
+  margin: 65px 0 40px;
 }
 
-.channel {
-  background: #1b1b1b;
-  padding: 38px 30px;
+.domination-card {
+  background: #191919;
+  padding: 40px 32px;
 }
 
-.channel-number {
+.domination-card small {
+  display: block;
+
   color: var(--gold);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .18em;
+
   margin-bottom: 30px;
 }
 
-.channel h3 {
+.domination-card h3 {
   font-family: var(--display);
-  font-size: 27px;
+  font-size: 29px;
   font-weight: 800;
   letter-spacing: -.04em;
-  margin: 0 0 14px;
+
+  margin: 0 0 15px;
 }
 
-.channel p {
+.domination-card p {
   color: #aaa;
   font-size: 14px;
   line-height: 1.8;
   margin: 0;
 }
 
-/* ==========================================================
+/* =====================================================
    INTELLIGENCE
-========================================================== */
+===================================================== */
 
 .intelligence {
   background: var(--cream);
-  padding: 130px 0;
+  padding: 135px 0;
 }
 
-.intelligence-header {
+.intelligence-intro {
   display: grid;
-  grid-template-columns: 1fr .85fr;
+  grid-template-columns: 1.1fr .9fr;
   gap: 70px;
   align-items: end;
+
   margin-bottom: 65px;
 }
 
-.intelligence-header .section-title {
+.intelligence-intro .section-heading {
   margin-bottom: 0;
 }
 
@@ -856,26 +989,31 @@ section {
   gap: 8px;
 }
 
-.flow-item {
-  min-height: 155px;
+.intelligence-step {
+  position: relative;
+
   background: white;
   border-top: 3px solid var(--gold);
-  padding: 24px 16px;
+
+  min-height: 165px;
+  padding: 25px 17px;
 }
 
-.flow-item small {
+.intelligence-step small {
   display: block;
+
   color: var(--gold-dark);
   font-size: 10px;
   font-weight: 800;
-  margin-bottom: 48px;
+
+  margin-bottom: 55px;
 }
 
-.flow-item strong {
+.intelligence-step strong {
   font-family: var(--display);
-  font-size: clamp(12px, 1.25vw, 17px);
+  font-size: clamp(12px, 1.2vw, 17px);
   font-weight: 800;
-  letter-spacing: -.035em;
+  letter-spacing: -.04em;
   overflow-wrap: anywhere;
 }
 
@@ -883,16 +1021,18 @@ section {
   display: grid;
   grid-template-columns: 190px 1fr;
   gap: 40px;
-  border-top: 1px solid #d9d6ce;
-  margin-top: 45px;
+
+  border-top: 1px solid #d9d6cd;
+
+  margin-top: 50px;
   padding-top: 35px;
 }
 
 .intelligence-note-label {
   color: var(--gold-dark);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: .13em;
+  letter-spacing: .15em;
 }
 
 .intelligence-note p {
@@ -903,145 +1043,157 @@ section {
   margin: 0;
 }
 
-/* ==========================================================
-   SPONSORS / PARTNERS
-========================================================== */
+/* =====================================================
+   PARTNER OPPORTUNITIES
+===================================================== */
 
-.audiences {
-  padding: 130px 0;
+.partners {
   background: white;
+  padding: 135px 0;
 }
 
-.audiences-header {
-  margin-bottom: 60px;
+.partners-intro {
+  margin-bottom: 65px;
 }
 
-.audience-grid {
+.partner-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.audience-card {
-  min-height: 490px;
-  padding: 55px 45px;
-  background: var(--cream);
-  border: 1px solid var(--line);
+.partner-card {
   display: flex;
   flex-direction: column;
+
+  min-height: 520px;
+  padding: 55px 45px;
+
+  background: var(--cream);
+  border: 1px solid var(--border);
 }
 
-.audience-card.dark {
+.partner-card.dark {
   background: var(--black);
   color: white;
   border-color: var(--black);
 }
 
-.audience-card .eyebrow {
+.partner-card .eyebrow {
   color: var(--gold-dark);
 }
 
-.audience-card.dark .eyebrow {
+.partner-card.dark .eyebrow {
   color: var(--gold);
 }
 
-.audience-card h3 {
+.partner-card h3 {
   font-family: var(--display);
-  font-size: clamp(33px, 4vw, 53px);
+  font-size: clamp(35px, 4vw, 54px);
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -.06em;
-  margin: 45px 0 20px;
+  letter-spacing: -.065em;
+
+  margin: 45px 0 22px;
 }
 
-.audience-card p {
+.partner-card p {
   color: #666;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.85;
   margin: 0 0 25px;
 }
 
-.audience-card.dark p {
+.partner-card.dark p {
   color: #aaa;
 }
 
-.benefits {
+.partner-benefits {
   list-style: none;
   padding: 0;
   margin: 0 0 40px;
 }
 
-.benefits li {
+.partner-benefits li {
   position: relative;
+
   padding: 12px 0 12px 23px;
-  border-bottom: 1px solid #e0ded7;
+  border-bottom: 1px solid #dedbd3;
+
   font-size: 13px;
   font-weight: 700;
 }
 
-.benefits li::before {
+.partner-benefits li::before {
   content: "+";
   position: absolute;
   left: 0;
   color: var(--gold-dark);
 }
 
-.dark .benefits li {
+.partner-card.dark .partner-benefits li {
   border-color: #333;
 }
 
-.dark .benefits li::before {
+.partner-card.dark .partner-benefits li::before {
   color: var(--gold);
 }
 
-.audience-card .button {
+.partner-card .btn {
   align-self: flex-start;
   margin-top: auto;
 }
 
-/* ==========================================================
+/* =====================================================
    FINAL CTA
-========================================================== */
+===================================================== */
 
-.final-cta {
-  padding: 135px 0;
+.final {
+  position: relative;
+
   background: var(--gold);
+  padding: 140px 0;
   overflow: hidden;
 }
 
-.final-cta::after {
+.final::after {
   content: "3";
+
   position: absolute;
   right: -3%;
-  bottom: -55%;
+  bottom: -65%;
+
   font-family: var(--display);
-  font-size: clamp(450px, 55vw, 800px);
+  font-size: clamp(450px, 55vw, 850px);
   font-weight: 800;
   letter-spacing: -.12em;
-  color: rgba(255,255,255,.13);
+
+  color: rgba(255,255,255,.14);
+
   pointer-events: none;
 }
 
-.final-cta-inner {
+.final-content {
   position: relative;
-  z-index: 1;
-  max-width: 950px;
+  z-index: 2;
+  max-width: 900px;
 }
 
-.final-cta .eyebrow {
-  color: #57410d;
+.final .eyebrow {
+  color: #59430f;
 }
 
-.final-cta h2 {
+.final h2 {
   font-family: var(--display);
   font-size: clamp(70px, 10vw, 140px);
   font-weight: 800;
-  line-height: .95;
-  letter-spacing: -.085em;
+  line-height: .94;
+  letter-spacing: -.09em;
+
   margin: 30px 0;
 }
 
-.final-cta p {
+.final p {
   max-width: 660px;
   font-size: 19px;
   line-height: 1.8;
@@ -1054,21 +1206,21 @@ section {
   gap: 13px;
 }
 
-/* ==========================================================
+/* =====================================================
    FOOTER
-========================================================== */
+===================================================== */
 
 .footer {
   background: #080808;
   color: white;
-  padding: 75px 0 30px;
+  padding: 80px 0 30px;
 }
 
 .footer-main {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 65px;
-  padding-bottom: 65px;
+  gap: 70px;
+  padding-bottom: 70px;
 }
 
 .footer-logo {
@@ -1083,28 +1235,28 @@ section {
   color: var(--gold);
 }
 
-.footer-brandline {
-  margin-top: 20px;
+.footer-category {
   color: var(--gold);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .18em;
+  margin-top: 20px;
 }
 
 .footer-tagline {
   font-family: var(--display);
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: -.04em;
-  margin: 20px 0 0;
+  margin-top: 20px;
 }
 
 .footer-description {
-  max-width: 360px;
+  max-width: 370px;
   color: #888;
   font-size: 14px;
-  line-height: 1.8;
-  margin-top: 16px;
+  line-height: 1.85;
+  margin-top: 15px;
 }
 
 .footer-links {
@@ -1115,18 +1267,20 @@ section {
 
 .footer-links h3 {
   color: var(--gold);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: .15em;
+  letter-spacing: .17em;
   margin: 0 0 25px;
 }
 
 .footer-links a {
   display: block;
   width: fit-content;
+
   color: #aaa;
   font-size: 13px;
   margin-bottom: 16px;
+
   transition: color .2s;
 }
 
@@ -1138,21 +1292,26 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+
   border-top: 1px solid #292929;
   padding-top: 25px;
+
   color: #777;
   font-size: 11px;
   line-height: 1.6;
 }
 
-/* ==========================================================
-   ANIMATIONS
-========================================================== */
+/* =====================================================
+   SCROLL REVEALS
+===================================================== */
 
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity .65s ease, transform .65s ease;
+  transform: translateY(24px);
+
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
 }
 
 .reveal.visible {
@@ -1160,38 +1319,37 @@ section {
   transform: translateY(0);
 }
 
-/* ==========================================================
+/* =====================================================
    RESPONSIVE
-========================================================== */
+===================================================== */
 
 @media(max-width: 1100px) {
 
-  .desktop-nav {
-    gap: 18px;
+  .nav-links {
+    gap: 17px;
   }
 
-  .desktop-nav > a:not(.button) {
-    font-size: 10px;
+  .nav-links > a:not(.btn) {
+    font-size: 9px;
   }
 
   .hero h1 {
-    font-size: clamp(62px, 8.5vw, 105px);
+    font-size: clamp(65px, 8.5vw, 108px);
   }
 
   .brain-stage {
-    height: 560px;
-  }
-
-  .network-header,
-  .intelligence-header {
-    gap: 40px;
+    height: 590px;
   }
 
 }
 
 @media(max-width: 900px) {
 
-  .desktop-nav {
+  .nav {
+    min-height: 75px;
+  }
+
+  .nav-links {
     display: none;
   }
 
@@ -1199,20 +1357,19 @@ section {
     display: flex;
   }
 
-  .nav-inner {
-    min-height: 75px;
-  }
-
   .mobile-nav {
     position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    top: 100%;
+
     display: none;
     flex-direction: column;
-    padding: 25px 5% 30px;
+
     background: var(--black);
     border-bottom: 1px solid #333;
+
+    padding: 25px 5% 30px;
     box-shadow: 0 20px 30px rgba(0,0,0,.3);
   }
 
@@ -1220,15 +1377,16 @@ section {
     display: flex;
   }
 
-  .mobile-nav > a:not(.button) {
+  .mobile-nav > a:not(.btn) {
     padding: 15px 0;
     border-bottom: 1px solid #292929;
+
     color: white;
     font-size: 14px;
     font-weight: 800;
   }
 
-  .mobile-nav .button {
+  .mobile-nav .btn {
     margin-top: 25px;
   }
 
@@ -1246,46 +1404,38 @@ section {
   }
 
   .brain-stage {
-    height: 480px;
-    max-width: 650px;
-    margin: -20px auto 10px;
+    height: 500px;
+    max-width: 670px;
+    margin: -15px auto 10px;
   }
 
-  .hero-location {
-    margin-top: 45px;
+  .hero-bottom {
+    margin-top: 50px;
   }
 
-  .network-section,
+  .network,
   .activations,
   .domination,
   .intelligence,
-  .audiences,
-  .final-cta {
-    padding: 90px 0;
+  .partners,
+  .final {
+    padding: 95px 0;
   }
 
-  .network-header,
-  .intelligence-header {
+  .network-heading,
+  .activations-intro,
+  .intelligence-intro {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .activations-header {
-    display: block;
-  }
-
-  .activations-header .section-copy {
-    max-width: 700px;
-    margin-top: 25px;
-  }
-
-  .activation-row {
-    grid-template-columns: 50px 1fr 35px;
+  .activation {
+    grid-template-columns: 45px 1fr 35px;
     gap: 15px;
   }
 
-  .activation-description {
-    grid-column: 2 / 3;
+  .activation p {
+    grid-column: 2;
   }
 
   .activation-arrow {
@@ -1294,10 +1444,10 @@ section {
   }
 
   .intelligence-flow {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .audience-card {
+  .partner-card {
     padding: 40px 30px;
   }
 
@@ -1309,14 +1459,17 @@ section {
     width: 88%;
   }
 
-  .brand-mark {
+  .logo {
     font-size: 34px;
   }
 
-  .brand-label {
+  .logo-description {
     font-size: 8px;
-    padding-left: 12px;
-    letter-spacing: .1em;
+    letter-spacing: .11em;
+  }
+
+  .logo-group {
+    gap: 13px;
   }
 
   .hero-content {
@@ -1324,11 +1477,7 @@ section {
   }
 
   .hero h1 {
-    font-size: clamp(55px, 12vw, 76px);
-  }
-
-  .hero-subtitle {
-    font-size: 19px;
+    font-size: clamp(54px, 12vw, 78px);
   }
 
   .hero-description {
@@ -1341,97 +1490,101 @@ section {
   }
 
   .brain-stage {
-    height: 350px;
+    height: 370px;
     margin-top: 0;
   }
 
-  .brain-label {
+  .brain-annotation {
     font-size: 7px;
   }
 
-  .brain-caption {
+  .brain-footnote {
     display: none;
   }
 
-  .section-title {
-    font-size: clamp(40px, 10vw, 58px);
+  .section-heading {
+    font-size: clamp(39px, 10vw, 60px);
   }
 
-  .network-section,
+  .network,
   .activations,
   .domination,
   .intelligence,
-  .audiences,
-  .final-cta {
+  .partners,
+  .final {
     padding: 75px 0;
   }
 
-  .network-visual {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .manifesto-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
   }
 
-  .network-visual::before {
+  .manifesto-item {
+    font-size: 9px;
+  }
+
+  .network-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .network-diagram::before {
     display: none;
   }
 
-  .network-node {
-    min-height: auto;
-    padding: 30px;
+  .network-card {
+    padding: 32px;
   }
 
-  .node-icon {
-    margin-bottom: 30px;
+  .network-icon {
+    margin-bottom: 35px;
   }
 
-  .network-statement {
+  .network-summary {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .activation-row {
+  .activation {
     grid-template-columns: 35px 1fr 25px;
     gap: 10px;
     padding: 30px 0;
   }
 
-  .activation-name {
+  .activation h3 {
     font-size: 28px;
   }
 
-  .activation-description {
+  .activation p {
     font-size: 14px;
   }
 
-  .domination .section-title {
-    font-size: clamp(44px, 10vw, 65px);
+  .domination .section-heading {
+    font-size: clamp(44px, 10vw, 68px);
   }
 
-  .channel-grid {
+  .domination-grid {
     grid-template-columns: 1fr;
   }
 
-  .channel {
-    padding: 30px;
-  }
-
-  .channel-number {
-    margin-bottom: 20px;
+  .domination-card {
+    padding: 32px;
   }
 
   .intelligence-flow {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .flow-item {
-    min-height: 130px;
+  .intelligence-step {
+    min-height: 135px;
   }
 
-  .flow-item small {
-    margin-bottom: 35px;
+  .intelligence-step small {
+    margin-bottom: 40px;
   }
 
-  .flow-item strong {
+  .intelligence-step strong {
     font-size: 14px;
   }
 
@@ -1440,25 +1593,21 @@ section {
     gap: 15px;
   }
 
-  .audience-grid {
+  .partner-grid {
     grid-template-columns: 1fr;
   }
 
-  .audience-card {
+  .partner-card {
     min-height: auto;
     padding: 40px 28px;
   }
 
-  .audience-card h3 {
+  .partner-card h3 {
     margin-top: 35px;
   }
 
-  .final-cta h2 {
+  .final h2 {
     font-size: clamp(60px, 12vw, 90px);
-  }
-
-  .final-cta p {
-    font-size: 17px;
   }
 
   .final-actions {
@@ -1468,7 +1617,7 @@ section {
 
   .footer-main {
     grid-template-columns: 1fr;
-    gap: 45px;
+    gap: 50px;
   }
 
   .footer-bottom {
@@ -1480,15 +1629,15 @@ section {
 @media(max-width: 390px) {
 
   .hero h1 {
-    font-size: 50px;
+    font-size: 49px;
   }
 
-  .section-title {
+  .section-heading {
     font-size: 37px;
   }
 
   .brain-stage {
-    height: 300px;
+    height: 320px;
   }
 
 }
@@ -1514,41 +1663,46 @@ section {
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- ======================================================
+<!-- =====================================================
      NAVIGATION
-====================================================== -->
+===================================================== -->
 
-<header class="site-header">
+<header class="header">
 
-  <div class="container nav-inner">
+  <div class="container nav">
 
-    <a href="#home" class="brand" aria-label="GK3 Home">
+    <a href="#home" class="logo-group" aria-label="GK3 Home">
 
-      <span class="brand-mark">GK<span>3</span></span>
+      <div class="logo">
+        GK<span>3</span>
+      </div>
 
-      <span class="brand-label">
+      <div class="logo-divider"></div>
+
+      <div class="logo-description">
         MARKETING &amp;<br>
         INTELLIGENCE
-      </span>
+      </div>
 
     </a>
 
-    <nav class="desktop-nav" aria-label="Main navigation">
+    <nav class="nav-links" aria-label="Main navigation">
 
-      <a href="#about">THE NETWORK</a>
+      <a href="#network">THE NETWORK</a>
       <a href="#activations">ACTIVATIONS</a>
       <a href="#intelligence">INTELLIGENCE</a>
       <a href="#partners">PARTNERS</a>
 
       <a
+        class="btn btn-gold"
         href="https://tally.so/r/m6glkk"
         target="_blank"
-        rel="noopener noreferrer"
-        class="button button-gold">
+        rel="noopener noreferrer">
         JOIN THE NETWORK ↗
       </a>
 
@@ -1574,16 +1728,16 @@ section {
     id="mobile-navigation"
     aria-label="Mobile navigation">
 
-    <a href="#about">THE NETWORK</a>
+    <a href="#network">THE NETWORK</a>
     <a href="#activations">ACTIVATIONS</a>
     <a href="#intelligence">INTELLIGENCE</a>
     <a href="#partners">PARTNERS</a>
 
     <a
+      class="btn btn-gold"
       href="https://tally.so/r/m6glkk"
       target="_blank"
-      rel="noopener noreferrer"
-      class="button button-gold">
+      rel="noopener noreferrer">
       JOIN THE NETWORK ↗
     </a>
 
@@ -1593,14 +1747,11 @@ section {
 
 <main>
 
-<!-- ======================================================
+<!-- =====================================================
      HERO
-====================================================== -->
+===================================================== -->
 
 <section class="hero" id="home">
-
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-glow" aria-hidden="true"></div>
 
   <div class="container hero-inner">
 
@@ -1615,7 +1766,7 @@ section {
         <span>TOGETHER.</span>
       </h1>
 
-      <div class="hero-subtitle">
+      <div class="hero-statement">
         The Intelligence of Connection.
       </div>
 
@@ -1629,46 +1780,46 @@ section {
       <div class="hero-actions">
 
         <a
+          class="btn btn-gold"
           href="https://tally.so/r/m6glkk"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button button-gold">
+          rel="noopener noreferrer">
           JOIN THE NETWORK ↗
         </a>
 
-        <a href="#about" class="button button-outline">
+        <a class="btn btn-outline" href="#network">
           EXPLORE GK3 ↓
         </a>
 
       </div>
 
-      <div class="hero-location">
+      <div class="hero-bottom">
         CHARLESTON, SOUTH CAROLINA · INITIAL MARKET
       </div>
 
     </div>
 
-    <!-- GOLD BRAIN VISUAL -->
+    <div
+      class="brain-stage"
+      role="img"
+      aria-label="Animated three-dimensional gold neural network forming a brain, symbolizing connected marketing intelligence">
 
-    <div class="brain-stage" aria-label="Animated gold neural network illustration representing connected intelligence">
-
-      <div class="brain-orbit" aria-hidden="true"></div>
+      <div class="brain-ring" aria-hidden="true"></div>
 
       <canvas
-        id="gold-brain"
-        class="brain-canvas"
+        id="brainCanvas"
         aria-hidden="true">
       </canvas>
 
-      <div class="brain-label top">
+      <div class="brain-annotation top" aria-hidden="true">
         CONNECTED INTELLIGENCE
       </div>
 
-      <div class="brain-label bottom">
+      <div class="brain-annotation bottom" aria-hidden="true">
         NETWORK / 03
       </div>
 
-      <div class="brain-caption">
+      <div class="brain-footnote" aria-hidden="true">
         MARKETING × CONNECTION × INTELLIGENCE
       </div>
 
@@ -1678,25 +1829,53 @@ section {
 
 </section>
 
-<!-- ======================================================
-     NETWORK
-====================================================== -->
+<!-- =====================================================
+     BRAND MANIFESTO
+===================================================== -->
 
-<section class="network-section" id="about">
+<div class="manifesto">
+
+  <div class="container manifesto-inner">
+
+    <div class="manifesto-item">
+      SPONSORED GROWTH NETWORKS
+    </div>
+
+    <div class="manifesto-divider"></div>
+
+    <div class="manifesto-item">
+      REAL-WORLD DISTRIBUTION
+    </div>
+
+    <div class="manifesto-divider"></div>
+
+    <div class="manifesto-item">
+      CONNECTED INTELLIGENCE
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =====================================================
+     NETWORK MODEL
+===================================================== -->
+
+<section class="network" id="network">
 
   <div class="container">
 
-    <div class="network-header reveal">
+    <div class="network-heading reveal">
 
       <div>
 
-        <div class="eyebrow dark-gold">
+        <div class="eyebrow gold-dark">
           THE GK3 MODEL
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-heading">
           THREE PARTNERS.<br>
-          <span class="dark-gold">ONE NETWORK.</span>
+          <span class="gold-dark">ONE NETWORK.</span>
         </h2>
 
       </div>
@@ -1704,37 +1883,41 @@ section {
       <p class="section-copy">
         GK3 is a sponsored growth network connecting
         local businesses with complementary advertisers.
-        Businesses contribute approved customer touchpoints.
-        Sponsors fund marketing campaigns.
+        Business partners contribute approved customer
+        touchpoints. Sponsors fund marketing campaigns.
         GK3 coordinates the partnership.
       </p>
 
     </div>
 
-    <div class="network-visual">
+    <div class="network-diagram">
 
-      <article class="network-node reveal">
+      <article class="network-card reveal">
 
-        <div class="node-icon">01</div>
+        <div class="network-icon">01</div>
 
-        <div class="node-index">DISTRIBUTION</div>
+        <div class="network-label">
+          DISTRIBUTION
+        </div>
 
         <h3>BUSINESS PARTNERS</h3>
 
         <p>
-          Restaurants and other local businesses provide
-          approved customer touchpoints while gaining
-          access to sponsor-funded marketing, social growth,
+          Participating businesses provide approved
+          customer touchpoints while gaining access
+          to sponsor-funded marketing, social growth,
           loyalty initiatives, and engagement opportunities.
         </p>
 
       </article>
 
-      <article class="network-node center reveal">
+      <article class="network-card featured reveal">
 
-        <div class="node-icon">03</div>
+        <div class="network-icon">03</div>
 
-        <div class="node-index">CONNECTION</div>
+        <div class="network-label">
+          CONNECTION
+        </div>
 
         <h3>GK3</h3>
 
@@ -1747,11 +1930,13 @@ section {
 
       </article>
 
-      <article class="network-node reveal">
+      <article class="network-card reveal">
 
-        <div class="node-icon">02</div>
+        <div class="network-icon">02</div>
 
-        <div class="node-index">SPONSORSHIP</div>
+        <div class="network-label">
+          SPONSORSHIP
+        </div>
 
         <h3>SPONSORS</h3>
 
@@ -1766,19 +1951,19 @@ section {
 
     </div>
 
-    <div class="network-statement reveal">
+    <div class="network-summary reveal">
 
       <p>
         Sponsorship funds the opportunity.<br>
         Distribution creates the connection.<br>
-        <span>Everyone has the potential to grow.</span>
+        <span class="gold-dark">Intelligence strengthens the network.</span>
       </p>
 
       <a
+        class="btn btn-black"
         href="https://tally.so/r/m6glkk"
         target="_blank"
-        rel="noopener noreferrer"
-        class="button button-dark">
+        rel="noopener noreferrer">
         JOIN THE NETWORK ↗
       </a>
 
@@ -1788,25 +1973,25 @@ section {
 
 </section>
 
-<!-- ======================================================
+<!-- =====================================================
      ACTIVATIONS
-====================================================== -->
+===================================================== -->
 
 <section class="activations" id="activations">
 
   <div class="container">
 
-    <div class="activations-header reveal">
+    <div class="activations-intro reveal">
 
       <div>
 
-        <div class="eyebrow dark-gold">
+        <div class="eyebrow gold-dark">
           GK3 ACTIVATIONS
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-heading">
           REAL-WORLD REACH.<br>
-          <span class="dark-gold">MEASURABLE ACTION.</span>
+          <span class="gold-dark">MEASURABLE ACTION.</span>
         </h2>
 
       </div>
@@ -1822,15 +2007,13 @@ section {
 
     <div class="activation-list">
 
-      <article class="activation-row reveal">
+      <article class="activation reveal">
 
         <div class="activation-index">01</div>
 
-        <h3 class="activation-name">
-          GK3 COUNTER
-        </h3>
+        <h3>GK3 COUNTER</h3>
 
-        <p class="activation-description">
+        <p>
           Sponsored in-store social growth stations
           combining live follower-counter displays,
           QR-enabled rewards, and customer
@@ -1841,16 +2024,14 @@ section {
 
       </article>
 
-      <article class="activation-row reveal">
+      <article class="activation reveal">
 
         <div class="activation-index">02</div>
 
-        <h3 class="activation-name">
-          GK3 REACH
-        </h3>
+        <h3>GK3 REACH</h3>
 
-        <p class="activation-description">
-          Sponsored packaging, QR stickers, and other
+        <p>
+          Sponsored packaging, QR stickers, and
           physical touchpoints that extend campaigns
           into customers' homes and communities.
         </p>
@@ -1859,15 +2040,13 @@ section {
 
       </article>
 
-      <article class="activation-row reveal">
+      <article class="activation reveal">
 
         <div class="activation-index">03</div>
 
-        <h3 class="activation-name">
-          GK3 ENGAGE
-        </h3>
+        <h3>GK3 ENGAGE</h3>
 
-        <p class="activation-description">
+        <p>
           Sponsored customer reactivation and loyalty
           campaigns delivered through participating
           businesses' approved, permission-based
@@ -1884,19 +2063,19 @@ section {
 
 </section>
 
-<!-- ======================================================
+<!-- =====================================================
      MARKET DOMINATION
-====================================================== -->
+===================================================== -->
 
 <section class="domination" id="market-domination">
 
-  <div class="container domination-inner">
+  <div class="container domination-content">
 
     <div class="eyebrow gold reveal">
       GK3 MARKET DOMINATION
     </div>
 
-    <h2 class="section-title reveal">
+    <h2 class="section-heading reveal">
       THREE CHANNELS.<br>
       ONE MARKET.<br>
       <span class="gold">MAXIMUM IMPACT.</span>
@@ -1904,18 +2083,17 @@ section {
 
     <p class="section-copy light reveal">
       Market Domination combines Counter, Reach, and Engage
-      into a coordinated local sponsorship campaign—
-      connecting physical visibility, digital interaction,
-      and customer engagement through one integrated strategy.
+      into a coordinated local sponsorship campaign.
+      Physical visibility, digital interaction, and
+      customer engagement work together through
+      one integrated strategy.
     </p>
 
-    <div class="channel-grid reveal">
+    <div class="domination-grid reveal">
 
-      <div class="channel">
+      <div class="domination-card">
 
-        <div class="channel-number">
-          CHANNEL 01
-        </div>
+        <small>CHANNEL 01</small>
 
         <h3>COUNTER</h3>
 
@@ -1926,11 +2104,9 @@ section {
 
       </div>
 
-      <div class="channel">
+      <div class="domination-card">
 
-        <div class="channel-number">
-          CHANNEL 02
-        </div>
+        <small>CHANNEL 02</small>
 
         <h3>REACH</h3>
 
@@ -1941,11 +2117,9 @@ section {
 
       </div>
 
-      <div class="channel">
+      <div class="domination-card">
 
-        <div class="channel-number">
-          CHANNEL 03
-        </div>
+        <small>CHANNEL 03</small>
 
         <h3>ENGAGE</h3>
 
@@ -1959,10 +2133,10 @@ section {
     </div>
 
     <a
+      class="btn btn-gold"
       href="https://tally.so/r/m6glkk"
       target="_blank"
-      rel="noopener noreferrer"
-      class="button button-gold">
+      rel="noopener noreferrer">
       EXPLORE SPONSORSHIP ↗
     </a>
 
@@ -1970,25 +2144,25 @@ section {
 
 </section>
 
-<!-- ======================================================
+<!-- =====================================================
      INTELLIGENCE
-====================================================== -->
+===================================================== -->
 
 <section class="intelligence" id="intelligence">
 
   <div class="container">
 
-    <div class="intelligence-header reveal">
+    <div class="intelligence-intro reveal">
 
       <div>
 
-        <div class="eyebrow dark-gold">
+        <div class="eyebrow gold-dark">
           GK3 INTELLIGENCE
         </div>
 
-        <h2 class="section-title">
+        <h2 class="section-heading">
           EVERY INTERACTION<br>
-          <span class="dark-gold">TELLS A STORY.</span>
+          <span class="gold-dark">TELLS A STORY.</span>
         </h2>
 
       </div>
@@ -2004,32 +2178,32 @@ section {
 
     <div class="intelligence-flow reveal">
 
-      <div class="flow-item">
+      <div class="intelligence-step">
         <small>01</small>
         <strong>ATTENTION</strong>
       </div>
 
-      <div class="flow-item">
+      <div class="intelligence-step">
         <small>02</small>
         <strong>SCAN</strong>
       </div>
 
-      <div class="flow-item">
+      <div class="intelligence-step">
         <small>03</small>
         <strong>ENGAGE</strong>
       </div>
 
-      <div class="flow-item">
+      <div class="intelligence-step">
         <small>04</small>
         <strong>REWARD</strong>
       </div>
 
-      <div class="flow-item">
+      <div class="intelligence-step">
         <small>05</small>
         <strong>INTELLIGENCE</strong>
       </div>
 
-      <div class="flow-item">
+      <div class="intelligence-step">
         <small>06</small>
         <strong>GROWTH</strong>
       </div>
@@ -2058,23 +2232,23 @@ section {
 
 </section>
 
-<!-- ======================================================
-     SPONSORS & BUSINESS PARTNERS
-====================================================== -->
+<!-- =====================================================
+     PARTNERS
+===================================================== -->
 
-<section class="audiences" id="partners">
+<section class="partners" id="partners">
 
   <div class="container">
 
-    <div class="audiences-header reveal">
+    <div class="partners-intro reveal">
 
-      <div class="eyebrow dark-gold">
+      <div class="eyebrow gold-dark">
         OPPORTUNITIES
       </div>
 
-      <h2 class="section-title">
+      <h2 class="section-heading">
         BETTER TOGETHER.<br>
-        <span class="dark-gold">BY DESIGN.</span>
+        <span class="gold-dark">BY DESIGN.</span>
       </h2>
 
       <p class="section-copy">
@@ -2085,9 +2259,9 @@ section {
 
     </div>
 
-    <div class="audience-grid">
+    <div class="partner-grid">
 
-      <article class="audience-card dark reveal" id="sponsors">
+      <article class="partner-card dark reveal" id="sponsors">
 
         <div class="eyebrow">
           FOR SPONSORS
@@ -2105,7 +2279,7 @@ section {
           customer touchpoints.
         </p>
 
-        <ul class="benefits">
+        <ul class="partner-benefits">
           <li>Locally targeted campaign opportunities</li>
           <li>Physical and digital customer touchpoints</li>
           <li>QR-enabled engagement and rewards</li>
@@ -2113,16 +2287,16 @@ section {
         </ul>
 
         <a
+          class="btn btn-gold"
           href="https://tally.so/r/m6glkk"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button button-gold">
+          rel="noopener noreferrer">
           BECOME A SPONSOR ↗
         </a>
 
       </article>
 
-      <article class="audience-card reveal" id="businesses">
+      <article class="partner-card reveal" id="businesses">
 
         <div class="eyebrow">
           FOR BUSINESS PARTNERS
@@ -2140,7 +2314,7 @@ section {
           and repeat engagement.
         </p>
 
-        <ul class="benefits">
+        <ul class="partner-benefits">
           <li>Sponsor-funded marketing opportunities</li>
           <li>Social media and customer engagement campaigns</li>
           <li>Potential packaging cost support</li>
@@ -2148,10 +2322,10 @@ section {
         </ul>
 
         <a
+          class="btn btn-black"
           href="https://tally.so/r/m6glkk"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button button-dark">
+          rel="noopener noreferrer">
           BECOME A PARTNER ↗
         </a>
 
@@ -2163,15 +2337,15 @@ section {
 
 </section>
 
-<!-- ======================================================
+<!-- =====================================================
      FINAL CTA
-====================================================== -->
+===================================================== -->
 
-<section class="final-cta" id="join">
+<section class="final" id="join">
 
   <div class="container">
 
-    <div class="final-cta-inner reveal">
+    <div class="final-content reveal">
 
       <div class="eyebrow">
         JOIN THE GK3 NETWORK
@@ -2192,14 +2366,14 @@ section {
       <div class="final-actions">
 
         <a
+          class="btn btn-black"
           href="https://tally.so/r/m6glkk"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button button-dark">
+          rel="noopener noreferrer">
           JOIN THE NETWORK ↗
         </a>
 
-        <a href="#about" class="button button-outline-dark">
+        <a class="btn btn-outline-dark" href="#network">
           EXPLORE THE MODEL ↑
         </a>
 
@@ -2213,9 +2387,9 @@ section {
 
 </main>
 
-<!-- ======================================================
+<!-- =====================================================
      FOOTER
-====================================================== -->
+===================================================== -->
 
 <footer class="footer">
 
@@ -2229,7 +2403,7 @@ section {
           GK<span>3</span>
         </a>
 
-        <div class="footer-brandline">
+        <div class="footer-category">
           MARKETING &amp; INTELLIGENCE
         </div>
 
@@ -2252,7 +2426,7 @@ section {
 
           <h3>EXPLORE</h3>
 
-          <a href="#about">The Network</a>
+          <a href="#network">The Network</a>
           <a href="#activations">Activations</a>
           <a href="#market-domination">Market Domination</a>
           <a href="#intelligence">Intelligence</a>
@@ -2296,482 +2470,664 @@ section {
 
 </footer>
 
-<!-- ======================================================
+<!-- =====================================================
      JAVASCRIPT
-====================================================== -->
+===================================================== -->
 
 <script>
 (function () {
-  'use strict';
+  "use strict";
 
-  /* =========================================
-     COPYRIGHT YEAR
-  ========================================= */
+  /* ===================================================
+     BASIC INTERACTIONS
+  =================================================== */
 
-  const yearElement = document.getElementById('year');
+  const year = document.getElementById("year");
 
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+  if (year) {
+    year.textContent = new Date().getFullYear();
   }
 
-  /* =========================================
-     MOBILE NAVIGATION
-  ========================================= */
-
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileNav = document.querySelector('.mobile-nav');
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
 
   function closeMenu() {
     if (!menuToggle || !mobileNav) return;
 
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Open navigation menu');
-    mobileNav.classList.remove('open');
-    document.body.classList.remove('menu-open');
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+    mobileNav.classList.remove("open");
+    document.body.classList.remove("menu-open");
   }
 
   if (menuToggle && mobileNav) {
 
-    menuToggle.addEventListener('click', function () {
+    menuToggle.addEventListener("click", function () {
 
-      const isOpen =
-        menuToggle.getAttribute('aria-expanded') === 'true';
+      const open =
+        menuToggle.getAttribute("aria-expanded") === "true";
 
-      menuToggle.setAttribute('aria-expanded', String(!isOpen));
-
+      menuToggle.setAttribute("aria-expanded", String(!open));
       menuToggle.setAttribute(
-        'aria-label',
-        isOpen ? 'Open navigation menu' : 'Close navigation menu'
+        "aria-label",
+        open ? "Open navigation menu" : "Close navigation menu"
       );
 
-      mobileNav.classList.toggle('open', !isOpen);
-      document.body.classList.toggle('menu-open', !isOpen);
+      mobileNav.classList.toggle("open", !open);
+      document.body.classList.toggle("menu-open", !open);
 
     });
 
-    mobileNav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMenu);
     });
 
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') closeMenu();
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeMenu();
     });
 
-    window.addEventListener('resize', function () {
+    window.addEventListener("resize", function () {
       if (window.innerWidth > 900) closeMenu();
     });
 
   }
 
-  /* =========================================
+  /* ===================================================
      SCROLL REVEALS
-  ========================================= */
-
-  const revealElements = document.querySelectorAll('.reveal');
+  =================================================== */
 
   const reducedMotion = window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
+    "(prefers-reduced-motion: reduce)"
   ).matches;
 
-  if (reducedMotion || !('IntersectionObserver' in window)) {
+  const reveals = document.querySelectorAll(".reveal");
 
-    revealElements.forEach(function (element) {
-      element.classList.add('visible');
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+
+    reveals.forEach(function (el) {
+      el.classList.add("visible");
     });
 
   } else {
 
-    const observer = new IntersectionObserver(function (entries) {
+    const revealObserver = new IntersectionObserver(function (entries) {
 
       entries.forEach(function (entry) {
 
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
         }
 
       });
 
     }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px 40px 0px'
+      threshold: .07,
+      rootMargin: "0px 0px 40px 0px"
     });
 
-    revealElements.forEach(function (element) {
-      observer.observe(element);
+    reveals.forEach(function (el) {
+      revealObserver.observe(el);
     });
 
   }
 
-  /* ======================================================
-     GOLD BRAIN — PARTICLE NEURAL NETWORK
+  /* ===================================================
+     GK3 GOLD BRAIN V3
 
-     A procedural, animated brain-shaped network.
+     Three-dimensional particle visualization.
 
-     - No external assets
-     - High-DPI canvas
-     - Pointer-responsive depth
+     Features:
+     - Two connected cerebral hemispheres
+     - Layered depth
+     - Neural pathways
+     - Curved cortical detailing
+     - Animated signals
+     - Pointer-responsive rotation
+     - Responsive canvas
      - Reduced-motion support
-     - Pauses when offscreen
-  ====================================================== */
+  =================================================== */
 
-  const canvas = document.getElementById('gold-brain');
+  const canvas = document.getElementById("brainCanvas");
 
   if (!canvas) return;
 
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
   if (!ctx) return;
 
   const stage = canvas.parentElement;
 
-  let width = 0;
-  let height = 0;
-  let dpr = 1;
-  let particles = [];
-  let connections = [];
+  let W = 1;
+  let H = 1;
+  let DPR = 1;
 
-  let animationFrame = null;
-  let active = true;
-  let frameTime = 0;
+  let nodes = [];
+  let edges = [];
+  let folds = [];
 
-  let pointerX = 0;
-  let pointerY = 0;
+  let frameId = null;
+  let running = false;
+  let visible = true;
+  let lastFrame = 0;
 
-  const GOLD = [213, 165, 46];
+  let mouseX = 0;
+  let mouseY = 0;
 
-  /* =========================================
-     BRAIN SHAPE
+  let currentX = 0;
+  let currentY = 0;
 
-     Normalized outline coordinates.
-     These form a stylized side-view brain
-     silhouette, with an upper cerebral mass,
-     lower temporal region, and brainstem.
-  ========================================= */
+  const GOLD = [215,169,54];
 
-  const brainOutline = [
-    [-0.88,-0.12],
-    [-0.91,-0.29],
-    [-0.85,-0.46],
-    [-0.70,-0.60],
-    [-0.52,-0.70],
-    [-0.28,-0.75],
-    [-0.04,-0.73],
-    [0.17,-0.69],
-    [0.40,-0.70],
-    [0.62,-0.62],
-    [0.78,-0.48],
-    [0.88,-0.28],
-    [0.90,-0.05],
-    [0.82,0.16],
-    [0.66,0.28],
-    [0.47,0.34],
-    [0.33,0.48],
-    [0.22,0.59],
-    [0.15,0.78],
-    [0.04,0.82],
-    [-0.03,0.72],
-    [0.01,0.53],
-    [-0.10,0.43],
-    [-0.28,0.39],
-    [-0.43,0.31],
-    [-0.60,0.30],
-    [-0.76,0.21],
-    [-0.85,0.06]
+  const TAU = Math.PI * 2;
+
+  /* ===================================================
+     HELPERS
+  =================================================== */
+
+  function rand(a,b) {
+    return a + Math.random() * (b-a);
+  }
+
+  function clamp(v,a,b) {
+    return Math.max(a, Math.min(b,v));
+  }
+
+  function distance3(a,b) {
+
+    const dx = a.x-b.x;
+    const dy = a.y-b.y;
+    const dz = a.z-b.z;
+
+    return Math.sqrt(dx*dx + dy*dy + dz*dz);
+
+  }
+
+  /*
+    Brain silhouette in normalized side-view space.
+
+    The shape deliberately emphasizes:
+    - broad frontal and upper cerebral mass
+    - curved rear hemisphere
+    - temporal region
+    - narrowing lower brainstem
+
+    The resulting geometry is stylized rather than
+    a medically precise anatomical model.
+  */
+
+  const outline = [
+
+    [-.94,-.11],
+    [-.94,-.30],
+    [-.86,-.48],
+    [-.71,-.63],
+    [-.52,-.73],
+    [-.29,-.79],
+    [-.05,-.78],
+    [.16,-.73],
+    [.39,-.72],
+    [.61,-.64],
+    [.79,-.49],
+    [.90,-.28],
+    [.93,-.06],
+    [.86,.15],
+    [.72,.30],
+    [.53,.38],
+    [.37,.42],
+    [.28,.55],
+    [.21,.73],
+    [.15,.88],
+    [.03,.89],
+    [-.03,.78],
+    [.00,.60],
+    [-.12,.49],
+    [-.31,.43],
+    [-.48,.35],
+    [-.66,.30],
+    [-.82,.17],
+    [-.91,.04]
+
   ];
 
-  function pointInsidePolygon(x, y, polygon) {
+  function insidePolygon(x,y) {
 
     let inside = false;
 
     for (
-      let i = 0, j = polygon.length - 1;
-      i < polygon.length;
-      j = i++
+      let i=0,j=outline.length-1;
+      i<outline.length;
+      j=i++
     ) {
 
-      const xi = polygon[i][0];
-      const yi = polygon[i][1];
-      const xj = polygon[j][0];
-      const yj = polygon[j][1];
+      const xi=outline[i][0];
+      const yi=outline[i][1];
 
-      const intersects =
-        ((yi > y) !== (yj > y)) &&
-        (x < (xj - xi) * (y - yi) / ((yj - yi) || 0.00001) + xi);
+      const xj=outline[j][0];
+      const yj=outline[j][1];
 
-      if (intersects) inside = !inside;
+      const intersect =
+        ((yi>y)!==(yj>y)) &&
+        (x<(xj-xi)*(y-yi)/((yj-yi)||.00001)+xi);
+
+      if (intersect) inside=!inside;
 
     }
 
     return inside;
+
   }
 
-  function random(min, max) {
-    return min + Math.random() * (max - min);
-  }
+  /* ===================================================
+     CREATE BRAIN GEOMETRY
+  =================================================== */
 
   function createBrain() {
 
-    particles = [];
-    connections = [];
+    nodes = [];
+    edges = [];
+    folds = [];
 
-    const mobile = width < 450;
+    const mobile = W < 450;
 
-    const count = mobile ? 235 : 430;
-
-    const scale = Math.min(width * .51, height * .52);
-
-    const centerX = width * .51;
-    const centerY = height * .48;
+    const count = mobile ? 420 : 780;
 
     let attempts = 0;
 
-    while (particles.length < count && attempts < count * 30) {
+    /*
+      Nodes occupy a volumetric brain shape.
+
+      Each x/y position receives a depth coordinate.
+      Nodes closer to the camera appear brighter
+      and slightly larger.
+    */
+
+    while (nodes.length < count && attempts < count*45) {
 
       attempts++;
 
-      const nx = random(-.96, .96);
-      const ny = random(-.84, .86);
+      const x = rand(-.96,.96);
+      const y = rand(-.83,.90);
 
-      if (!pointInsidePolygon(nx, ny, brainOutline)) continue;
+      if (!insidePolygon(x,y)) continue;
 
       /*
-        Three softly differentiated clusters:
-        business partners, GK3, sponsors.
+        Elliptical depth envelope.
+
+        More volume near the center.
+        Narrower near the outline.
       */
 
-      let cluster = 0;
-
-      if (nx > .24) cluster = 2;
-      else if (nx > -.30) cluster = 1;
-
-      const depth = random(-1, 1);
-
-      const curve = Math.sqrt(
-        Math.max(0, 1 - Math.min(1, nx * nx * .45 + ny * ny * .35))
+      const envelope = Math.sqrt(
+        Math.max(
+          .05,
+          1 - .55*x*x - .65*y*y
+        )
       );
 
-      const px = centerX + nx * scale;
-      const py = centerY + ny * scale * .93;
+      const z = rand(-1,1)*envelope*.72;
 
-      particles.push({
-        x: px,
-        y: py,
-        nx: nx,
-        ny: ny,
-        depth: depth,
-        curve: curve,
-        cluster: cluster,
-        size: random(.65, 1.9),
-        phase: random(0, Math.PI * 2),
-        brightness: random(.4, 1),
-        speed: random(.45, 1.25)
-      });
+      /*
+        Cortical folds introduce subtle ripples
+        into the front surface.
+      */
+
+      const wrinkle =
+        Math.sin(x*21 + y*9) *
+        Math.cos(y*19 - x*7) *
+        .045;
+
+      const node = {
+
+        x:x,
+        y:y,
+        z:z+wrinkle,
+
+        size:rand(.65,1.65),
+
+        glow:Math.random(),
+
+        phase:rand(0,TAU),
+
+        speed:rand(.4,1.3),
+
+        cluster:
+          x<-.28 ? 0 :
+          x<.25 ? 1 : 2
+
+      };
+
+      nodes.push(node);
 
     }
 
     /*
-      Connect nearby particles.
-      A spatial grid avoids checking every
-      possible pair across the whole brain.
+      Build a local three-dimensional graph.
+
+      Spatial hashing reduces connection checks.
     */
 
-    const cellSize = mobile ? 26 : 31;
+    const cell = .17;
     const grid = new Map();
 
-    function key(cx, cy) {
-      return cx + ',' + cy;
+    function key(x,y,z) {
+      return x+","+y+","+z;
     }
 
-    particles.forEach(function (p, index) {
+    function cellCoords(n) {
+      return [
+        Math.floor(n.x/cell),
+        Math.floor(n.y/cell),
+        Math.floor(n.z/cell)
+      ];
+    }
 
-      const gx = Math.floor(p.x / cellSize);
-      const gy = Math.floor(p.y / cellSize);
+    nodes.forEach(function(n,i) {
 
-      const k = key(gx, gy);
+      const c=cellCoords(n);
+      const k=key(c[0],c[1],c[2]);
 
-      if (!grid.has(k)) grid.set(k, []);
+      if(!grid.has(k)) grid.set(k,[]);
 
-      grid.get(k).push(index);
+      grid.get(k).push(i);
 
     });
 
-    const maxDistance = mobile ? 31 : 40;
+    const maxDist = mobile ? .18 : .155;
 
-    particles.forEach(function (p, i) {
+    nodes.forEach(function(n,i) {
 
-      const gx = Math.floor(p.x / cellSize);
-      const gy = Math.floor(p.y / cellSize);
+      const c=cellCoords(n);
 
-      let links = 0;
+      let links=0;
 
-      for (let ox = -2; ox <= 2; ox++) {
-        for (let oy = -2; oy <= 2; oy++) {
+      for(let dx=-1;dx<=1;dx++) {
+        for(let dy=-1;dy<=1;dy++) {
+          for(let dz=-1;dz<=1;dz++) {
 
-          const nearby = grid.get(key(gx + ox, gy + oy));
+            const nearby=grid.get(
+              key(c[0]+dx,c[1]+dy,c[2]+dz)
+            );
 
-          if (!nearby) continue;
+            if(!nearby) continue;
 
-          for (const j of nearby) {
+            for(const j of nearby) {
 
-            if (j <= i || links >= 5) continue;
+              if(j<=i || links>=5) continue;
 
-            const q = particles[j];
+              const other=nodes[j];
 
-            const dx = p.x - q.x;
-            const dy = p.y - q.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
+              const d=distance3(n,other);
 
-            if (dist < maxDistance && dist > 5) {
+              if(d<maxDist && d>.035) {
 
-              connections.push({
-                a: i,
-                b: j,
-                strength: 1 - dist / maxDistance,
-                phase: random(0, Math.PI * 2),
-                speed: random(.35, 1)
-              });
+                edges.push({
 
-              links++;
+                  a:i,
+                  b:j,
+
+                  strength:1-d/maxDist,
+
+                  phase:rand(0,TAU),
+
+                  speed:rand(.4,1.1)
+
+                });
+
+                links++;
+
+              }
 
             }
 
           }
-
         }
       }
 
     });
 
+    /*
+      Cortical contour curves.
+
+      These create the suggestion of the brain's
+      folded outer surface.
+    */
+
+    for(let row=0;row<13;row++) {
+
+      const points=[];
+
+      const yBase=-.60+row*.105;
+
+      for(let i=0;i<=85;i++) {
+
+        const x=-.89+i/85*1.77;
+
+        const y=
+          yBase +
+          Math.sin(x*13+row*.85)*.045 +
+          Math.sin(x*26-row*.7)*.022;
+
+        if(!insidePolygon(x,y)) continue;
+
+        const z=
+          .55 +
+          Math.sin(x*10+row)*.04;
+
+        points.push({x,y,z});
+
+      }
+
+      if(points.length>5) {
+        folds.push(points);
+      }
+
+    }
+
   }
 
-  function resizeBrain() {
+  /* ===================================================
+     PROJECTION
 
-    const rect = canvas.getBoundingClientRect();
+     Simulated 3D camera:
+     - small Y rotation
+     - small X rotation
+     - perspective depth
+  =================================================== */
 
-    width = Math.max(1, rect.width);
-    height = Math.max(1, rect.height);
+  function project(n,time) {
 
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const rotY =
+      (reducedMotion ? 0 : Math.sin(time*.00016)*.13)
+      + currentX*.20;
 
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
+    const rotX =
+      (reducedMotion ? 0 : Math.cos(time*.00012)*.045)
+      + currentY*.12;
 
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const cy=Math.cos(rotY);
+    const sy=Math.sin(rotY);
 
-    createBrain();
-    drawBrain(frameTime);
+    const cx=Math.cos(rotX);
+    const sx=Math.sin(rotX);
 
-  }
+    const x1=n.x*cy+n.z*sy;
+    const z1=-n.x*sy+n.z*cy;
 
-  function project(p, time) {
+    const y2=n.y*cx-z1*sx;
+    const z2=n.y*sx+z1*cx;
 
-    const drift = reducedMotion
-      ? 0
-      : Math.sin(time * .00022 + p.phase) * 1.7;
+    const perspective=2.9/(2.9-z2*.32);
 
-    const parallaxX = pointerX * p.depth * 8;
-    const parallaxY = pointerY * p.depth * 6;
+    const scale=Math.min(W*.50,H*.53);
 
     return {
-      x: p.x + drift + parallaxX,
-      y: p.y + Math.cos(time * .0002 + p.phase) * (reducedMotion ? 0 : 1.2) + parallaxY
+
+      x:W*.51+x1*scale*perspective,
+
+      y:H*.49+y2*scale*perspective*.95,
+
+      z:z2,
+
+      perspective:perspective
+
     };
 
   }
 
-  function drawBrain(time) {
+  /* ===================================================
+     DRAWING
+  =================================================== */
 
-    ctx.clearRect(0, 0, width, height);
+  function draw(time) {
 
-    const centerX = width * .51;
-    const centerY = height * .48;
+    ctx.clearRect(0,0,W,H);
 
-    const radius = Math.min(width, height) * .40;
+    const cx=W*.51;
+    const cy=H*.49;
+
+    const radius=Math.min(W,H)*.46;
 
     /*
-      Background halo
+      Ambient gold illumination.
     */
 
-    const halo = ctx.createRadialGradient(
-      centerX,
-      centerY,
-      0,
-      centerX,
-      centerY,
-      radius * 1.4
+    const halo=ctx.createRadialGradient(
+      cx,cy,0,
+      cx,cy,radius*1.45
     );
 
-    halo.addColorStop(0, 'rgba(213,165,46,0.075)');
-    halo.addColorStop(.55, 'rgba(213,165,46,0.025)');
-    halo.addColorStop(1, 'rgba(213,165,46,0)');
+    halo.addColorStop(0,"rgba(215,169,54,.085)");
+    halo.addColorStop(.5,"rgba(215,169,54,.025)");
+    halo.addColorStop(1,"rgba(215,169,54,0)");
 
-    ctx.fillStyle = halo;
+    ctx.fillStyle=halo;
+
     ctx.beginPath();
-    ctx.arc(centerX, centerY, radius * 1.4, 0, Math.PI * 2);
+    ctx.arc(cx,cy,radius*1.45,0,TAU);
     ctx.fill();
 
     /*
-      Neural connections
+      Project all nodes once per frame.
     */
 
-    ctx.lineWidth = .65;
+    const projected=nodes.map(function(n) {
+      return project(n,time);
+    });
 
-    connections.forEach(function (connection) {
+    /*
+      Cortical contour detailing.
+    */
 
-      const p = particles[connection.a];
-      const q = particles[connection.b];
+    ctx.lineWidth=.7;
 
-      const a = project(p, time);
-      const b = project(q, time);
-
-      const pulse = reducedMotion
-        ? .5
-        : .5 + .5 * Math.sin(time * .001 * connection.speed + connection.phase);
-
-      const alpha = Math.min(
-        .38,
-        .045 + connection.strength * .15 + pulse * .065
-      );
-
-      ctx.strokeStyle = `rgba(${GOLD[0]},${GOLD[1]},${GOLD[2]},${alpha})`;
+    folds.forEach(function(fold,index) {
 
       ctx.beginPath();
-      ctx.moveTo(a.x, a.y);
-      ctx.lineTo(b.x, b.y);
+
+      let started=false;
+
+      fold.forEach(function(n) {
+
+        const p=project(n,time);
+
+        if(!started) {
+
+          ctx.moveTo(p.x,p.y);
+          started=true;
+
+        } else {
+
+          ctx.lineTo(p.x,p.y);
+
+        }
+
+      });
+
+      ctx.strokeStyle=
+        "rgba(215,169,54,"+
+        (.055+(index%3)*.015)+")";
+
       ctx.stroke();
 
     });
 
     /*
-      Signal pulses moving between connected nodes.
+      Neural connections.
+      Depth affects opacity.
     */
 
-    if (!reducedMotion) {
+    edges.forEach(function(e) {
 
-      const signalCount = Math.min(28, connections.length);
+      const a=projected[e.a];
+      const b=projected[e.b];
 
-      for (let i = 0; i < signalCount; i++) {
+      const depth=(a.z+b.z)*.5;
 
-        const connection = connections[
-          (i * 37) % connections.length
-        ];
+      const depthAlpha=clamp(
+        (depth+1.2)/2.4,
+        .15,
+        1
+      );
 
-        if (!connection) continue;
+      const pulse=reducedMotion
+        ? .5
+        : .5+.5*Math.sin(time*.001*e.speed+e.phase);
 
-        const p = project(particles[connection.a], time);
-        const q = project(particles[connection.b], time);
+      const alpha=clamp(
+        (.055+e.strength*.20+pulse*.045)*depthAlpha,
+        .025,
+        .35
+      );
 
-        const t = (
-          time * .00016 * (1 + (i % 3) * .25) + i * .17
-        ) % 1;
+      ctx.strokeStyle=
+        `rgba(${GOLD[0]},${GOLD[1]},${GOLD[2]},${alpha})`;
 
-        const x = p.x + (q.x - p.x) * t;
-        const y = p.y + (q.y - p.y) * t;
+      ctx.lineWidth=.55+(depthAlpha*.35);
 
-        ctx.fillStyle = 'rgba(241,205,114,.7)';
+      ctx.beginPath();
+
+      ctx.moveTo(a.x,a.y);
+      ctx.lineTo(b.x,b.y);
+
+      ctx.stroke();
+
+    });
+
+    /*
+      Animated information signals.
+    */
+
+    if(!reducedMotion && edges.length) {
+
+      const count=Math.min(45,edges.length);
+
+      for(let i=0;i<count;i++) {
+
+        const edge=edges[(i*43)%edges.length];
+
+        const a=projected[edge.a];
+        const b=projected[edge.b];
+
+        const t=(
+          time*.00015*(1+(i%4)*.18)+i*.173
+        )%1;
+
+        const x=a.x+(b.x-a.x)*t;
+        const y=a.y+(b.y-a.y)*t;
+
+        const depth=clamp(
+          ((a.z+b.z)*.5+1)/2,
+          .2,
+          1
+        );
+
+        ctx.fillStyle=
+          `rgba(243,215,139,${depth*.8})`;
+
         ctx.beginPath();
-        ctx.arc(x, y, 1.25, 0, Math.PI * 2);
+        ctx.arc(x,y,1.1,0,TAU);
         ctx.fill();
 
       }
@@ -2779,183 +3135,255 @@ section {
     }
 
     /*
-      Gold nodes
+      Draw nodes back-to-front.
     */
 
-    particles.forEach(function (p) {
+    const order=nodes.map(function(n,i) {
+      return i;
+    });
 
-      const point = project(p, time);
+    order.sort(function(a,b) {
+      return projected[a].z-projected[b].z;
+    });
 
-      const pulse = reducedMotion
-        ? .75
-        : .65 + .35 * Math.sin(time * .0012 * p.speed + p.phase);
+    order.forEach(function(i) {
 
-      const alpha = Math.min(
-        1,
-        (.38 + p.brightness * .48) * pulse
+      const n=nodes[i];
+      const p=projected[i];
+
+      const depth=clamp(
+        (p.z+1.1)/2.2,
+        .18,
+        1
       );
 
-      const size = p.size * (.8 + p.curve * .25);
+      const pulse=reducedMotion
+        ? .85
+        : .72+.28*Math.sin(
+            time*.0012*n.speed+n.phase
+          );
 
-      ctx.fillStyle = `rgba(241,205,114,${alpha})`;
+      const alpha=clamp(
+        (.32+n.glow*.65)*depth*pulse,
+        .10,
+        1
+      );
 
-      ctx.beginPath();
-      ctx.arc(point.x, point.y, size, 0, Math.PI * 2);
-      ctx.fill();
+      const size=n.size*
+        (.65+depth*.65)*
+        p.perspective;
 
       /*
-        Selected bright nodes receive a soft glow.
+        Small luminous halo on brighter nodes.
       */
 
-      if (p.brightness > .94) {
+      if(n.glow>.965 && depth>.5) {
 
-        ctx.fillStyle = `rgba(213,165,46,${alpha * .09})`;
+        ctx.fillStyle=
+          `rgba(215,169,54,${alpha*.11})`;
+
         ctx.beginPath();
-        ctx.arc(point.x, point.y, size * 5, 0, Math.PI * 2);
+        ctx.arc(p.x,p.y,size*6,0,TAU);
         ctx.fill();
 
       }
 
+      ctx.fillStyle=
+        `rgba(243,215,139,${alpha})`;
+
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,size,0,TAU);
+      ctx.fill();
+
     });
 
     /*
-      Subtle centerline suggests the brain's
-      two connected hemispheric regions.
+      A subtle central neural division.
     */
 
-    ctx.strokeStyle = 'rgba(213,165,46,.11)';
-    ctx.lineWidth = 1;
+    const p1=project({x:-.05,y:-.68,z:.57},time);
+    const p2=project({x:.08,y:-.25,z:.57},time);
+    const p3=project({x:-.04,y:.25,z:.57},time);
+    const p4=project({x:.06,y:.50,z:.50},time);
+
+    ctx.strokeStyle="rgba(243,215,139,.13)";
+    ctx.lineWidth=1;
 
     ctx.beginPath();
-    ctx.moveTo(centerX - radius * .05, centerY - radius * .85);
+    ctx.moveTo(p1.x,p1.y);
+
     ctx.bezierCurveTo(
-      centerX + radius * .13,
-      centerY - radius * .35,
-      centerX - radius * .18,
-      centerY + radius * .12,
-      centerX + radius * .06,
-      centerY + radius * .58
+      p2.x,p2.y,
+      p3.x,p3.y,
+      p4.x,p4.y
     );
+
     ctx.stroke();
 
   }
 
+  /* ===================================================
+     ANIMATION LOOP
+  =================================================== */
+
   function animate(time) {
 
-    if (!active) {
-      animationFrame = null;
+    if(!running) {
+      frameId=null;
       return;
     }
 
-    if (time - frameTime >= 30) {
-      frameTime = time;
-      drawBrain(time);
+    if(time-lastFrame>=30) {
+
+      lastFrame=time;
+
+      currentX+=(mouseX-currentX)*.045;
+      currentY+=(mouseY-currentY)*.045;
+
+      draw(time);
+
     }
 
-    animationFrame = requestAnimationFrame(animate);
+    frameId=requestAnimationFrame(animate);
 
   }
 
-  function startAnimation() {
+  function start() {
 
-    if (reducedMotion || animationFrame !== null || !active) return;
+    if(
+      reducedMotion ||
+      !visible ||
+      document.hidden ||
+      frameId!==null
+    ) return;
 
-    animationFrame = requestAnimationFrame(animate);
+    running=true;
+    frameId=requestAnimationFrame(animate);
 
   }
 
-  function stopAnimation() {
+  function stop() {
 
-    if (animationFrame !== null) {
-      cancelAnimationFrame(animationFrame);
-      animationFrame = null;
+    running=false;
+
+    if(frameId!==null) {
+      cancelAnimationFrame(frameId);
+      frameId=null;
     }
 
   }
 
-  /*
-    Pointer parallax.
-  */
+  /* ===================================================
+     RESIZE
+  =================================================== */
 
-  stage.addEventListener('pointermove', function (event) {
+  function resize() {
 
-    if (reducedMotion) return;
+    const rect=canvas.getBoundingClientRect();
 
-    const rect = stage.getBoundingClientRect();
+    W=Math.max(1,rect.width);
+    H=Math.max(1,rect.height);
 
-    pointerX = (
-      (event.clientX - rect.left) / rect.width - .5
-    ) * 2;
+    DPR=Math.min(window.devicePixelRatio||1,2);
 
-    pointerY = (
-      (event.clientY - rect.top) / rect.height - .5
-    ) * 2;
+    canvas.width=Math.round(W*DPR);
+    canvas.height=Math.round(H*DPR);
+
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+
+    createBrain();
+
+    draw(lastFrame);
+
+  }
+
+  /* ===================================================
+     POINTER INTERACTION
+  =================================================== */
+
+  stage.addEventListener("pointermove",function(event) {
+
+    if(reducedMotion) return;
+
+    const rect=stage.getBoundingClientRect();
+
+    mouseX=(
+      (event.clientX-rect.left)/rect.width-.5
+    )*2;
+
+    mouseY=(
+      (event.clientY-rect.top)/rect.height-.5
+    )*2;
 
   });
 
-  stage.addEventListener('pointerleave', function () {
-    pointerX = 0;
-    pointerY = 0;
+  stage.addEventListener("pointerleave",function() {
+
+    mouseX=0;
+    mouseY=0;
+
   });
 
-  /*
-    Pause rendering when the brain isn't visible.
-  */
+  /* ===================================================
+     VISIBILITY MANAGEMENT
+  =================================================== */
 
-  if ('IntersectionObserver' in window && !reducedMotion) {
+  if("IntersectionObserver" in window && !reducedMotion) {
 
-    const brainObserver = new IntersectionObserver(function (entries) {
+    const brainObserver=new IntersectionObserver(
+      function(entries) {
 
-      entries.forEach(function (entry) {
+        entries.forEach(function(entry) {
 
-        active = entry.isIntersecting && !document.hidden;
+          visible=entry.isIntersecting;
 
-        if (active) {
-          startAnimation();
-        } else {
-          stopAnimation();
-        }
+          if(visible) start();
+          else stop();
 
-      });
+        });
 
-    }, {
-      threshold: .05
-    });
+      },
+      {threshold:.05}
+    );
 
     brainObserver.observe(stage);
 
   }
 
-  document.addEventListener('visibilitychange', function () {
+  document.addEventListener("visibilitychange",function() {
 
-    if (document.hidden) {
-      active = false;
-      stopAnimation();
+    if(document.hidden) {
+      stop();
     } else {
-      active = true;
-      startAnimation();
+      start();
     }
 
   });
 
-  /*
-    Resize safely.
-  */
-
   let resizeTimer;
 
-  window.addEventListener('resize', function () {
+  window.addEventListener("resize",function() {
 
     clearTimeout(resizeTimer);
 
-    resizeTimer = setTimeout(resizeBrain, 120);
+    resizeTimer=setTimeout(function() {
+
+      resize();
+
+      if(!reducedMotion) start();
+
+    },150);
 
   });
 
-  resizeBrain();
+  /*
+    Initialize.
+  */
 
-  if (!reducedMotion) {
-    startAnimation();
+  resize();
+
+  if(!reducedMotion) {
+    start();
   }
 
 })();
