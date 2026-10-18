@@ -1,3393 +1,1690 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>GK3 — Marketing & Intelligence | Grow Together</title>
-
-<meta name="description" content="GK3 is a marketing and intelligence network connecting businesses and sponsors through coordinated, measurable growth partnerships.">
-
+<meta name="description" content="GK3 connects local businesses and sponsors through funded marketing partnerships, physical distribution, customer engagement, and campaign intelligence.">
 <meta name="theme-color" content="#080808">
-
 <meta property="og:type" content="website">
 <meta property="og:title" content="GK3 — Marketing & Intelligence">
-<meta property="og:description" content="The Intelligence of Connection. Sponsored Growth Networks. Grow Together.">
+<meta property="og:description" content="Sponsored Growth Networks. The Intelligence of Connection. Grow Together.">
 <meta property="og:url" content="https://g-k-3.com/">
-
 <link rel="canonical" href="https://g-k-3.com/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* =====================================================
-   GK3 V3 — CONNECTED INTELLIGENCE
-   DESIGN SYSTEM
-===================================================== */
-
-:root {
-  --black: #080808;
-  --black2: #101010;
-  --black3: #181818;
-
-  --white: #ffffff;
-  --cream: #f6f5f1;
-
-  --gold: #d7a936;
-  --gold-light: #f3d78b;
-  --gold-dark: #a77b16;
-
-  --gray: #777777;
-  --gray-light: #aaaaaa;
-
-  --border: #e7e5df;
-
-  --display: 'Manrope', sans-serif;
-  --body: 'DM Sans', sans-serif;
-
-  --max: 1280px;
+/* ======================================================
+   GK3 V4 — DESIGN SYSTEM
+====================================================== */
+:root{
+  --black:#080808;
+  --ink:#111110;
+  --dark:#151515;
+  --dark2:#1e1e1c;
+  --cream:#f6f4ee;
+  --paper:#fffefa;
+  --white:#fff;
+  --gold:#d8ad49;
+  --gold2:#f1d58d;
+  --gold3:#a67b22;
+  --muted:#77766f;
+  --line:#e5e2d9;
+  --font:'Manrope',sans-serif;
+  --body:'DM Sans',sans-serif;
+  --max:1300px;
 }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button,a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+::selection{background:var(--gold);color:#000}
+.container{width:min(90%,var(--max));margin:auto}
+section{position:relative}
+.gold{color:var(--gold)}
+.gold-dark{color:var(--gold3)}
+.eyebrow{display:flex;align-items:center;gap:12px;font:800 10px var(--font);letter-spacing:.19em;text-transform:uppercase}
+.eyebrow:before{content:"";width:26px;height:1px;background:currentColor;flex:none}
+.section-title{font:800 clamp(42px,6.1vw,86px)/1.07 var(--font);letter-spacing:-.075em;margin:25px 0}
+.section-copy{font-size:17px;line-height:1.85;color:#676660;max-width:650px}
+.section-copy.light{color:#aaa9a2}
+.micro{font:700 10px var(--font);letter-spacing:.14em;text-transform:uppercase}
+.concept-label{display:inline-flex;align-items:center;gap:8px;font:700 9px var(--font);letter-spacing:.12em;text-transform:uppercase;color:#858078}
+.concept-label:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:53px;padding:16px 24px;border:1px solid transparent;font:800 10px var(--font);letter-spacing:.12em;text-transform:uppercase;transition:transform .2s,background .2s,border-color .2s,color .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:#080808}
+.btn-gold:hover{background:var(--gold2)}
+.btn-dark{background:#101010;color:white}
+.btn-dark:hover{background:#333}
+.btn-outline{border-color:#595959;color:white}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-light-outline{border-color:#c7c2b6;color:#151515}
+.btn-light-outline:hover{background:#151515;color:white;border-color:#151515}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* ======================================================
+   NAV
+====================================================== */
+.header{position:sticky;top:0;z-index:100;background:rgba(8,8,8,.96);border-bottom:1px solid #242424;backdrop-filter:blur(15px)}
+.nav{min-height:83px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo-group{display:flex;align-items:center;gap:19px}
+.logo{font:800 40px/1 var(--font);letter-spacing:-.12em;color:white}
+.logo span{color:var(--gold)}
+.logo-divider{width:1px;height:34px;background:#554628}
+.logo-desc{color:var(--gold);font:800 9px/1.6 var(--font);letter-spacing:.16em}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links>a:not(.btn){color:#c7c7c7;font:800 10px var(--font);letter-spacing:.07em}
+.nav-links>a:not(.btn):hover{color:var(--gold)}
+.nav-links .btn{min-height:43px;padding:12px 17px;font-size:9px}
+.menu-toggle{display:none;width:44px;height:44px;border:1px solid #555;background:transparent;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.menu-toggle span{width:19px;height:2px;background:white}
+.mobile-nav{display:none}
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
-body {
-  margin: 0;
-  font-family: var(--body);
-  color: var(--black);
-  background: white;
-  -webkit-font-smoothing: antialiased;
-}
-
-body.menu-open {
-  overflow: hidden;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 4px;
-}
-
-::selection {
-  background: var(--gold);
-  color: black;
-}
-
-.container {
-  width: min(90%, var(--max));
-  margin: auto;
-}
-
-section {
-  position: relative;
-}
-
-.gold {
-  color: var(--gold);
-}
-
-.gold-dark {
-  color: var(--gold-dark);
-}
-
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-}
-
-.eyebrow::before {
-  content: "";
-  width: 26px;
-  height: 1px;
-  background: currentColor;
-}
-
-.section-heading {
-  font-family: var(--display);
-  font-size: clamp(42px, 6vw, 82px);
-  line-height: 1.07;
-  letter-spacing: -.07em;
-  font-weight: 800;
-  margin: 26px 0;
-}
-
-.section-copy {
-  max-width: 690px;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #666;
-}
-
-.section-copy.light {
-  color: #aaa;
-}
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-
-  min-height: 54px;
-  padding: 17px 25px;
-
-  border: 1px solid transparent;
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .13em;
-
-  text-transform: uppercase;
-  transition: .25s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-.btn-gold {
-  background: var(--gold);
-  color: black;
-}
-
-.btn-gold:hover {
-  background: var(--gold-light);
-  box-shadow: 0 8px 35px rgba(215,169,54,.17);
-}
-
-.btn-outline {
-  border-color: #555;
-  color: white;
-}
-
-.btn-outline:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-.btn-black {
-  background: black;
-  color: white;
-}
-
-.btn-black:hover {
-  background: #333;
-}
-
-.btn-outline-dark {
-  border-color: #aaa;
-  color: black;
-}
-
-.btn-outline-dark:hover {
-  background: black;
-  color: white;
-  border-color: black;
-}
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  background: rgba(8,8,8,.96);
-  border-bottom: 1px solid #242424;
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  min-height: 86px;
-  gap: 25px;
-}
-
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  color: white;
-  font-family: var(--display);
-  font-size: 40px;
-  font-weight: 800;
-  letter-spacing: -.12em;
-  line-height: 1;
-}
-
-.logo span {
-  color: var(--gold);
-}
-
-.logo-divider {
-  width: 1px;
-  height: 34px;
-  background: #49402b;
-}
-
-.logo-description {
-  color: var(--gold);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .16em;
-  line-height: 1.65;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.nav-links > a:not(.btn) {
-  color: #ccc;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .07em;
-  transition: color .2s;
-}
-
-.nav-links > a:not(.btn):hover {
-  color: var(--gold);
-}
-
-.nav-links .btn {
-  min-height: 43px;
-  padding: 13px 17px;
-  font-size: 9px;
-}
-
-.menu-toggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-
-  width: 45px;
-  height: 45px;
-
-  background: transparent;
-  border: 1px solid #444;
-}
-
-.menu-toggle span {
-  width: 20px;
-  height: 2px;
-  background: white;
-  transition: .2s;
-}
-
-.menu-toggle[aria-expanded="true"] span:first-child {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle[aria-expanded="true"] span:last-child {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.mobile-nav {
-  display: none;
-}
-
-/* =====================================================
+/* ======================================================
    HERO
-===================================================== */
-
-.hero {
-  position: relative;
-  min-height: 820px;
-
-  display: flex;
-  align-items: center;
-
-  background: #080808;
-  color: white;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(rgba(215,169,54,.027) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(215,169,54,.027) 1px, transparent 1px);
-
-  background-size: 70px 70px;
-
-  mask-image: linear-gradient(90deg, transparent, black);
-  -webkit-mask-image: linear-gradient(90deg, transparent, black);
-
-  pointer-events: none;
-}
-
-.hero::after {
-  content: "";
-
-  position: absolute;
-  width: 850px;
-  height: 850px;
-
-  right: -220px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  background: radial-gradient(
-    circle,
-    rgba(215,169,54,.10),
-    rgba(215,169,54,.025) 40%,
-    transparent 70%
-  );
-
-  pointer-events: none;
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 2;
-
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  align-items: center;
-
-  min-height: 820px;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 5;
-  padding: 110px 0;
-}
-
-.hero-kicker {
-  color: var(--gold);
-
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .23em;
-
-  margin-bottom: 37px;
-}
-
-.hero-kicker::before {
-  content: "";
-
-  display: inline-block;
-
-  width: 30px;
-  height: 1px;
-
-  background: var(--gold);
-
-  vertical-align: middle;
-  margin-right: 14px;
-}
-
-.hero h1 {
-  font-family: var(--display);
-  font-size: clamp(70px, 8.7vw, 126px);
-
-  font-weight: 800;
-  line-height: .94;
-  letter-spacing: -.09em;
-
-  margin: 0 0 35px;
-}
-
-.hero h1 span {
-  color: var(--gold);
-}
-
-.hero-statement {
-  font-family: var(--display);
-  font-size: clamp(19px, 2vw, 26px);
-  font-weight: 700;
-  letter-spacing: -.045em;
-
-  margin-bottom: 19px;
-}
-
-.hero-description {
-  max-width: 530px;
-
-  font-size: 17px;
-  line-height: 1.85;
-
-  color: #aaa;
-  margin: 0;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-
-  margin-top: 40px;
-}
-
-.hero-bottom {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-
-  margin-top: 75px;
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .15em;
-
-  color: #777;
-}
-
-.hero-bottom::before {
-  content: "";
-  width: 32px;
-  height: 1px;
-  background: var(--gold);
-}
-
-/* =====================================================
-   GOLD BRAIN STAGE
-===================================================== */
-
-.brain-stage {
-  position: relative;
-
-  width: 100%;
-  height: 690px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#brainCanvas {
-  position: relative;
-  z-index: 2;
-
-  display: block;
-
-  width: 100%;
-  height: 100%;
-}
-
-.brain-ring {
-  position: absolute;
-
-  width: 93%;
-  aspect-ratio: 1;
-
-  border: 1px solid rgba(215,169,54,.11);
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-.brain-ring::before {
-  content: "";
-
-  position: absolute;
-  inset: 12%;
-
-  border: 1px dashed rgba(215,169,54,.13);
-  border-radius: 50%;
-}
-
-.brain-ring::after {
-  content: "";
-
-  position: absolute;
-  inset: 25%;
-
-  border: 1px solid rgba(215,169,54,.09);
-  border-radius: 50%;
-}
-
-.brain-annotation {
-  position: absolute;
-  z-index: 3;
-
-  color: var(--gold);
-
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .2em;
-}
-
-.brain-annotation.top {
-  right: 3%;
-  top: 10%;
-}
-
-.brain-annotation.bottom {
-  left: 3%;
-  bottom: 10%;
-}
-
-.brain-annotation::before {
-  content: "";
-
-  display: inline-block;
-
-  width: 6px;
-  height: 6px;
-
-  background: var(--gold);
-  border-radius: 50%;
-
-  box-shadow: 0 0 15px var(--gold);
-
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.brain-footnote {
-  position: absolute;
-  z-index: 3;
-
-  right: 0;
-  bottom: 16%;
-
-  color: #555;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .13em;
-}
-
-/* =====================================================
-   MANIFESTO STRIP
-===================================================== */
-
-.manifesto {
-  background: var(--gold);
-  padding: 25px 0;
-}
-
-.manifesto-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-}
-
-.manifesto-item {
-  font-family: var(--display);
-  font-size: clamp(10px, 1.15vw, 14px);
-  font-weight: 800;
-  letter-spacing: .13em;
-}
-
-.manifesto-divider {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(0,0,0,.45);
-}
-
-/* =====================================================
-   NETWORK MODEL
-===================================================== */
-
-.network {
-  background: var(--cream);
-  padding: 135px 0;
-}
-
-.network-heading {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 70px;
-  align-items: end;
-
-  margin-bottom: 65px;
-}
-
-.network-heading .section-heading {
-  margin-bottom: 0;
-}
-
-.network-heading .section-copy {
-  margin-bottom: 0;
-}
-
-.network-diagram {
-  position: relative;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.network-diagram::before {
-  content: "";
-
-  position: absolute;
-  top: 67px;
-  left: 17%;
-  right: 17%;
-
-  height: 1px;
-  background: var(--gold);
-}
-
-.network-card {
-  position: relative;
-  z-index: 1;
-
-  background: white;
-  border: 1px solid #e5e2da;
-
-  padding: 38px 32px 45px;
-
-  transition: .3s ease;
-}
-
-.network-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
-}
-
-.network-card.featured {
-  background: var(--black);
-  border-color: var(--black);
-  color: white;
-}
-
-.network-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 58px;
-  height: 58px;
-
-  background: white;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-
-  color: var(--gold-dark);
-
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 800;
-
-  margin-bottom: 55px;
-}
-
-.network-card.featured .network-icon {
-  background: var(--black);
-  color: var(--gold);
-}
-
-.network-label {
-  color: var(--gold-dark);
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .17em;
-
-  margin-bottom: 15px;
-}
-
-.network-card.featured .network-label {
-  color: var(--gold);
-}
-
-.network-card h3 {
-  font-family: var(--display);
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -.05em;
-
-  margin: 0 0 18px;
-}
-
-.network-card p {
-  font-size: 14px;
-  line-height: 1.85;
-  color: #666;
-  margin: 0;
-}
-
-.network-card.featured p {
-  color: #aaa;
-}
-
-.network-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-
-  border-top: 1px solid #d8d5cc;
-  margin-top: 55px;
-  padding-top: 35px;
-}
-
-.network-summary p {
-  font-family: var(--display);
-  font-size: clamp(20px, 2.1vw, 27px);
-  font-weight: 800;
-  letter-spacing: -.045em;
-  line-height: 1.5;
-
-  margin: 0;
-}
-
-/* =====================================================
-   ACTIVATIONS
-===================================================== */
-
-.activations {
-  background: white;
-  padding: 135px 0;
-}
-
-.activations-intro {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  align-items: end;
-  gap: 70px;
-
-  margin-bottom: 65px;
-}
-
-.activations-intro .section-heading {
-  margin-bottom: 0;
-}
-
-.activation-list {
-  border-top: 1px solid var(--border);
-}
-
-.activation {
-  display: grid;
-  grid-template-columns: 65px 1fr 1.1fr 50px;
-  align-items: center;
-  gap: 25px;
-
-  padding: 44px 10px;
-  border-bottom: 1px solid var(--border);
-
-  transition: .25s ease;
-}
-
-.activation:hover {
-  background: var(--cream);
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.activation-index {
-  color: var(--gold-dark);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.activation h3 {
-  font-family: var(--display);
-  font-size: clamp(29px, 3.5vw, 46px);
-  font-weight: 800;
-  letter-spacing: -.06em;
-  margin: 0;
-}
-
-.activation p {
-  max-width: 480px;
-  color: #666;
-  font-size: 15px;
-  line-height: 1.8;
-  margin: 0;
-}
-
-.activation-arrow {
-  text-align: right;
-  color: var(--gold-dark);
-  font-size: 29px;
-}
-
-/* =====================================================
-   MARKET DOMINATION
-===================================================== */
-
-.domination {
-  position: relative;
-
-  background: var(--black);
-  color: white;
-
-  padding: 140px 0;
-  overflow: hidden;
-}
-
-.domination::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at 80% 50%, rgba(215,169,54,.08), transparent 40%);
-
-  pointer-events: none;
-}
-
-.domination::after {
-  content: "GK3";
-
-  position: absolute;
-  right: -3%;
-  bottom: -13%;
-
-  font-family: var(--display);
-  font-size: clamp(220px, 28vw, 450px);
-  font-weight: 800;
-  letter-spacing: -.12em;
-
-  color: #151515;
-
-  pointer-events: none;
-}
-
-.domination-content {
-  position: relative;
-  z-index: 2;
-}
-
-.domination .section-heading {
-  font-size: clamp(52px, 7.5vw, 100px);
-}
-
-.domination .section-copy {
-  max-width: 760px;
-}
-
-.domination-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-
-  background: #383838;
-  border: 1px solid #383838;
-
-  margin: 65px 0 40px;
-}
-
-.domination-card {
-  background: #191919;
-  padding: 40px 32px;
-}
-
-.domination-card small {
-  display: block;
-
-  color: var(--gold);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .18em;
-
-  margin-bottom: 30px;
-}
-
-.domination-card h3 {
-  font-family: var(--display);
-  font-size: 29px;
-  font-weight: 800;
-  letter-spacing: -.04em;
-
-  margin: 0 0 15px;
-}
-
-.domination-card p {
-  color: #aaa;
-  font-size: 14px;
-  line-height: 1.8;
-  margin: 0;
-}
-
-/* =====================================================
+====================================================== */
+.hero{background:#080808;color:white;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(215,169,54,.026) 1px,transparent 1px),linear-gradient(90deg,rgba(215,169,54,.026) 1px,transparent 1px);background-size:70px 70px;pointer-events:none}
+.hero:after{content:"";position:absolute;width:850px;height:850px;right:-200px;top:0;background:radial-gradient(circle,rgba(216,173,73,.085),transparent 65%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;min-height:790px}
+.hero-content{padding:100px 0;position:relative;z-index:3}
+.hero-kicker{font:800 11px var(--font);letter-spacing:.22em;color:var(--gold);margin-bottom:36px}
+.hero-kicker:before{content:"";display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin-right:12px}
+.hero h1{font:800 clamp(70px,8.7vw,125px)/.94 var(--font);letter-spacing:-.09em;margin:0 0 34px}
+.hero h1 span{color:var(--gold)}
+.hero-sub{font:800 clamp(19px,2.1vw,27px) var(--font);letter-spacing:-.05em;margin:0 0 18px}
+.hero-description{max-width:520px;font-size:17px;line-height:1.85;color:#aaa;margin:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:37px}
+.hero-note{display:flex;align-items:center;gap:12px;margin-top:65px;font:800 10px var(--font);letter-spacing:.13em;color:#777}
+.hero-note:before{content:"";width:30px;height:1px;background:var(--gold)}
+.brain-stage{height:670px;position:relative;display:flex;align-items:center;justify-content:center}
+#brainCanvas{display:block;width:100%;height:100%;position:relative;z-index:2}
+.brain-ring{position:absolute;width:94%;aspect-ratio:1;border:1px solid rgba(216,173,73,.10);border-radius:50%}
+.brain-ring:before{content:"";position:absolute;inset:12%;border:1px dashed rgba(216,173,73,.12);border-radius:50%}
+.brain-ring:after{content:"";position:absolute;inset:25%;border:1px solid rgba(216,173,73,.08);border-radius:50%}
+.brain-label{position:absolute;z-index:3;color:var(--gold);font:800 9px var(--font);letter-spacing:.18em}
+.brain-label.top{top:12%;right:0}
+.brain-label.bottom{bottom:12%;left:0}
+.brain-label:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-right:9px;vertical-align:middle;box-shadow:0 0 12px var(--gold)}
+
+/* ======================================================
+   TICKER / INTRO
+====================================================== */
+.brand-strip{background:var(--gold);padding:24px 0}
+.brand-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand-strip span{font:800 clamp(10px,1.15vw,14px) var(--font);letter-spacing:.12em}
+.brand-strip i{width:5px;height:5px;border-radius:50%;background:#71551c;flex:none}
+.intro{padding:125px 0 115px;background:var(--paper)}
+.intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:end}
+.intro .section-title{margin-bottom:0}
+.intro-right p{font-size:19px;line-height:1.8;color:#56544f;margin:0}
+.intro-right strong{color:#111}
+.intro-right .small-line{display:block;margin-top:25px;color:var(--gold3);font:800 10px var(--font);letter-spacing:.16em}
+
+/* ======================================================
+   AUDIENCE SELECTOR
+====================================================== */
+.audience{padding:100px 0 115px;background:#101010;color:white}
+.audience-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:40px}
+.audience-head .section-title{margin-bottom:0}
+.audience-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.audience-tab{background:#222;border:1px solid #393939;color:#bbb;padding:16px 19px;font:800 10px var(--font);letter-spacing:.11em;text-transform:uppercase}
+.audience-tab.active{background:var(--gold);border-color:var(--gold);color:#111}
+.audience-panel{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #333;min-height:400px}
+.audience-info{padding:58px 50px}
+.audience-info .micro{color:var(--gold)}
+.audience-info h3{font:800 clamp(35px,4vw,58px)/1.1 var(--font);letter-spacing:-.065em;margin:27px 0}
+.audience-info p{color:#aaa;font-size:16px;line-height:1.85;max-width:490px}
+.audience-info .btn{margin-top:24px}
+.audience-visual{position:relative;background:radial-gradient(circle at center,#302716,#171717 67%);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:35px}
+.audience-orbit{width:min(340px,90%);aspect-ratio:1;border:1px solid rgba(216,173,73,.24);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative}
+.audience-orbit:before{content:"";position:absolute;inset:18%;border:1px dashed rgba(216,173,73,.28);border-radius:50%}
+.orbit-center{position:relative;z-index:2;width:118px;height:118px;border-radius:50%;background:#101010;border:1px solid var(--gold);display:grid;place-items:center;font:800 39px var(--font);letter-spacing:-.12em;color:white;box-shadow:0 0 65px rgba(216,173,73,.14)}
+.orbit-center span{color:var(--gold)}
+.orbit-pill{position:absolute;background:#222;border:1px solid #62512f;color:#e6d7b3;padding:12px 16px;font:800 9px var(--font);letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
+.orbit-pill.one{top:5%;left:-12%}
+.orbit-pill.two{right:-12%;top:40%}
+.orbit-pill.three{bottom:3%;left:1%}
+.orbit-caption{position:absolute;bottom:18px;right:20px;color:#888;font:700 9px var(--font);letter-spacing:.12em}
+
+/* ======================================================
+   NETWORK
+====================================================== */
+.network{padding:130px 0;background:var(--cream)}
+.network-head{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:end;margin-bottom:65px}
+.network-head .section-title{margin-bottom:0}
+.network-canvas{border:1px solid #dedbd2;background:var(--paper);padding:55px 35px 40px;position:relative;overflow:hidden}
+.network-canvas:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#d6cdb8 .7px,transparent .7px);background-size:19px 19px;opacity:.4}
+.network-map{position:relative;display:grid;grid-template-columns:1fr 140px 1fr;gap:25px;align-items:center;min-height:280px}
+.network-side{display:grid;gap:18px}
+.network-node{background:white;border:1px solid #ded8cb;padding:25px;position:relative;z-index:2;box-shadow:0 14px 35px rgba(0,0,0,.035)}
+.network-node small{color:var(--gold3);font:800 10px var(--font);letter-spacing:.15em}
+.network-node h3{font:800 25px var(--font);letter-spacing:-.05em;margin:13px 0}
+.network-node p{font-size:13px;line-height:1.75;color:#777;margin:0}
+.network-center{position:relative;z-index:3;width:140px;height:140px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;background:#101010;box-shadow:0 0 0 18px rgba(216,173,73,.075)}
+.network-center strong{font:800 48px var(--font);letter-spacing:-.12em;color:white}
+.network-center strong span{color:var(--gold)}
+.network-connect{position:absolute;top:50%;left:22%;right:22%;height:1px;background:var(--gold);z-index:1}
+.network-caption{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid #dedbd2;margin-top:35px;padding-top:30px}
+.network-caption p{font:800 clamp(18px,2vw,27px)/1.5 var(--font);letter-spacing:-.04em;margin:0}
+
+/* ======================================================
+   ACTIVATION SHOWCASE
+====================================================== */
+.showcase{padding:130px 0;background:white}
+.showcase-head{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:end;margin-bottom:65px}
+.showcase-head .section-title{margin-bottom:0}
+.feature{display:grid;grid-template-columns:1.13fr .87fr;min-height:560px;margin-bottom:22px;background:var(--cream)}
+.feature.reverse{grid-template-columns:.87fr 1.13fr}
+.feature.reverse .feature-art{order:2}
+.feature-art{position:relative;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:45px}
+.feature-copy{padding:70px 55px;display:flex;flex-direction:column;justify-content:center}
+.feature-num{font:800 10px var(--font);letter-spacing:.17em;color:var(--gold3)}
+.feature-copy h3{font:800 clamp(38px,4.3vw,61px)/1.09 var(--font);letter-spacing:-.07em;margin:22px 0}
+.feature-copy p{font-size:16px;line-height:1.85;color:#666;max-width:490px}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tag{border:1px solid #d8d2c4;padding:10px 12px;font:800 9px var(--font);letter-spacing:.08em;color:#655f51;text-transform:uppercase}
+.feature-copy .concept-label{margin-top:30px}
+
+/* Counter illustration */
+.counter-scene{background:linear-gradient(145deg,#44352a,#201c19 58%,#0e0e0e);isolation:isolate}
+.counter-scene:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 65% 25%,rgba(239,196,112,.25),transparent 48%);z-index:-1}
+.cafe-shelf{position:absolute;top:19%;left:0;right:0;height:14px;background:#171410;box-shadow:0 15px 18px #0005}
+.cafe-shelf:before{content:"";position:absolute;bottom:14px;left:10%;width:70%;height:60px;background:repeating-linear-gradient(90deg,transparent 0 40px,#b5a18b 41px 52px,transparent 53px 85px);opacity:.27}
+.cafe-counter{position:absolute;bottom:0;left:0;right:0;height:27%;background:linear-gradient(#916b48,#583a28);border-top:16px solid #b1845c;box-shadow:0 -15px 35px #0005}
+.counter-products{position:relative;z-index:2;display:flex;align-items:flex-end;gap:20px;transform:translateY(65px);max-width:100%}
+.follower-device{background:#f6efe1;border:5px solid #b99858;border-radius:13px;padding:13px;box-shadow:0 15px 25px #0007;min-width:250px}
+.follower-top{font:800 10px var(--font);letter-spacing:.11em;color:#1e1e1e;text-align:center;margin-bottom:9px}
+.follower-digits{display:flex;gap:4px;justify-content:center}
+.follower-digits span{display:grid;place-items:center;width:34px;height:53px;background:linear-gradient(#aa3b82,#e56aab);border:2px solid #2b1824;border-radius:4px;color:white;font:800 26px var(--font)}
+.sponsor-stand{width:150px;min-height:214px;background:#f5f0e6;border:5px solid #bd9a5c;border-radius:9px;padding:15px 10px;text-align:center;box-shadow:0 15px 25px #0007}
+.stand-kicker{font:800 9px var(--font);letter-spacing:.08em;color:#2a2925}
+.stand-brand{font:800 26px var(--font);letter-spacing:-.09em;color:#141414;margin:10px 0}
+.stand-brand span{color:#a77d27}
+.stand-copy{font:800 9px/1.5 var(--font);letter-spacing:.05em;color:#34302a;margin-top:12px}
+.qr{width:86px;height:86px;background:white;padding:5px;margin:0 auto;display:block}
+.qr svg{width:100%;height:100%;display:block}
+.scene-note{position:absolute;bottom:18px;left:25px;color:#e7d9c2;font:700 9px var(--font);letter-spacing:.12em;z-index:4}
+
+/* Packaging illustration */
+.packaging-scene{background:linear-gradient(145deg,#ddd3c1,#b8a68c)}
+.packaging-scene:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(25deg,rgba(255,255,255,.04) 0 2px,transparent 2px 7px)}
+.packaging-layout{position:relative;width:100%;height:410px;max-width:610px}
+.pizza-box{position:absolute;left:4%;top:14%;width:73%;height:72%;background:linear-gradient(135deg,#d4a978,#b98350);border:12px solid #c79562;border-radius:7px;box-shadow:25px 28px 40px #4d392d55;transform:rotate(-10deg);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pizza-box:before{content:"";position:absolute;inset:13px;border:1px solid #a36e3b}
+.pizza-mark{font:800 clamp(30px,4vw,54px)/1 var(--font);letter-spacing:-.085em;color:#573a24;text-align:center}
+.pizza-mark small{display:block;font:800 10px var(--font);letter-spacing:.35em;margin-top:10px}
+.pizza-mark .pizza-circle{width:56px;height:56px;border-radius:50%;border:3px solid #5b402a;margin:0 auto 18px;display:grid;place-items:center;font-size:28px}
+.packaging-sticker{position:absolute;right:0;top:2%;width:180px;height:180px;border-radius:50%;background:#fffdf8;border:5px solid #d8b76d;box-shadow:0 15px 35px #0004;transform:rotate(9deg);padding:17px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.packaging-sticker strong{font:800 15px/1.15 var(--font);letter-spacing:-.05em}
+.packaging-sticker small{font:800 8px var(--font);letter-spacing:.08em;margin-top:7px}
+.packaging-sticker .qr{width:57px;height:57px;margin-top:7px}
+.coffee-cup{position:absolute;right:4%;bottom:-5%;width:115px;height:165px;background:linear-gradient(90deg,#e3d2b3,#fff4d8,#d9c5a5);clip-path:polygon(4% 0,96% 0,82% 100%,18% 100%);box-shadow:0 10px 25px #0003;display:flex;align-items:center;justify-content:center}
+.cup-logo{width:75px;height:75px;border:2px solid #9b7a40;border-radius:50%;display:grid;place-items:center;text-align:center;font:800 12px/1.3 var(--font);letter-spacing:-.04em;color:#4b3927}
+.cup-lid{position:absolute;right:3%;bottom:154px;width:118px;height:20px;background:#302c28;border-radius:10px}
+.packaging-foot{position:absolute;bottom:18px;left:25px;font:800 9px var(--font);letter-spacing:.13em;color:#594c3a}
+
+/* CRM visualization */
+.crm-scene{background:radial-gradient(circle at 45% 40%,#3c3425,#111 72%)}
+.crm-window{width:92%;max-width:560px;background:#151515;border:1px solid #5a4a2a;box-shadow:0 30px 65px #0009;position:relative}
+.crm-top{height:45px;display:flex;align-items:center;justify-content:space-between;padding:0 17px;border-bottom:1px solid #333}
+.crm-brand{color:white;font:800 14px var(--font);letter-spacing:-.07em}
+.crm-brand span{color:var(--gold)}
+.crm-top small{color:#999;font:700 8px var(--font);letter-spacing:.12em}
+.crm-body{padding:25px}
+.crm-heading{color:#eee;font:800 17px var(--font);letter-spacing:-.04em;margin-bottom:6px}
+.crm-sub{color:#888;font-size:11px;margin-bottom:22px}
+.crm-journey{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.crm-step{background:#242424;border-top:2px solid var(--gold);padding:14px 8px;min-height:83px}
+.crm-step small{display:block;color:var(--gold);font:800 9px var(--font);margin-bottom:20px}
+.crm-step strong{color:#eee;font:800 10px var(--font);letter-spacing:.01em;overflow-wrap:anywhere}
+.crm-card-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}
+.crm-card{background:#202020;border:1px solid #333;padding:17px}
+.crm-card small{display:block;color:#999;font:700 9px var(--font);letter-spacing:.08em;margin-bottom:11px}
+.crm-card strong{color:white;font:800 17px var(--font)}
+.crm-card em{display:block;color:#c9b078;font-size:10px;font-style:normal;margin-top:6px}
+.crm-badge{position:absolute;right:-12px;bottom:-14px;background:var(--gold);padding:11px 14px;color:#111;font:800 9px var(--font);letter-spacing:.08em}
+
+/* ======================================================
+   CAMPAIGN DEMO
+====================================================== */
+.demo{padding:130px 0;background:#101010;color:white;overflow:hidden}
+.demo:before{content:"";position:absolute;right:-250px;top:0;width:750px;height:750px;background:radial-gradient(circle,rgba(216,173,73,.08),transparent 70%)}
+.demo-head{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:end;margin-bottom:50px;position:relative}
+.demo-head .section-title{margin-bottom:0}
+.demo-frame{display:grid;grid-template-columns:.8fr 1.2fr;border:1px solid #38352e;position:relative;background:#181818}
+.demo-controls{padding:43px;border-right:1px solid #38352e}
+.demo-controls h3{font:800 24px var(--font);letter-spacing:-.05em;margin:0 0 25px}
+.demo-choice{display:flex;align-items:center;gap:13px;width:100%;padding:19px 15px;background:#222;border:1px solid #363636;color:#bcbcbc;text-align:left;margin-bottom:9px;font:800 12px var(--font)}
+.demo-choice.active{border-color:var(--gold);background:#30291a;color:white}
+.demo-choice span{font:800 10px var(--font);color:var(--gold)}
+.demo-explain{font-size:14px;line-height:1.8;color:#aaa;margin-top:25px}
+.demo-screen{min-height:475px;display:flex;align-items:center;justify-content:center;padding:40px;position:relative;overflow:hidden;background:radial-gradient(circle at center,#30291b,#171717 70%)}
+.demo-screen:after{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:35px 35px;pointer-events:none}
+.demo-display{position:relative;z-index:1;width:100%;max-width:500px}
+.demo-visual-title{color:var(--gold);font:800 10px var(--font);letter-spacing:.17em;margin-bottom:22px}
+.demo-package{background:linear-gradient(135deg,#d4ac79,#ba8757);border:11px solid #a97644;border-radius:7px;aspect-ratio:1.6;box-shadow:20px 25px 35px #0006;transform:rotate(-4deg);display:flex;align-items:center;justify-content:center;gap:22px;padding:22px}
+.demo-package-mark{color:#5b3c25;font:800 clamp(23px,3vw,42px)/1 var(--font);letter-spacing:-.08em}
+.demo-package-mark small{display:block;font:800 10px var(--font);letter-spacing:.15em;margin-top:10px}
+.demo-package-label{background:#fff9ed;border:3px solid #d5b46a;border-radius:50%;width:140px;height:140px;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:15px;text-align:center;color:#161616;flex:none}
+.demo-package-label strong{font:800 12px var(--font);letter-spacing:-.04em}
+.demo-package-label small{font:800 8px var(--font);margin-top:6px}
+.demo-package-label .qr{width:55px;height:55px;margin-top:7px}
+.phone{width:230px;max-width:100%;min-height:365px;margin:auto;background:#f9f7f0;border:9px solid #222;border-radius:31px;padding:22px 17px;color:#161616;box-shadow:0 25px 45px #0008;text-align:center}
+.phone-notch{width:65px;height:11px;border-radius:10px;background:#222;margin:-13px auto 25px}
+.phone-kicker{font:800 9px var(--font);letter-spacing:.12em;color:#9b762b}
+.phone h4{font:800 24px/1.15 var(--font);letter-spacing:-.07em;margin:18px 0}
+.phone p{font-size:11px;line-height:1.6;color:#777}
+.phone-option{padding:12px;border:1px solid #d4c7a9;margin:8px 0;font:800 11px var(--font);text-align:left;background:white}
+.phone-button{margin-top:18px;padding:13px;background:var(--gold);font:800 10px var(--font);letter-spacing:.08em}
+.demo-metrics{background:#151515;border:1px solid #48412f;padding:30px}
+.demo-metrics h4{font:800 26px var(--font);letter-spacing:-.05em;margin:0 0 20px}
+.demo-metric{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #333;padding:15px 0;color:#aaa;font-size:13px}
+.demo-metric strong{color:var(--gold);font-size:14px}
+.demo-disclaimer{color:#888;font-size:11px;line-height:1.7;margin-top:25px}
+
+/* ======================================================
    INTELLIGENCE
-===================================================== */
-
-.intelligence {
-  background: var(--cream);
-  padding: 135px 0;
-}
-
-.intelligence-intro {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 70px;
-  align-items: end;
-
-  margin-bottom: 65px;
-}
-
-.intelligence-intro .section-heading {
-  margin-bottom: 0;
-}
-
-.intelligence-flow {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.intelligence-step {
-  position: relative;
-
-  background: white;
-  border-top: 3px solid var(--gold);
-
-  min-height: 165px;
-  padding: 25px 17px;
-}
-
-.intelligence-step small {
-  display: block;
-
-  color: var(--gold-dark);
-  font-size: 10px;
-  font-weight: 800;
-
-  margin-bottom: 55px;
-}
-
-.intelligence-step strong {
-  font-family: var(--display);
-  font-size: clamp(12px, 1.2vw, 17px);
-  font-weight: 800;
-  letter-spacing: -.04em;
-  overflow-wrap: anywhere;
-}
-
-.intelligence-note {
-  display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 40px;
-
-  border-top: 1px solid #d9d6cd;
-
-  margin-top: 50px;
-  padding-top: 35px;
-}
-
-.intelligence-note-label {
-  color: var(--gold-dark);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .15em;
-}
-
-.intelligence-note p {
-  max-width: 850px;
-  color: #555;
-  font-size: 15px;
-  line-height: 1.9;
-  margin: 0;
-}
-
-/* =====================================================
-   PARTNER OPPORTUNITIES
-===================================================== */
-
-.partners {
-  background: white;
-  padding: 135px 0;
-}
-
-.partners-intro {
-  margin-bottom: 65px;
-}
-
-.partner-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.partner-card {
-  display: flex;
-  flex-direction: column;
-
-  min-height: 520px;
-  padding: 55px 45px;
-
-  background: var(--cream);
-  border: 1px solid var(--border);
-}
-
-.partner-card.dark {
-  background: var(--black);
-  color: white;
-  border-color: var(--black);
-}
-
-.partner-card .eyebrow {
-  color: var(--gold-dark);
-}
-
-.partner-card.dark .eyebrow {
-  color: var(--gold);
-}
-
-.partner-card h3 {
-  font-family: var(--display);
-  font-size: clamp(35px, 4vw, 54px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -.065em;
-
-  margin: 45px 0 22px;
-}
-
-.partner-card p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.85;
-  margin: 0 0 25px;
-}
-
-.partner-card.dark p {
-  color: #aaa;
-}
-
-.partner-benefits {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 40px;
-}
-
-.partner-benefits li {
-  position: relative;
-
-  padding: 12px 0 12px 23px;
-  border-bottom: 1px solid #dedbd3;
-
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.partner-benefits li::before {
-  content: "+";
-  position: absolute;
-  left: 0;
-  color: var(--gold-dark);
-}
-
-.partner-card.dark .partner-benefits li {
-  border-color: #333;
-}
-
-.partner-card.dark .partner-benefits li::before {
-  color: var(--gold);
-}
-
-.partner-card .btn {
-  align-self: flex-start;
-  margin-top: auto;
-}
-
-/* =====================================================
-   FINAL CTA
-===================================================== */
-
-.final {
-  position: relative;
-
-  background: var(--gold);
-  padding: 140px 0;
-  overflow: hidden;
-}
-
-.final::after {
-  content: "3";
-
-  position: absolute;
-  right: -3%;
-  bottom: -65%;
-
-  font-family: var(--display);
-  font-size: clamp(450px, 55vw, 850px);
-  font-weight: 800;
-  letter-spacing: -.12em;
-
-  color: rgba(255,255,255,.14);
-
-  pointer-events: none;
-}
-
-.final-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-}
-
-.final .eyebrow {
-  color: #59430f;
-}
-
-.final h2 {
-  font-family: var(--display);
-  font-size: clamp(70px, 10vw, 140px);
-  font-weight: 800;
-  line-height: .94;
-  letter-spacing: -.09em;
-
-  margin: 30px 0;
-}
-
-.final p {
-  max-width: 660px;
-  font-size: 19px;
-  line-height: 1.8;
-  margin: 0 0 35px;
-}
-
-.final-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-}
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer {
-  background: #080808;
-  color: white;
-  padding: 80px 0 30px;
-}
-
-.footer-main {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 70px;
-  padding-bottom: 70px;
-}
-
-.footer-logo {
-  font-family: var(--display);
-  font-size: 65px;
-  font-weight: 800;
-  letter-spacing: -.12em;
-  line-height: 1;
-}
-
-.footer-logo span {
-  color: var(--gold);
-}
-
-.footer-category {
-  color: var(--gold);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .18em;
-  margin-top: 20px;
-}
-
-.footer-tagline {
-  font-family: var(--display);
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -.04em;
-  margin-top: 20px;
-}
-
-.footer-description {
-  max-width: 370px;
-  color: #888;
-  font-size: 14px;
-  line-height: 1.85;
-  margin-top: 15px;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.footer-links h3 {
-  color: var(--gold);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .17em;
-  margin: 0 0 25px;
-}
-
-.footer-links a {
-  display: block;
-  width: fit-content;
-
-  color: #aaa;
-  font-size: 13px;
-  margin-bottom: 16px;
-
-  transition: color .2s;
-}
-
-.footer-links a:hover {
-  color: var(--gold);
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-
-  border-top: 1px solid #292929;
-  padding-top: 25px;
-
-  color: #777;
-  font-size: 11px;
-  line-height: 1.6;
-}
-
-/* =====================================================
-   SCROLL REVEALS
-===================================================== */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-
-  transition:
-    opacity .7s ease,
-    transform .7s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =====================================================
+====================================================== */
+.intelligence{padding:135px 0;background:var(--cream)}
+.intel-head{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:end;margin-bottom:60px}
+.intel-head .section-title{margin-bottom:0}
+.intel-board{background:#101010;color:white;border:1px solid #333;padding:45px;position:relative;overflow:hidden}
+.intel-board:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#b58c3e33 1px,transparent 1px);background-size:22px 22px}
+.intel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;z-index:1}
+.intel-item{border:1px solid #514329;background:#1b1b1b;min-height:180px;padding:23px;display:flex;flex-direction:column;justify-content:space-between}
+.intel-item small{color:var(--gold);font:800 10px var(--font);letter-spacing:.13em}
+.intel-item h3{font:800 clamp(19px,2.2vw,29px)/1.1 var(--font);letter-spacing:-.055em;margin:20px 0 0}
+.intel-item p{font-size:11px;line-height:1.6;color:#999;margin:12px 0 0}
+.intel-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:25px 0;position:relative}
+.intel-foot{position:relative;display:flex;align-items:center;justify-content:space-between;gap:25px;z-index:1}
+.intel-foot p{font:800 clamp(18px,2vw,25px)/1.5 var(--font);letter-spacing:-.04em;margin:0}
+.intel-note{border-top:1px solid #d5d1c8;margin-top:40px;padding-top:30px;display:grid;grid-template-columns:190px 1fr;gap:35px}
+.intel-note p{font-size:14px;line-height:1.85;color:#65615b;margin:0}
+
+/* ======================================================
+   MARKET DOMINATION
+====================================================== */
+.domination{background:#101010;color:white;padding:120px 0;overflow:hidden}
+.domination:after{content:"GK3";position:absolute;right:-3%;bottom:-13%;font:800 clamp(220px,28vw,420px) var(--font);letter-spacing:-.12em;color:#191919;pointer-events:none}
+.domination-inner{position:relative;z-index:1}
+.domination .section-title{font-size:clamp(50px,7vw,100px)}
+.domination .section-copy{max-width:760px}
+.domination-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#383838;border:1px solid #383838;margin:55px 0 35px}
+.domination-card{background:#1b1b1b;padding:38px 30px}
+.domination-card small{color:var(--gold);font:800 10px var(--font);letter-spacing:.14em}
+.domination-card h3{font:800 29px var(--font);letter-spacing:-.05em;margin:28px 0 12px}
+.domination-card p{font-size:14px;line-height:1.8;color:#aaa;margin:0}
+
+/* ======================================================
+   PLANNER
+====================================================== */
+.planner{padding:130px 0;background:white}
+.planner-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}
+.planner-controls{background:var(--cream);border:1px solid var(--line);padding:38px}
+.planner-controls label{display:block;font:800 11px var(--font);letter-spacing:.08em;margin:0 0 12px}
+.planner-controls input[type=range]{width:100%;accent-color:var(--gold3);margin:12px 0 25px}
+.planner-value{font:800 27px var(--font);letter-spacing:-.05em;color:#222;float:right}
+.planner-result{border-top:1px solid #d6d0c4;padding-top:25px;margin-top:10px}
+.planner-result strong{display:block;font:800 clamp(48px,5vw,72px) var(--font);letter-spacing:-.09em;color:#a77b22}
+.planner-result span{font:800 11px var(--font);letter-spacing:.12em}
+.planner-result p{font-size:12px;line-height:1.75;color:#777;margin-top:18px}
+
+/* ======================================================
+   ECONOMICS / PARTNERS
+====================================================== */
+.economics{background:var(--cream);padding:125px 0}
+.economics-head{max-width:850px;margin-bottom:60px}
+.economics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.economics-card{background:white;border:1px solid #e1ded5;padding:37px 30px}
+.economics-card small{color:var(--gold3);font:800 10px var(--font);letter-spacing:.15em}
+.economics-card h3{font:800 25px var(--font);letter-spacing:-.055em;margin:27px 0 15px}
+.economics-card p{font-size:14px;line-height:1.85;color:#666;margin:0}
+.partners{padding:130px 0;background:white}
+.partner-head{margin-bottom:55px}
+.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.partner-card{padding:55px 45px;background:var(--cream);display:flex;flex-direction:column;min-height:520px}
+.partner-card.dark{background:#101010;color:white}
+.partner-card .eyebrow{color:var(--gold3)}
+.partner-card.dark .eyebrow{color:var(--gold)}
+.partner-card h3{font:800 clamp(35px,4vw,55px)/1.1 var(--font);letter-spacing:-.07em;margin:45px 0 22px}
+.partner-card p{font-size:16px;line-height:1.8;color:#666;margin:0 0 25px}
+.partner-card.dark p{color:#aaa}
+.partner-list{list-style:none;margin:0 0 38px;padding:0}
+.partner-list li{position:relative;padding:12px 0 12px 23px;border-bottom:1px solid #dedbd3;font-size:13px;font-weight:700}
+.partner-list li:before{content:"+";position:absolute;left:0;color:var(--gold3)}
+.partner-card.dark .partner-list li{border-color:#333}
+.partner-card.dark .partner-list li:before{color:var(--gold)}
+.partner-card .btn{align-self:flex-start;margin-top:auto}
+
+/* ======================================================
+   FINAL CTA / FOOTER
+====================================================== */
+.final{padding:140px 0;background:var(--gold);overflow:hidden}
+.final:after{content:"3";position:absolute;right:-2%;bottom:-68%;font:800 clamp(450px,55vw,850px) var(--font);letter-spacing:-.12em;color:#ffffff20;pointer-events:none}
+.final-inner{position:relative;z-index:1;max-width:900px}
+.final h2{font:800 clamp(70px,10vw,140px)/.94 var(--font);letter-spacing:-.09em;margin:30px 0}
+.final p{max-width:650px;font-size:19px;line-height:1.8;margin:0 0 35px}
+.final-actions{display:flex;gap:12px;flex-wrap:wrap}
+.footer{background:#080808;color:white;padding:80px 0 30px}
+.footer-main{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;padding-bottom:65px}
+.footer-logo{font:800 65px var(--font);letter-spacing:-.12em}
+.footer-logo span{color:var(--gold)}
+.footer-cat{color:var(--gold);font:800 11px var(--font);letter-spacing:.17em;margin-top:10px}
+.footer-tag{font:800 22px var(--font);letter-spacing:-.04em;margin-top:22px}
+.footer-desc{max-width:370px;color:#888;font-size:14px;line-height:1.85;margin-top:15px}
+.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.footer-links h4{color:var(--gold);font:800 10px var(--font);letter-spacing:.15em;margin:0 0 25px}
+.footer-links a{display:block;color:#aaa;font-size:13px;margin-bottom:15px}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid #292929;padding-top:25px;display:flex;justify-content:space-between;gap:20px;color:#777;font-size:11px}
+
+/* ======================================================
    RESPONSIVE
-===================================================== */
-
-@media(max-width: 1100px) {
-
-  .nav-links {
-    gap: 17px;
-  }
-
-  .nav-links > a:not(.btn) {
-    font-size: 9px;
-  }
-
-  .hero h1 {
-    font-size: clamp(65px, 8.5vw, 108px);
-  }
-
-  .brain-stage {
-    height: 590px;
-  }
-
+====================================================== */
+@media(max-width:1100px){
+  .nav-links{gap:16px}
+  .nav-links>a:not(.btn){font-size:9px}
+  .hero h1{font-size:clamp(66px,8.5vw,105px)}
+  .brain-stage{height:580px}
+  .feature-copy{padding:45px 35px}
+  .counter-products{gap:10px;transform:translateY(50px) scale(.88)}
+  .follower-device{min-width:235px}
 }
-
-@media(max-width: 900px) {
-
-  .nav {
-    min-height: 75px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .mobile-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    display: none;
-    flex-direction: column;
-
-    background: var(--black);
-    border-bottom: 1px solid #333;
-
-    padding: 25px 5% 30px;
-    box-shadow: 0 20px 30px rgba(0,0,0,.3);
-  }
-
-  .mobile-nav.open {
-    display: flex;
-  }
-
-  .mobile-nav > a:not(.btn) {
-    padding: 15px 0;
-    border-bottom: 1px solid #292929;
-
-    color: white;
-    font-size: 14px;
-    font-weight: 800;
-  }
-
-  .mobile-nav .btn {
-    margin-top: 25px;
-  }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .hero-content {
-    padding: 90px 0 0;
-  }
-
-  .hero h1 {
-    font-size: clamp(70px, 12vw, 110px);
-  }
-
-  .brain-stage {
-    height: 500px;
-    max-width: 670px;
-    margin: -15px auto 10px;
-  }
-
-  .hero-bottom {
-    margin-top: 50px;
-  }
-
-  .network,
-  .activations,
-  .domination,
-  .intelligence,
-  .partners,
-  .final {
-    padding: 95px 0;
-  }
-
-  .network-heading,
-  .activations-intro,
-  .intelligence-intro {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .activation {
-    grid-template-columns: 45px 1fr 35px;
-    gap: 15px;
-  }
-
-  .activation p {
-    grid-column: 2;
-  }
-
-  .activation-arrow {
-    grid-column: 3;
-    grid-row: 1 / 3;
-  }
-
-  .intelligence-flow {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .partner-card {
-    padding: 40px 30px;
-  }
-
+@media(max-width:900px){
+  .nav{min-height:75px}
+  .nav-links{display:none}
+  .menu-toggle{display:flex}
+  .mobile-nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;padding:20px 5% 30px;background:#080808;border-bottom:1px solid #333;box-shadow:0 20px 30px #0005}
+  .mobile-nav.open{display:flex}
+  .mobile-nav>a:not(.btn){padding:15px 0;border-bottom:1px solid #292929;font-size:14px;font-weight:800}
+  .mobile-nav .btn{margin-top:25px}
+  .hero-inner{grid-template-columns:1fr;min-height:auto}
+  .hero-content{padding:90px 0 0}
+  .hero h1{font-size:clamp(70px,12vw,110px)}
+  .brain-stage{height:500px;max-width:670px;margin:-10px auto 0}
+  .intro,.audience,.network,.showcase,.demo,.intelligence,.domination,.planner,.economics,.partners,.final{padding:90px 0}
+  .intro-grid,.network-head,.showcase-head,.demo-head,.intel-head,.planner-grid{grid-template-columns:1fr;gap:25px}
+  .audience-head{align-items:flex-start;flex-direction:column}
+  .feature,.feature.reverse{grid-template-columns:1fr}
+  .feature.reverse .feature-art{order:0}
+  .feature-art{min-height:430px}
+  .feature-copy{padding:45px}
+  .demo-frame{grid-template-columns:1fr}
+  .demo-controls{border-right:0;border-bottom:1px solid #38352e}
+  .demo-screen{min-height:450px}
+  .intel-grid{grid-template-columns:repeat(2,1fr)}
+  .economics-grid{grid-template-columns:1fr}
 }
-
-@media(max-width: 650px) {
-
-  .container {
-    width: 88%;
-  }
-
-  .logo {
-    font-size: 34px;
-  }
-
-  .logo-description {
-    font-size: 8px;
-    letter-spacing: .11em;
-  }
-
-  .logo-group {
-    gap: 13px;
-  }
-
-  .hero-content {
-    padding-top: 80px;
-  }
-
-  .hero h1 {
-    font-size: clamp(54px, 12vw, 78px);
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .brain-stage {
-    height: 370px;
-    margin-top: 0;
-  }
-
-  .brain-annotation {
-    font-size: 7px;
-  }
-
-  .brain-footnote {
-    display: none;
-  }
-
-  .section-heading {
-    font-size: clamp(39px, 10vw, 60px);
-  }
-
-  .network,
-  .activations,
-  .domination,
-  .intelligence,
-  .partners,
-  .final {
-    padding: 75px 0;
-  }
-
-  .manifesto-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 18px;
-  }
-
-  .manifesto-item {
-    font-size: 9px;
-  }
-
-  .network-diagram {
-    grid-template-columns: 1fr;
-  }
-
-  .network-diagram::before {
-    display: none;
-  }
-
-  .network-card {
-    padding: 32px;
-  }
-
-  .network-icon {
-    margin-bottom: 35px;
-  }
-
-  .network-summary {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .activation {
-    grid-template-columns: 35px 1fr 25px;
-    gap: 10px;
-    padding: 30px 0;
-  }
-
-  .activation h3 {
-    font-size: 28px;
-  }
-
-  .activation p {
-    font-size: 14px;
-  }
-
-  .domination .section-heading {
-    font-size: clamp(44px, 10vw, 68px);
-  }
-
-  .domination-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .domination-card {
-    padding: 32px;
-  }
-
-  .intelligence-flow {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .intelligence-step {
-    min-height: 135px;
-  }
-
-  .intelligence-step small {
-    margin-bottom: 40px;
-  }
-
-  .intelligence-step strong {
-    font-size: 14px;
-  }
-
-  .intelligence-note {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .partner-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .partner-card {
-    min-height: auto;
-    padding: 40px 28px;
-  }
-
-  .partner-card h3 {
-    margin-top: 35px;
-  }
-
-  .final h2 {
-    font-size: clamp(60px, 12vw, 90px);
-  }
-
-  .final-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-main {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-  }
-
+@media(max-width:650px){
+  .container{width:88%}
+  .logo{font-size:34px}
+  .logo-desc{font-size:8px;letter-spacing:.11em}
+  .logo-group{gap:12px}
+  .hero-content{padding-top:75px}
+  .hero h1{font-size:clamp(54px,12vw,80px)}
+  .hero-description{font-size:16px}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .hero-note{margin-top:45px;font-size:8px}
+  .brain-stage{height:350px}
+  .brain-label{font-size:7px}
+  .section-title{font-size:clamp(39px,10vw,62px)}
+  .intro,.audience,.network,.showcase,.demo,.intelligence,.domination,.planner,.economics,.partners,.final{padding:75px 0}
+  .brand-strip-inner{justify-content:center;flex-wrap:wrap;gap:10px 15px}
+  .brand-strip span{font-size:9px}
+  .intro-right p{font-size:17px}
+  .audience-panel{grid-template-columns:1fr}
+  .audience-info{padding:35px 27px}
+  .audience-visual{min-height:310px}
+  .audience-orbit{width:240px}
+  .orbit-center{width:95px;height:95px;font-size:30px}
+  .orbit-pill{font-size:7px;padding:10px}
+  .orbit-pill.one{left:-5%}
+  .orbit-pill.two{right:-6%}
+  .network-canvas{padding:25px 18px}
+  .network-map{grid-template-columns:1fr;gap:25px}
+  .network-side{gap:10px}
+  .network-center{margin:auto;width:110px;height:110px;grid-row:2}
+  .network-connect{display:none}
+  .network-node{padding:20px}
+  .network-caption{flex-direction:column;align-items:flex-start}
+  .feature-art{min-height:355px;padding:18px}
+  .feature-copy{padding:38px 26px}
+  .feature-copy h3{font-size:clamp(36px,10vw,51px)}
+  .counter-products{transform:translateY(43px) scale(.68);gap:5px;flex:none}
+  .packaging-layout{height:330px}
+  .pizza-box{left:0;width:78%;height:65%}
+  .pizza-mark{font-size:28px}
+  .packaging-sticker{width:135px;height:135px;right:-3%;padding:10px}
+  .packaging-sticker strong{font-size:11px}
+  .packaging-sticker .qr{width:45px;height:45px}
+  .coffee-cup{transform:scale(.7);transform-origin:bottom right;right:0}
+  .cup-lid{transform:scale(.7);transform-origin:bottom right;right:0;bottom:110px}
+  .crm-window{width:100%}
+  .crm-body{padding:16px}
+  .crm-step{padding:10px 5px;min-height:75px}
+  .crm-step strong{font-size:8px}
+  .crm-card{padding:12px}
+  .demo-controls{padding:25px}
+  .demo-screen{padding:30px 20px;min-height:350px}
+  .demo-package{gap:8px;padding:10px}
+  .demo-package-mark{font-size:23px}
+  .demo-package-label{width:105px;height:105px;padding:8px}
+  .demo-package-label strong{font-size:10px}
+  .demo-package-label .qr{width:42px;height:42px}
+  .intel-board{padding:20px}
+  .intel-grid{gap:8px}
+  .intel-item{min-height:150px;padding:15px}
+  .intel-item h3{font-size:18px}
+  .intel-foot{flex-direction:column;align-items:flex-start}
+  .intel-note{grid-template-columns:1fr;gap:12px}
+  .domination-cards{grid-template-columns:1fr}
+  .planner-controls{padding:25px}
+  .partner-grid{grid-template-columns:1fr}
+  .partner-card{min-height:auto;padding:40px 28px}
+  .partner-card h3{margin-top:35px}
+  .final h2{font-size:clamp(60px,12vw,90px)}
+  .final-actions{flex-direction:column;align-items:flex-start}
+  .footer-main{grid-template-columns:1fr;gap:50px}
+  .footer-bottom{flex-direction:column}
 }
-
-@media(max-width: 390px) {
-
-  .hero h1 {
-    font-size: 49px;
-  }
-
-  .section-heading {
-    font-size: 37px;
-  }
-
-  .brain-stage {
-    height: 320px;
-  }
-
+@media(max-width:390px){
+  .hero h1{font-size:49px}
+  .section-title{font-size:37px}
+  .brain-stage{height:310px}
 }
-
-@media(prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-  }
-
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
 }
-
 </style>
-
 </head>
 
 <body>
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
+<!-- NAVIGATION -->
 <header class="header">
-
   <div class="container nav">
-
     <a href="#home" class="logo-group" aria-label="GK3 Home">
-
-      <div class="logo">
-        GK<span>3</span>
-      </div>
-
+      <div class="logo">GK<span>3</span></div>
       <div class="logo-divider"></div>
-
-      <div class="logo-description">
-        MARKETING &amp;<br>
-        INTELLIGENCE
-      </div>
-
+      <div class="logo-desc">MARKETING &amp;<br>INTELLIGENCE</div>
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
-
       <a href="#network">THE NETWORK</a>
       <a href="#activations">ACTIVATIONS</a>
+      <a href="#demo">HOW IT WORKS</a>
       <a href="#intelligence">INTELLIGENCE</a>
       <a href="#partners">PARTNERS</a>
-
-      <a
-        class="btn btn-gold"
-        href="https://tally.so/r/m6glkk"
-        target="_blank"
-        rel="noopener noreferrer">
-        JOIN THE NETWORK ↗
-      </a>
-
+      <a class="btn btn-gold" href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">JOIN THE NETWORK ↗</a>
     </nav>
 
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="mobile-navigation">
-
-      <span></span>
-      <span></span>
-      <span></span>
-
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation">
+      <span></span><span></span><span></span>
     </button>
-
   </div>
 
-  <nav
-    class="mobile-nav"
-    id="mobile-navigation"
-    aria-label="Mobile navigation">
-
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">
     <a href="#network">THE NETWORK</a>
     <a href="#activations">ACTIVATIONS</a>
+    <a href="#demo">HOW IT WORKS</a>
     <a href="#intelligence">INTELLIGENCE</a>
     <a href="#partners">PARTNERS</a>
-
-    <a
-      class="btn btn-gold"
-      href="https://tally.so/r/m6glkk"
-      target="_blank"
-      rel="noopener noreferrer">
-      JOIN THE NETWORK ↗
-    </a>
-
+    <a class="btn btn-gold" href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">JOIN THE NETWORK ↗</a>
   </nav>
-
 </header>
 
 <main>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
+<!-- HERO -->
 <section class="hero" id="home">
-
   <div class="container hero-inner">
-
     <div class="hero-content">
+      <div class="hero-kicker">GK3 / MARKETING &amp; INTELLIGENCE</div>
 
-      <div class="hero-kicker">
-        GK3 / MARKETING &amp; INTELLIGENCE
-      </div>
+      <h1>GROW.<br><span>TOGETHER.</span></h1>
 
-      <h1>
-        GROW.<br>
-        <span>TOGETHER.</span>
-      </h1>
-
-      <div class="hero-statement">
-        The Intelligence of Connection.
-      </div>
+      <div class="hero-sub">The Intelligence of Connection.</div>
 
       <p class="hero-description">
-        GK3 connects businesses and sponsors through
-        coordinated marketing partnerships that create
-        customer engagement, measurable opportunities,
-        and shared growth.
+        A smarter way for local businesses and sponsors to grow.
+        GK3 connects complementary businesses through sponsor-funded
+        marketing partnerships—turning everyday customer interactions
+        into opportunities for engagement, loyalty, and growth.
       </p>
 
       <div class="hero-actions">
-
-        <a
-          class="btn btn-gold"
-          href="https://tally.so/r/m6glkk"
-          target="_blank"
-          rel="noopener noreferrer">
-          JOIN THE NETWORK ↗
-        </a>
-
-        <a class="btn btn-outline" href="#network">
-          EXPLORE GK3 ↓
-        </a>
-
+        <a class="btn btn-gold" href="#audience" data-audience-link="sponsor">I WANT TO SPONSOR ↗</a>
+        <a class="btn btn-outline" href="#audience" data-audience-link="business">I WANT TO PARTNER ↗</a>
       </div>
 
-      <div class="hero-bottom">
-        CHARLESTON, SOUTH CAROLINA · INITIAL MARKET
-      </div>
-
+      <div class="hero-note">SPONSORED GROWTH NETWORKS · CHARLESTON, SC</div>
     </div>
 
-    <div
-      class="brain-stage"
-      role="img"
-      aria-label="Animated three-dimensional gold neural network forming a brain, symbolizing connected marketing intelligence">
-
+    <div class="brain-stage" role="img" aria-label="Animated gold neural connections forming a dimensional brain">
       <div class="brain-ring" aria-hidden="true"></div>
-
-      <canvas
-        id="brainCanvas"
-        aria-hidden="true">
-      </canvas>
-
-      <div class="brain-annotation top" aria-hidden="true">
-        CONNECTED INTELLIGENCE
-      </div>
-
-      <div class="brain-annotation bottom" aria-hidden="true">
-        NETWORK / 03
-      </div>
-
-      <div class="brain-footnote" aria-hidden="true">
-        MARKETING × CONNECTION × INTELLIGENCE
-      </div>
-
+      <canvas id="brainCanvas" aria-hidden="true"></canvas>
+      <div class="brain-label top" aria-hidden="true">CONNECTED INTELLIGENCE</div>
+      <div class="brain-label bottom" aria-hidden="true">NETWORK / 03</div>
     </div>
-
   </div>
-
 </section>
 
-<!-- =====================================================
-     BRAND MANIFESTO
-===================================================== -->
-
-<div class="manifesto">
-
-  <div class="container manifesto-inner">
-
-    <div class="manifesto-item">
-      SPONSORED GROWTH NETWORKS
-    </div>
-
-    <div class="manifesto-divider"></div>
-
-    <div class="manifesto-item">
-      REAL-WORLD DISTRIBUTION
-    </div>
-
-    <div class="manifesto-divider"></div>
-
-    <div class="manifesto-item">
-      CONNECTED INTELLIGENCE
-    </div>
-
+<!-- BRAND STRIP -->
+<div class="brand-strip">
+  <div class="container brand-strip-inner">
+    <span>SPONSORED GROWTH NETWORKS</span><i></i>
+    <span>REAL-WORLD DISTRIBUTION</span><i></i>
+    <span>CONNECTED INTELLIGENCE</span>
   </div>
-
 </div>
 
-<!-- =====================================================
-     NETWORK MODEL
-===================================================== -->
-
-<section class="network" id="network">
-
-  <div class="container">
-
-    <div class="network-heading reveal">
-
-      <div>
-
-        <div class="eyebrow gold-dark">
-          THE GK3 MODEL
-        </div>
-
-        <h2 class="section-heading">
-          THREE PARTNERS.<br>
-          <span class="gold-dark">ONE NETWORK.</span>
-        </h2>
-
-      </div>
-
-      <p class="section-copy">
-        GK3 is a sponsored growth network connecting
-        local businesses with complementary advertisers.
-        Business partners contribute approved customer
-        touchpoints. Sponsors fund marketing campaigns.
-        GK3 coordinates the partnership.
-      </p>
-
+<!-- INTRO -->
+<section class="intro">
+  <div class="container intro-grid">
+    <div class="reveal">
+      <div class="eyebrow gold-dark">A DIFFERENT APPROACH TO GROWTH</div>
+      <h2 class="section-title">BETTER<br>BUSINESS.<br><span class="gold-dark">BY CONNECTION.</span></h2>
     </div>
-
-    <div class="network-diagram">
-
-      <article class="network-card reveal">
-
-        <div class="network-icon">01</div>
-
-        <div class="network-label">
-          DISTRIBUTION
-        </div>
-
-        <h3>BUSINESS PARTNERS</h3>
-
-        <p>
-          Participating businesses provide approved
-          customer touchpoints while gaining access
-          to sponsor-funded marketing, social growth,
-          loyalty initiatives, and engagement opportunities.
-        </p>
-
-      </article>
-
-      <article class="network-card featured reveal">
-
-        <div class="network-icon">03</div>
-
-        <div class="network-label">
-          CONNECTION
-        </div>
-
-        <h3>GK3</h3>
-
-        <p>
-          GK3 connects sponsors and business partners,
-          develops campaigns, coordinates physical
-          distribution, and measures available
-          engagement signals.
-        </p>
-
-      </article>
-
-      <article class="network-card reveal">
-
-        <div class="network-icon">02</div>
-
-        <div class="network-label">
-          SPONSORSHIP
-        </div>
-
-        <h3>SPONSORS</h3>
-
-        <p>
-          Advertisers fund relevant campaigns to reach
-          customers through participating businesses
-          and create opportunities for measurable
-          interactions.
-        </p>
-
-      </article>
-
-    </div>
-
-    <div class="network-summary reveal">
-
+    <div class="intro-right reveal">
       <p>
-        Sponsorship funds the opportunity.<br>
-        Distribution creates the connection.<br>
-        <span class="gold-dark">Intelligence strengthens the network.</span>
+        Every business already connects with customers.
+        Every sponsor wants meaningful access to the right audience.
+        <strong>GK3 brings those opportunities together.</strong>
       </p>
-
-      <a
-        class="btn btn-black"
-        href="https://tally.so/r/m6glkk"
-        target="_blank"
-        rel="noopener noreferrer">
-        JOIN THE NETWORK ↗
-      </a>
-
+      <p style="margin-top:18px">
+        We coordinate marketing partnerships that give participating
+        businesses new growth opportunities while helping sponsors
+        connect with local customers in relevant settings.
+      </p>
+      <span class="small-line">THREE PARTNERS. ONE NETWORK. SHARED OPPORTUNITY.</span>
     </div>
-
   </div>
-
 </section>
 
-<!-- =====================================================
-     ACTIVATIONS
-===================================================== -->
-
-<section class="activations" id="activations">
-
+<!-- AUDIENCE SELECTOR -->
+<section class="audience" id="audience">
   <div class="container">
-
-    <div class="activations-intro reveal">
-
+    <div class="audience-head reveal">
       <div>
+        <div class="eyebrow gold">FIND YOUR OPPORTUNITY</div>
+        <h2 class="section-title">TWO WAYS<br>TO <span class="gold">GROW.</span></h2>
+      </div>
+      <div class="audience-tabs" role="group" aria-label="Choose your perspective">
+        <button type="button" class="audience-tab active" data-audience="sponsor" aria-pressed="true">FOR SPONSORS</button>
+        <button type="button" class="audience-tab" data-audience="business" aria-pressed="false">FOR BUSINESS PARTNERS</button>
+      </div>
+    </div>
 
-        <div class="eyebrow gold-dark">
-          GK3 ACTIVATIONS
+    <div class="audience-panel reveal">
+      <div class="audience-info" aria-live="polite">
+        <div class="micro" id="audienceKicker">FOR SPONSORS</div>
+        <h3 id="audienceTitle">REACH CUSTOMERS<br>WHERE LIFE HAPPENS.</h3>
+        <p id="audienceText">
+          Put your brand in front of relevant local audiences
+          through trusted businesses, sponsored packaging,
+          in-store experiences, and measurable engagement opportunities.
+        </p>
+        <a class="btn btn-gold" id="audienceCTA" href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">EXPLORE SPONSORSHIP ↗</a>
+      </div>
+      <div class="audience-visual" aria-hidden="true">
+        <div class="audience-orbit">
+          <div class="orbit-center">GK<span>3</span></div>
+          <div class="orbit-pill one" id="orbitOne">SPONSOR</div>
+          <div class="orbit-pill two" id="orbitTwo">CUSTOMER</div>
+          <div class="orbit-pill three" id="orbitThree">BUSINESS PARTNER</div>
+        </div>
+        <div class="orbit-caption">CONNECTED OPPORTUNITY / GK3</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section class="network" id="network">
+  <div class="container">
+    <div class="network-head reveal">
+      <div>
+        <div class="eyebrow gold-dark">THE GK3 MODEL</div>
+        <h2 class="section-title">THREE PARTNERS.<br><span class="gold-dark">ONE NETWORK.</span></h2>
+      </div>
+      <p class="section-copy">
+        Business partners provide approved customer touchpoints.
+        Sponsors fund relevant marketing campaigns.
+        GK3 connects the two, coordinates activation,
+        and measures available engagement signals.
+      </p>
+    </div>
+
+    <div class="network-canvas reveal">
+      <div class="network-map">
+        <div class="network-connect"></div>
+        <div class="network-side">
+          <article class="network-node">
+            <small>01 / DISTRIBUTION</small>
+            <h3>BUSINESS PARTNERS</h3>
+            <p>Provide approved in-store, packaging, and customer engagement opportunities.</p>
+          </article>
         </div>
 
-        <h2 class="section-heading">
-          REAL-WORLD REACH.<br>
-          <span class="gold-dark">MEASURABLE ACTION.</span>
-        </h2>
+        <div class="network-center" aria-label="GK3 connects the network">
+          <strong>GK<span>3</span></strong>
+        </div>
 
+        <div class="network-side">
+          <article class="network-node">
+            <small>02 / SPONSORSHIP</small>
+            <h3>SPONSORS</h3>
+            <p>Fund relevant campaigns that reach customers through participating businesses.</p>
+          </article>
+        </div>
       </div>
 
-      <p class="section-copy">
-        Three complementary ways to connect sponsored
-        campaigns with customers—inside businesses,
-        beyond the storefront, and through approved
-        digital communication channels.
-      </p>
-
+      <div class="network-caption">
+        <p>Sponsorship funds the opportunity.<br>
+          Distribution creates the connection.<br>
+          <span class="gold-dark">Intelligence strengthens the network.</span>
+        </p>
+        <a class="btn btn-dark" href="#demo">SEE IT IN ACTION ↗</a>
+      </div>
     </div>
-
-    <div class="activation-list">
-
-      <article class="activation reveal">
-
-        <div class="activation-index">01</div>
-
-        <h3>GK3 COUNTER</h3>
-
-        <p>
-          Sponsored in-store social growth stations
-          combining live follower-counter displays,
-          QR-enabled rewards, and customer
-          engagement campaigns.
-        </p>
-
-        <div class="activation-arrow" aria-hidden="true">↗</div>
-
-      </article>
-
-      <article class="activation reveal">
-
-        <div class="activation-index">02</div>
-
-        <h3>GK3 REACH</h3>
-
-        <p>
-          Sponsored packaging, QR stickers, and
-          physical touchpoints that extend campaigns
-          into customers' homes and communities.
-        </p>
-
-        <div class="activation-arrow" aria-hidden="true">↗</div>
-
-      </article>
-
-      <article class="activation reveal">
-
-        <div class="activation-index">03</div>
-
-        <h3>GK3 ENGAGE</h3>
-
-        <p>
-          Sponsored customer reactivation and loyalty
-          campaigns delivered through participating
-          businesses' approved, permission-based
-          communication channels.
-        </p>
-
-        <div class="activation-arrow" aria-hidden="true">↗</div>
-
-      </article>
-
-    </div>
-
   </div>
-
 </section>
 
-<!-- =====================================================
-     MARKET DOMINATION
-===================================================== -->
-
-<section class="domination" id="market-domination">
-
-  <div class="container domination-content">
-
-    <div class="eyebrow gold reveal">
-      GK3 MARKET DOMINATION
+<!-- ACTIVATIONS -->
+<section class="showcase" id="activations">
+  <div class="container">
+    <div class="showcase-head reveal">
+      <div>
+        <div class="eyebrow gold-dark">GK3 IN ACTION</div>
+        <h2 class="section-title">REAL-WORLD<br><span class="gold-dark">CONNECTIONS.</span></h2>
+      </div>
+      <p class="section-copy">
+        Marketing doesn't have to begin with another digital advertisement.
+        GK3 creates opportunities through the businesses, packaging,
+        and customer interactions already part of everyday life.
+      </p>
     </div>
 
-    <h2 class="section-heading reveal">
-      THREE CHANNELS.<br>
-      ONE MARKET.<br>
-      <span class="gold">MAXIMUM IMPACT.</span>
-    </h2>
+    <!-- COUNTER -->
+    <article class="feature reveal">
+      <div class="feature-art counter-scene">
+        <div class="cafe-shelf"></div>
+        <div class="cafe-counter"></div>
+        <div class="counter-products">
+          <div class="follower-device">
+            <div class="follower-top">SOCIAL GROWTH COUNTER</div>
+            <div class="follower-digits">
+              <span>4</span><span>3</span><span>8</span><span>2</span><span>7</span>
+            </div>
+          </div>
+          <div class="sponsor-stand">
+            <div class="stand-kicker">LOCAL SPONSOR</div>
+            <div class="stand-brand">GK<span>3</span></div>
+            <div class="qr" data-qr></div>
+            <div class="stand-copy">SCAN · DISCOVER · ENGAGE</div>
+          </div>
+        </div>
+        <div class="scene-note">ILLUSTRATIVE IN-STORE ACTIVATION</div>
+      </div>
 
+      <div class="feature-copy">
+        <div class="feature-num">01 / GK3 COUNTER</div>
+        <h3>TURN EVERY<br>COUNTER INTO<br><span class="gold-dark">OPPORTUNITY.</span></h3>
+        <p>
+          Help participating businesses grow their social audiences
+          while connecting sponsors with customers through
+          in-store displays, rewards, and QR-enabled campaigns.
+        </p>
+        <div class="tag-row">
+          <span class="tag">SOCIAL GROWTH</span>
+          <span class="tag">IN-STORE VISIBILITY</span>
+          <span class="tag">CUSTOMER ENGAGEMENT</span>
+        </div>
+        <div class="concept-label">Concept visualization · Displays may use third-party hardware</div>
+      </div>
+    </article>
+
+    <!-- REACH -->
+    <article class="feature reverse reveal">
+      <div class="feature-art packaging-scene">
+        <div class="packaging-layout">
+          <div class="pizza-box">
+            <div class="pizza-mark">
+              <div class="pizza-circle">✦</div>
+              LOCAL<br>PIZZA CO.
+              <small>CHARLESTON, SC</small>
+            </div>
+          </div>
+          <div class="packaging-sticker">
+            <strong>WHERE WOULD<br>YOU LIVE?</strong>
+            <small>EXPLORE CHARLESTON</small>
+            <div class="qr" data-qr></div>
+          </div>
+          <div class="cup-lid"></div>
+          <div class="coffee-cup">
+            <div class="cup-logo">LOCAL<br>COFFEE<br>× GK3</div>
+          </div>
+        </div>
+        <div class="packaging-foot">ILLUSTRATIVE SPONSORED PACKAGING</div>
+      </div>
+
+      <div class="feature-copy">
+        <div class="feature-num">02 / GK3 REACH</div>
+        <h3>YOUR MESSAGE.<br>THEIR EVERYDAY<br><span class="gold-dark">MOMENTS.</span></h3>
+        <p>
+          Turn pizza boxes, coffee cups, takeout bags, and other
+          approved packaging into opportunities for sponsored
+          marketing and customer engagement.
+        </p>
+        <div class="tag-row">
+          <span class="tag">PACKAGING</span>
+          <span class="tag">PHYSICAL DISTRIBUTION</span>
+          <span class="tag">QR CAMPAIGNS</span>
+        </div>
+        <div class="concept-label">Illustrative packaging and campaign creative</div>
+      </div>
+    </article>
+
+    <!-- ENGAGE -->
+    <article class="feature reveal">
+      <div class="feature-art crm-scene">
+        <div class="crm-window">
+          <div class="crm-top">
+            <div class="crm-brand">GK<span>3</span> / ENGAGE</div>
+            <small>WORKFLOW CONCEPT</small>
+          </div>
+          <div class="crm-body">
+            <div class="crm-heading">Customer Engagement Journey</div>
+            <div class="crm-sub">From physical interaction to an ongoing relationship</div>
+            <div class="crm-journey">
+              <div class="crm-step"><small>01</small><strong>SCAN</strong></div>
+              <div class="crm-step"><small>02</small><strong>ENGAGE</strong></div>
+              <div class="crm-step"><small>03</small><strong>OPT IN</strong></div>
+              <div class="crm-step"><small>04</small><strong>FOLLOW UP</strong></div>
+            </div>
+            <div class="crm-card-row">
+              <div class="crm-card">
+                <small>CAMPAIGN TYPE</small>
+                <strong>Local Rewards</strong>
+                <em>Participation campaign</em>
+              </div>
+              <div class="crm-card">
+                <small>FOLLOW-UP CHANNEL</small>
+                <strong>Email / SMS</strong>
+                <em>Permission required</em>
+              </div>
+            </div>
+          </div>
+          <div class="crm-badge">ILLUSTRATIVE WORKFLOW</div>
+        </div>
+      </div>
+
+      <div class="feature-copy">
+        <div class="feature-num">03 / GK3 ENGAGE</div>
+        <h3>DON'T JUST<br>REACH CUSTOMERS.<br><span class="gold-dark">BUILD RELATIONSHIPS.</span></h3>
+        <p>
+          Connect sponsored activations with loyalty, customer
+          reactivation, and permission-based communication.
+          GK3 can coordinate campaigns using appropriate CRM
+          tools and participating businesses' authorized channels.
+        </p>
+        <div class="tag-row">
+          <span class="tag">LOYALTY</span>
+          <span class="tag">CRM STRATEGY</span>
+          <span class="tag">REACTIVATION</span>
+        </div>
+        <div class="concept-label">Illustrative CRM workflow · Not a live software dashboard</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- INTERACTIVE CAMPAIGN -->
+<section class="demo" id="demo">
+  <div class="container">
+    <div class="demo-head reveal">
+      <div>
+        <div class="eyebrow gold">INTERACTIVE CAMPAIGN EXAMPLE</div>
+        <h2 class="section-title">SEE HOW<br><span class="gold">GK3 WORKS.</span></h2>
+      </div>
+      <p class="section-copy light">
+        Follow a hypothetical local sponsorship campaign from
+        physical packaging to customer engagement and
+        measurable activity.
+      </p>
+    </div>
+
+    <div class="demo-frame reveal">
+      <div class="demo-controls">
+        <h3>EXPLORE THE JOURNEY</h3>
+        <button type="button" class="demo-choice active" data-demo="0" aria-pressed="true"><span>01</span> SPONSORED PACKAGING</button>
+        <button type="button" class="demo-choice" data-demo="1" aria-pressed="false"><span>02</span> CUSTOMER ENGAGEMENT</button>
+        <button type="button" class="demo-choice" data-demo="2" aria-pressed="false"><span>03</span> CAMPAIGN INSIGHTS</button>
+        <p class="demo-explain" id="demoExplain">
+          A participating restaurant includes a sponsor-funded
+          campaign sticker on approved takeout packaging.
+        </p>
+        <div class="concept-label" style="margin-top:20px">Hypothetical demonstration · No real customer data</div>
+      </div>
+
+      <div class="demo-screen" aria-live="polite">
+        <div class="demo-display" id="demoDisplay">
+          <div class="demo-visual-title">01 / PHYSICAL DISTRIBUTION</div>
+          <div class="demo-package">
+            <div class="demo-package-mark">LOCAL<br>PIZZA CO.<small>FRESH FROM CHARLESTON</small></div>
+            <div class="demo-package-label">
+              <strong>YOUR DREAM<br>NEIGHBORHOOD?</strong>
+              <small>SCAN TO EXPLORE</small>
+              <div class="qr" data-qr></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="demo-disclaimer">
+      All campaign imagery and interactions in this demonstration are illustrative.
+      QR-style graphics are decorative examples, not active tracking codes.
+      Real campaigns require approved placements, appropriate consent,
+      and agreed measurement methods.
+    </p>
+  </div>
+</section>
+
+<!-- INTELLIGENCE -->
+<section class="intelligence" id="intelligence">
+  <div class="container">
+    <div class="intel-head reveal">
+      <div>
+        <div class="eyebrow gold-dark">GK3 INTELLIGENCE</div>
+        <h2 class="section-title">EVERY INTERACTION<br><span class="gold-dark">TELLS A STORY.</span></h2>
+      </div>
+      <p class="section-copy">
+        Physical marketing can generate measurable digital interactions.
+        GK3 uses available campaign signals to help evaluate placements,
+        refine creative, and inform future marketing decisions.
+      </p>
+    </div>
+
+    <div class="intel-board reveal">
+      <div class="intel-grid">
+        <div class="intel-item">
+          <small>01 / DISTRIBUTE</small>
+          <div><h3>PHYSICAL<br>PLACEMENTS</h3><p>Approved packaging and in-store touchpoints.</p></div>
+        </div>
+        <div class="intel-item">
+          <small>02 / INTERACT</small>
+          <div><h3>QR &amp; DIGITAL<br>ENGAGEMENT</h3><p>Scans and landing-page activity where measured.</p></div>
+        </div>
+        <div class="intel-item">
+          <small>03 / UNDERSTAND</small>
+          <div><h3>CAMPAIGN<br>INSIGHTS</h3><p>Compare available engagement signals.</p></div>
+        </div>
+        <div class="intel-item">
+          <small>04 / IMPROVE</small>
+          <div><h3>SMARTER<br>DECISIONS</h3><p>Use what is learned to refine future campaigns.</p></div>
+        </div>
+      </div>
+      <div class="intel-line"></div>
+      <div class="intel-foot">
+        <p>Distribution creates the opportunity.<br><span class="gold">Intelligence improves what comes next.</span></p>
+        <span class="concept-label">Conceptual measurement framework</span>
+      </div>
+    </div>
+
+    <div class="intel-note reveal">
+      <div class="micro gold-dark">MEASUREMENT MATTERS</div>
+      <p>
+        Depending on campaign setup, GK3 can evaluate QR scans,
+        landing-page activity, reward participation, and authorized
+        opt-ins. These signals are not automatically equivalent to
+        unique people, verified purchases, or marketing consent.
+        Reporting should reflect what each campaign actually measures.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET DOMINATION -->
+<section class="domination" id="market-domination">
+  <div class="container domination-inner">
+    <div class="eyebrow gold reveal">GK3 MARKET DOMINATION</div>
+    <h2 class="section-title reveal">THREE CHANNELS.<br>ONE MARKET.<br><span class="gold">ONE STRATEGY.</span></h2>
     <p class="section-copy light reveal">
-      Market Domination combines Counter, Reach, and Engage
-      into a coordinated local sponsorship campaign.
-      Physical visibility, digital interaction, and
-      customer engagement work together through
-      one integrated strategy.
+      Bring in-store visibility, sponsored physical distribution,
+      and permission-based customer engagement together through
+      one coordinated local marketing campaign.
     </p>
 
-    <div class="domination-grid reveal">
-
+    <div class="domination-cards reveal">
       <div class="domination-card">
-
-        <small>CHANNEL 01</small>
-
-        <h3>COUNTER</h3>
-
-        <p>
-          In-store attention, social growth,
-          and customer participation.
-        </p>
-
+        <small>CHANNEL 01</small><h3>COUNTER</h3>
+        <p>In-store attention, social growth, and customer participation.</p>
       </div>
-
       <div class="domination-card">
-
-        <small>CHANNEL 02</small>
-
-        <h3>REACH</h3>
-
-        <p>
-          Sponsored physical distribution
-          and QR-enabled campaigns.
-        </p>
-
+        <small>CHANNEL 02</small><h3>REACH</h3>
+        <p>Sponsored packaging, physical distribution, and QR-enabled campaigns.</p>
       </div>
-
       <div class="domination-card">
-
-        <small>CHANNEL 03</small>
-
-        <h3>ENGAGE</h3>
-
-        <p>
-          Permission-based digital engagement
-          and customer reactivation.
-        </p>
-
+        <small>CHANNEL 03</small><h3>ENGAGE</h3>
+        <p>Permission-based loyalty, reactivation, and customer communications.</p>
       </div>
-
     </div>
 
-    <a
-      class="btn btn-gold"
-      href="https://tally.so/r/m6glkk"
-      target="_blank"
-      rel="noopener noreferrer">
-      EXPLORE SPONSORSHIP ↗
-    </a>
-
+    <a class="btn btn-gold" href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">DISCUSS A CAMPAIGN ↗</a>
   </div>
-
 </section>
 
-<!-- =====================================================
-     INTELLIGENCE
-===================================================== -->
-
-<section class="intelligence" id="intelligence">
-
-  <div class="container">
-
-    <div class="intelligence-intro reveal">
-
-      <div>
-
-        <div class="eyebrow gold-dark">
-          GK3 INTELLIGENCE
-        </div>
-
-        <h2 class="section-heading">
-          EVERY INTERACTION<br>
-          <span class="gold-dark">TELLS A STORY.</span>
-        </h2>
-
-      </div>
-
+<!-- PLANNER -->
+<section class="planner" id="planner">
+  <div class="container planner-grid">
+    <div class="reveal">
+      <div class="eyebrow gold-dark">SPONSORSHIP PLANNING TOOL</div>
+      <h2 class="section-title">THINK<br>BEYOND<br><span class="gold-dark">ONE LOCATION.</span></h2>
       <p class="section-copy">
-        GK3 connects physical marketing with measurable
-        digital interactions. QR-enabled campaigns create
-        opportunities to understand engagement, evaluate
-        placements, and improve future marketing decisions.
+        Explore how sponsored packaging placements could scale
+        across a network of participating businesses.
+        Adjust the assumptions to visualize a hypothetical
+        monthly distribution scenario.
       </p>
-
+      <div class="concept-label" style="margin-top:20px">Planning illustration · Not actual GK3 network inventory</div>
     </div>
 
-    <div class="intelligence-flow reveal">
+    <div class="planner-controls reveal">
+      <label for="locations">PARTICIPATING LOCATIONS <span class="planner-value" id="locationsValue">5</span></label>
+      <input type="range" id="locations" min="1" max="30" value="5">
 
-      <div class="intelligence-step">
-        <small>01</small>
-        <strong>ATTENTION</strong>
+      <label for="packages">MONTHLY PACKAGES PER LOCATION <span class="planner-value" id="packagesValue">1,000</span></label>
+      <input type="range" id="packages" min="100" max="5000" step="100" value="1000">
+
+      <div class="planner-result">
+        <span>HYPOTHETICAL MONTHLY PLACEMENTS</span>
+        <strong id="placementsTotal">5,000</strong>
+        <p>
+          Calculated as locations × estimated packages per location.
+          These are assumed placements—not verified distribution,
+          unique audience reach, scans, or campaign results.
+        </p>
       </div>
-
-      <div class="intelligence-step">
-        <small>02</small>
-        <strong>SCAN</strong>
-      </div>
-
-      <div class="intelligence-step">
-        <small>03</small>
-        <strong>ENGAGE</strong>
-      </div>
-
-      <div class="intelligence-step">
-        <small>04</small>
-        <strong>REWARD</strong>
-      </div>
-
-      <div class="intelligence-step">
-        <small>05</small>
-        <strong>INTELLIGENCE</strong>
-      </div>
-
-      <div class="intelligence-step">
-        <small>06</small>
-        <strong>GROWTH</strong>
-      </div>
-
     </div>
-
-    <div class="intelligence-note reveal">
-
-      <div class="intelligence-note-label">
-        THE LONG-TERM ADVANTAGE
-      </div>
-
-      <p>
-        Campaign activity can reveal which placements,
-        messages, and incentives generate engagement.
-        Where tracking is available, GK3 can evaluate
-        QR scans, landing-page interactions, and reward
-        participation to inform future campaigns.
-        A scan represents an interaction—not necessarily
-        a unique customer, purchase, or marketing consent.
-      </p>
-
-    </div>
-
   </div>
-
 </section>
 
-<!-- =====================================================
-     PARTNERS
-===================================================== -->
+<!-- ECONOMICS -->
+<section class="economics" id="model">
+  <div class="container">
+    <div class="economics-head reveal">
+      <div class="eyebrow gold-dark">WHY THE MODEL WORKS</div>
+      <h2 class="section-title">A BETTER WAY<br>TO <span class="gold-dark">FUND GROWTH.</span></h2>
+      <p class="section-copy">
+        GK3 aligns businesses with complementary incentives
+        rather than treating every marketing opportunity
+        as a conventional advertising purchase.
+      </p>
+    </div>
 
+    <div class="economics-grid">
+      <article class="economics-card reveal">
+        <small>01 / BUSINESS PARTNERS</small>
+        <h3>UNLOCK OPPORTUNITY.</h3>
+        <p>
+          Provide approved customer touchpoints and gain access
+          to sponsor-funded marketing initiatives, social growth,
+          loyalty campaigns, and negotiated partnership benefits.
+        </p>
+      </article>
+      <article class="economics-card reveal">
+        <small>02 / SPONSORS</small>
+        <h3>FUND RELEVANT REACH.</h3>
+        <p>
+          Support campaigns that connect your business with
+          local audiences through participating businesses,
+          physical placements, and digital engagement.
+        </p>
+      </article>
+      <article class="economics-card reveal">
+        <small>03 / GK3</small>
+        <h3>CONNECT THE NETWORK.</h3>
+        <p>
+          Structure partnerships, coordinate campaigns,
+          oversee agreed activations, and evaluate
+          available engagement and campaign signals.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
 <section class="partners" id="partners">
-
   <div class="container">
-
-    <div class="partners-intro reveal">
-
-      <div class="eyebrow gold-dark">
-        OPPORTUNITIES
-      </div>
-
-      <h2 class="section-heading">
-        BETTER TOGETHER.<br>
-        <span class="gold-dark">BY DESIGN.</span>
-      </h2>
-
+    <div class="partner-head reveal">
+      <div class="eyebrow gold-dark">PARTNER OPPORTUNITIES</div>
+      <h2 class="section-title">BETTER TOGETHER.<br><span class="gold-dark">BY DESIGN.</span></h2>
       <p class="section-copy">
-        Whether you want to reach new customers or
-        grow your existing business, GK3 creates
-        opportunities through aligned partnerships.
+        Whether you're looking for new customers or new ways
+        to grow your business, GK3 creates opportunities
+        through aligned marketing partnerships.
       </p>
-
     </div>
 
     <div class="partner-grid">
-
       <article class="partner-card dark reveal" id="sponsors">
-
-        <div class="eyebrow">
-          FOR SPONSORS
-        </div>
-
-        <h3>
-          REACH PEOPLE.<br>
-          NOT JUST SCREENS.
-        </h3>
-
+        <div class="eyebrow">FOR SPONSORS</div>
+        <h3>REACH PEOPLE.<br>NOT JUST SCREENS.</h3>
         <p>
-          Put your business in front of relevant
-          local audiences through sponsored campaigns
-          at participating businesses and
-          customer touchpoints.
+          Put your business in front of relevant local audiences
+          through approved physical and digital campaigns
+          at participating businesses.
         </p>
-
-        <ul class="partner-benefits">
-          <li>Locally targeted campaign opportunities</li>
+        <ul class="partner-list">
+          <li>Locally relevant sponsorship opportunities</li>
           <li>Physical and digital customer touchpoints</li>
-          <li>QR-enabled engagement and rewards</li>
+          <li>QR-enabled engagement campaigns</li>
           <li>Available campaign performance insights</li>
         </ul>
-
-        <a
-          class="btn btn-gold"
-          href="https://tally.so/r/m6glkk"
-          target="_blank"
-          rel="noopener noreferrer">
-          BECOME A SPONSOR ↗
-        </a>
-
+        <a class="btn btn-gold" href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">BECOME A SPONSOR ↗</a>
       </article>
 
       <article class="partner-card reveal" id="businesses">
-
-        <div class="eyebrow">
-          FOR BUSINESS PARTNERS
-        </div>
-
-        <h3>
-          YOUR BUSINESS.<br>
-          MORE OPPORTUNITY.
-        </h3>
-
+        <div class="eyebrow">FOR BUSINESS PARTNERS</div>
+        <h3>YOUR BUSINESS.<br>MORE OPPORTUNITY.</h3>
         <p>
-          Turn existing customer touchpoints into
-          opportunities for sponsor-funded marketing,
-          social media growth, loyalty,
-          and repeat engagement.
+          Turn existing customer touchpoints into opportunities
+          for sponsor-funded marketing, social growth,
+          loyalty, and repeat engagement.
         </p>
-
-        <ul class="partner-benefits">
+        <ul class="partner-list">
           <li>Sponsor-funded marketing opportunities</li>
           <li>Social media and customer engagement campaigns</li>
           <li>Potential packaging cost support</li>
           <li>New partnership and revenue opportunities</li>
         </ul>
-
-        <a
-          class="btn btn-black"
-          href="https://tally.so/r/m6glkk"
-          target="_blank"
-          rel="noopener noreferrer">
-          BECOME A PARTNER ↗
-        </a>
-
+        <a class="btn btn-dark" href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">BECOME A BUSINESS PARTNER ↗</a>
       </article>
-
     </div>
-
   </div>
-
 </section>
 
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
-
+<!-- FINAL CTA -->
 <section class="final" id="join">
-
   <div class="container">
-
-    <div class="final-content reveal">
-
-      <div class="eyebrow">
-        JOIN THE GK3 NETWORK
-      </div>
-
-      <h2>
-        GROW<br>
-        TOGETHER.
-      </h2>
-
+    <div class="final-inner reveal">
+      <div class="eyebrow">JOIN THE GK3 NETWORK</div>
+      <h2>GROW<br>TOGETHER.</h2>
       <p>
-        Great partnerships create opportunities for
-        everyone involved. Whether you're a business
-        looking to grow or a sponsor looking to connect,
-        there's a place for you in the GK3 network.
+        The strongest opportunities often begin with the right connection.
+        Join the conversation and explore what GK3 could create
+        for your business.
       </p>
-
       <div class="final-actions">
-
-        <a
-          class="btn btn-black"
-          href="https://tally.so/r/m6glkk"
-          target="_blank"
-          rel="noopener noreferrer">
-          JOIN THE NETWORK ↗
-        </a>
-
-        <a class="btn btn-outline-dark" href="#network">
-          EXPLORE THE MODEL ↑
-        </a>
-
+        <a class="btn btn-dark" href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">JOIN THE NETWORK ↗</a>
+        <a class="btn btn-light-outline" href="#demo">EXPLORE HOW IT WORKS ↑</a>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 </main>
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
+<!-- FOOTER -->
 <footer class="footer">
-
   <div class="container">
-
     <div class="footer-main">
-
       <div>
-
-        <a href="#home" class="footer-logo" aria-label="GK3 Home">
-          GK<span>3</span>
-        </a>
-
-        <div class="footer-category">
-          MARKETING &amp; INTELLIGENCE
-        </div>
-
-        <div class="footer-tagline">
-          GROW TOGETHER.
-        </div>
-
-        <p class="footer-description">
-          Sponsored growth networks connecting
-          businesses, sponsors, and customers
-          through coordinated marketing
-          and measurable engagement.
+        <a href="#home" class="footer-logo" aria-label="GK3 Home">GK<span>3</span></a>
+        <div class="footer-cat">MARKETING &amp; INTELLIGENCE</div>
+        <div class="footer-tag">GROW TOGETHER.</div>
+        <p class="footer-desc">
+          Sponsored growth networks connecting businesses,
+          sponsors, and customers through coordinated
+          marketing and measurable engagement.
         </p>
-
       </div>
 
       <div class="footer-links">
-
         <div>
-
-          <h3>EXPLORE</h3>
-
+          <h4>EXPLORE</h4>
           <a href="#network">The Network</a>
           <a href="#activations">Activations</a>
-          <a href="#market-domination">Market Domination</a>
+          <a href="#demo">Campaign Example</a>
           <a href="#intelligence">Intelligence</a>
-
+          <a href="#planner">Sponsorship Planner</a>
         </div>
-
         <div>
-
-          <h3>GET INVOLVED</h3>
-
+          <h4>GET INVOLVED</h4>
           <a href="#sponsors">For Sponsors</a>
           <a href="#businesses">For Businesses</a>
-
-          <a
-            href="https://tally.so/r/m6glkk"
-            target="_blank"
-            rel="noopener noreferrer">
-            Join the Network ↗
-          </a>
-
+          <a href="https://tally.so/r/m6glkk" target="_blank" rel="noopener noreferrer">Join the Network ↗</a>
         </div>
-
       </div>
-
     </div>
 
     <div class="footer-bottom">
-
-      <span>
-        © <span id="year">2026</span>
-        Gold Key Partners LLC. All rights reserved.
-      </span>
-
-      <span>
-        GK3 — Marketing &amp; Intelligence · Charleston, SC
-      </span>
-
+      <span>© <span id="year">2026</span> Gold Key Partners LLC. All rights reserved.</span>
+      <span>GK3 — Marketing &amp; Intelligence · Charleston, SC</span>
     </div>
-
   </div>
-
 </footer>
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
-(function () {
-  "use strict";
+(function(){
+"use strict";
 
-  /* ===================================================
-     BASIC INTERACTIONS
-  =================================================== */
+/* ======================================================
+   NAVIGATION
+====================================================== */
+const year=document.getElementById("year");
+if(year)year.textContent=new Date().getFullYear();
 
-  const year = document.getElementById("year");
+const toggle=document.querySelector(".menu-toggle");
+const mobileNav=document.querySelector(".mobile-nav");
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
+function closeMenu(){
+  if(!toggle||!mobileNav)return;
+  toggle.setAttribute("aria-expanded","false");
+  toggle.setAttribute("aria-label","Open navigation menu");
+  mobileNav.classList.remove("open");
+  document.body.classList.remove("menu-open");
+}
+if(toggle&&mobileNav){
+  toggle.addEventListener("click",()=>{
+    const open=toggle.getAttribute("aria-expanded")==="true";
+    toggle.setAttribute("aria-expanded",String(!open));
+    toggle.setAttribute("aria-label",open?"Open navigation menu":"Close navigation menu");
+    mobileNav.classList.toggle("open",!open);
+    document.body.classList.toggle("menu-open",!open);
+  });
+  mobileNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+  window.addEventListener("resize",()=>{if(innerWidth>900)closeMenu()});
+}
+
+/* ======================================================
+   REVEAL
+====================================================== */
+const reducedMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealEls=document.querySelectorAll(".reveal");
+
+if(reducedMotion||!("IntersectionObserver" in window)){
+  revealEls.forEach(el=>el.classList.add("visible"));
+}else{
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.07,rootMargin:"0px 0px 40px 0px"});
+  revealEls.forEach(el=>observer.observe(el));
+}
+
+/* ======================================================
+   AUDIENCE SELECTOR
+====================================================== */
+const audienceData={
+  sponsor:{
+    kicker:"FOR SPONSORS",
+    title:"REACH CUSTOMERS<br>WHERE LIFE HAPPENS.",
+    text:"Put your brand in front of relevant local audiences through trusted businesses, sponsored packaging, in-store experiences, and measurable engagement opportunities.",
+    cta:"EXPLORE SPONSORSHIP ↗",
+    orbit:["SPONSOR","CUSTOMER","BUSINESS PARTNER"]
+  },
+  business:{
+    kicker:"FOR BUSINESS PARTNERS",
+    title:"YOUR CUSTOMERS.<br>MORE OPPORTUNITY.",
+    text:"Turn existing customer touchpoints into opportunities for sponsor-funded marketing, social media growth, loyalty campaigns, and potential new revenue or cost-support arrangements.",
+    cta:"BECOME A PARTNER ↗",
+    orbit:["YOUR BUSINESS","CUSTOMER","SPONSOR"]
+  }
+};
+
+function setAudience(type){
+  const d=audienceData[type];
+  if(!d)return;
+  document.getElementById("audienceKicker").textContent=d.kicker;
+  document.getElementById("audienceTitle").innerHTML=d.title;
+  document.getElementById("audienceText").textContent=d.text;
+  document.getElementById("audienceCTA").textContent=d.cta;
+  document.getElementById("orbitOne").textContent=d.orbit[0];
+  document.getElementById("orbitTwo").textContent=d.orbit[1];
+  document.getElementById("orbitThree").textContent=d.orbit[2];
+  document.querySelectorAll(".audience-tab").forEach(btn=>{
+    const active=btn.dataset.audience===type;
+    btn.classList.toggle("active",active);
+    btn.setAttribute("aria-pressed",String(active));
+  });
+}
+document.querySelectorAll(".audience-tab").forEach(btn=>{
+  btn.addEventListener("click",()=>setAudience(btn.dataset.audience));
+});
+document.querySelectorAll("[data-audience-link]").forEach(link=>{
+  link.addEventListener("click",()=>setAudience(link.dataset.audienceLink));
+});
+
+/* ======================================================
+   DECORATIVE QR PATTERN
+   These are visual placeholders, NOT functional QR codes.
+====================================================== */
+function qrSVG(){
+  const size=25;
+  let rects="";
+  function finder(x,y){
+    return `<rect x="${x}" y="${y}" width="7" height="7" fill="#101820"/>
+    <rect x="${x+1}" y="${y+1}" width="5" height="5" fill="#fff"/>
+    <rect x="${x+2}" y="${y+2}" width="3" height="3" fill="#101820"/>`;
+  }
+  rects+=finder(1,1)+finder(17,1)+finder(1,17);
+
+  function inFinder(x,y){
+    return (x>=1&&x<=7&&y>=1&&y<=7)||
+           (x>=17&&x<=23&&y>=1&&y<=7)||
+           (x>=1&&x<=7&&y>=17&&y<=23);
+  }
+  for(let y=1;y<24;y++){
+    for(let x=1;x<24;x++){
+      if(inFinder(x,y))continue;
+      const v=(x*x*7+y*y*11+x*y*3+x*13+y*5)%17;
+      if(v<8)rects+=`<rect x="${x}" y="${y}" width="1" height="1" fill="#101820"/>`;
+    }
+  }
+  return `<svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative QR-style pattern, not scannable"><rect width="25" height="25" fill="#fff"/>${rects}</svg>`;
+}
+document.querySelectorAll("[data-qr]").forEach(el=>el.innerHTML=qrSVG());
+
+/* ======================================================
+   INTERACTIVE CAMPAIGN DEMO
+====================================================== */
+const demoExplain=document.getElementById("demoExplain");
+const demoDisplay=document.getElementById("demoDisplay");
+
+const demoScreens=[
+  {
+    text:"A participating restaurant includes a sponsor-funded campaign sticker on approved takeout packaging.",
+    html:`
+      <div class="demo-visual-title">01 / PHYSICAL DISTRIBUTION</div>
+      <div class="demo-package">
+        <div class="demo-package-mark">LOCAL<br>PIZZA CO.<small>FRESH FROM CHARLESTON</small></div>
+        <div class="demo-package-label">
+          <strong>YOUR DREAM<br>NEIGHBORHOOD?</strong>
+          <small>SCAN TO EXPLORE</small>
+          <div class="qr" data-qr></div>
+        </div>
+      </div>`
+  },
+  {
+    text:"A customer scans the campaign code and visits a mobile landing page. Participation is optional, and marketing follow-up requires appropriate consent.",
+    html:`
+      <div class="demo-visual-title">02 / CUSTOMER ENGAGEMENT</div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-kicker">CHARLESTON CAMPAIGN CONCEPT</div>
+        <h4>WHERE WOULD<br>YOU LIVE?</h4>
+        <p>Choose a Charleston neighborhood to explore.</p>
+        <div class="phone-option">○ Downtown Charleston</div>
+        <div class="phone-option">○ Mount Pleasant</div>
+        <div class="phone-option">○ James Island</div>
+        <div class="phone-button">EXPLORE NEIGHBORHOODS →</div>
+      </div>`
+  },
+  {
+    text:"The campaign can produce measurable activity such as scans, page visits, and voluntary participation. Results depend on the actual tracking setup.",
+    html:`
+      <div class="demo-visual-title">03 / CAMPAIGN INTELLIGENCE</div>
+      <div class="demo-metrics">
+        <h4>Illustrative Measurement</h4>
+        <div class="demo-metric"><span>Physical placements</span><strong>Distribution records</strong></div>
+        <div class="demo-metric"><span>QR interactions</span><strong>Scan events</strong></div>
+        <div class="demo-metric"><span>Landing-page engagement</span><strong>Page activity</strong></div>
+        <div class="demo-metric"><span>Optional participation</span><strong>Recorded responses</strong></div>
+        <div class="demo-metric"><span>Marketing follow-up</span><strong>Consent required</strong></div>
+        <p style="color:#888;font-size:11px;line-height:1.7;margin:20px 0 0">
+          Example measurement categories only. No live data or verified campaign results are displayed.
+        </p>
+      </div>`
+  }
+];
+
+function setDemo(index){
+  const d=demoScreens[index];
+  if(!d)return;
+  demoExplain.textContent=d.text;
+  demoDisplay.innerHTML=d.html;
+  demoDisplay.querySelectorAll("[data-qr]").forEach(el=>el.innerHTML=qrSVG());
+  document.querySelectorAll(".demo-choice").forEach(btn=>{
+    const active=Number(btn.dataset.demo)===index;
+    btn.classList.toggle("active",active);
+    btn.setAttribute("aria-pressed",String(active));
+  });
+}
+document.querySelectorAll(".demo-choice").forEach(btn=>{
+  btn.addEventListener("click",()=>setDemo(Number(btn.dataset.demo)));
+});
+
+/* ======================================================
+   SPONSORSHIP PLANNER
+====================================================== */
+const locations=document.getElementById("locations");
+const packages=document.getElementById("packages");
+const fmt=new Intl.NumberFormat("en-US");
+
+function updatePlanner(){
+  const l=Number(locations.value);
+  const p=Number(packages.value);
+  document.getElementById("locationsValue").textContent=fmt.format(l);
+  document.getElementById("packagesValue").textContent=fmt.format(p);
+  document.getElementById("placementsTotal").textContent=fmt.format(l*p);
+}
+locations.addEventListener("input",updatePlanner);
+packages.addEventListener("input",updatePlanner);
+updatePlanner();
+
+/* ======================================================
+   GOLD BRAIN
+   Preserves V3's procedural particle-network direction.
+====================================================== */
+const canvas=document.getElementById("brainCanvas");
+if(!canvas)return;
+const ctx=canvas.getContext("2d");
+if(!ctx)return;
+
+const stage=canvas.parentElement;
+const TAU=Math.PI*2;
+let W=1,H=1,DPR=1;
+let nodes=[],edges=[],folds=[];
+let frameId=null,running=false,visible=true,lastFrame=0;
+let mouseX=0,mouseY=0,currentX=0,currentY=0;
+
+const outline=[
+  [-.94,-.11],[-.94,-.30],[-.86,-.48],[-.71,-.63],
+  [-.52,-.73],[-.29,-.79],[-.05,-.78],[.16,-.73],
+  [.39,-.72],[.61,-.64],[.79,-.49],[.90,-.28],
+  [.93,-.06],[.86,.15],[.72,.30],[.53,.38],
+  [.37,.42],[.28,.55],[.21,.73],[.15,.88],
+  [.03,.89],[-.03,.78],[0,.60],[-.12,.49],
+  [-.31,.43],[-.48,.35],[-.66,.30],[-.82,.17],
+  [-.91,.04]
+];
+
+function rand(a,b){return a+Math.random()*(b-a)}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+
+function insidePolygon(x,y){
+  let inside=false;
+  for(let i=0,j=outline.length-1;i<outline.length;j=i++){
+    const xi=outline[i][0],yi=outline[i][1];
+    const xj=outline[j][0],yj=outline[j][1];
+    if(((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/((yj-yi)||.00001)+xi)){
+      inside=!inside;
+    }
+  }
+  return inside;
+}
+
+function createBrain(){
+  nodes=[];edges=[];folds=[];
+  const mobile=W<450;
+  const count=mobile?420:780;
+  let attempts=0;
+
+  while(nodes.length<count&&attempts<count*45){
+    attempts++;
+    const x=rand(-.96,.96),y=rand(-.83,.90);
+    if(!insidePolygon(x,y))continue;
+    const envelope=Math.sqrt(Math.max(.05,1-.55*x*x-.65*y*y));
+    const z=rand(-1,1)*envelope*.72;
+    const wrinkle=Math.sin(x*21+y*9)*Math.cos(y*19-x*7)*.045;
+    nodes.push({
+      x,y,z:z+wrinkle,
+      size:rand(.65,1.65),
+      glow:Math.random(),
+      phase:rand(0,TAU),
+      speed:rand(.4,1.3)
+    });
   }
 
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mobileNav = document.querySelector(".mobile-nav");
-
-  function closeMenu() {
-    if (!menuToggle || !mobileNav) return;
-
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation menu");
-
-    mobileNav.classList.remove("open");
-    document.body.classList.remove("menu-open");
-  }
-
-  if (menuToggle && mobileNav) {
-
-    menuToggle.addEventListener("click", function () {
-
-      const open =
-        menuToggle.getAttribute("aria-expanded") === "true";
-
-      menuToggle.setAttribute("aria-expanded", String(!open));
-      menuToggle.setAttribute(
-        "aria-label",
-        open ? "Open navigation menu" : "Close navigation menu"
-      );
-
-      mobileNav.classList.toggle("open", !open);
-      document.body.classList.toggle("menu-open", !open);
-
-    });
-
-    mobileNav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") closeMenu();
-    });
-
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 900) closeMenu();
-    });
-
-  }
-
-  /* ===================================================
-     SCROLL REVEALS
-  =================================================== */
-
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  const reveals = document.querySelectorAll(".reveal");
-
-  if (reducedMotion || !("IntersectionObserver" in window)) {
-
-    reveals.forEach(function (el) {
-      el.classList.add("visible");
-    });
-
-  } else {
-
-    const revealObserver = new IntersectionObserver(function (entries) {
-
-      entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
-
-      });
-
-    }, {
-      threshold: .07,
-      rootMargin: "0px 0px 40px 0px"
-    });
-
-    reveals.forEach(function (el) {
-      revealObserver.observe(el);
-    });
-
-  }
-
-  /* ===================================================
-     GK3 GOLD BRAIN V3
-
-     Three-dimensional particle visualization.
-
-     Features:
-     - Two connected cerebral hemispheres
-     - Layered depth
-     - Neural pathways
-     - Curved cortical detailing
-     - Animated signals
-     - Pointer-responsive rotation
-     - Responsive canvas
-     - Reduced-motion support
-  =================================================== */
-
-  const canvas = document.getElementById("brainCanvas");
-
-  if (!canvas) return;
-
-  const ctx = canvas.getContext("2d");
-
-  if (!ctx) return;
-
-  const stage = canvas.parentElement;
-
-  let W = 1;
-  let H = 1;
-  let DPR = 1;
-
-  let nodes = [];
-  let edges = [];
-  let folds = [];
-
-  let frameId = null;
-  let running = false;
-  let visible = true;
-  let lastFrame = 0;
-
-  let mouseX = 0;
-  let mouseY = 0;
-
-  let currentX = 0;
-  let currentY = 0;
-
-  const GOLD = [215,169,54];
-
-  const TAU = Math.PI * 2;
-
-  /* ===================================================
-     HELPERS
-  =================================================== */
-
-  function rand(a,b) {
-    return a + Math.random() * (b-a);
-  }
-
-  function clamp(v,a,b) {
-    return Math.max(a, Math.min(b,v));
-  }
-
-  function distance3(a,b) {
-
-    const dx = a.x-b.x;
-    const dy = a.y-b.y;
-    const dz = a.z-b.z;
-
-    return Math.sqrt(dx*dx + dy*dy + dz*dz);
-
-  }
-
-  /*
-    Brain silhouette in normalized side-view space.
-
-    The shape deliberately emphasizes:
-    - broad frontal and upper cerebral mass
-    - curved rear hemisphere
-    - temporal region
-    - narrowing lower brainstem
-
-    The resulting geometry is stylized rather than
-    a medically precise anatomical model.
-  */
-
-  const outline = [
-
-    [-.94,-.11],
-    [-.94,-.30],
-    [-.86,-.48],
-    [-.71,-.63],
-    [-.52,-.73],
-    [-.29,-.79],
-    [-.05,-.78],
-    [.16,-.73],
-    [.39,-.72],
-    [.61,-.64],
-    [.79,-.49],
-    [.90,-.28],
-    [.93,-.06],
-    [.86,.15],
-    [.72,.30],
-    [.53,.38],
-    [.37,.42],
-    [.28,.55],
-    [.21,.73],
-    [.15,.88],
-    [.03,.89],
-    [-.03,.78],
-    [.00,.60],
-    [-.12,.49],
-    [-.31,.43],
-    [-.48,.35],
-    [-.66,.30],
-    [-.82,.17],
-    [-.91,.04]
-
+  const cell=.17;
+  const grid=new Map();
+  const key=(x,y,z)=>x+","+y+","+z;
+  const coords=n=>[
+    Math.floor(n.x/cell),
+    Math.floor(n.y/cell),
+    Math.floor(n.z/cell)
   ];
 
-  function insidePolygon(x,y) {
-
-    let inside = false;
-
-    for (
-      let i=0,j=outline.length-1;
-      i<outline.length;
-      j=i++
-    ) {
-
-      const xi=outline[i][0];
-      const yi=outline[i][1];
-
-      const xj=outline[j][0];
-      const yj=outline[j][1];
-
-      const intersect =
-        ((yi>y)!==(yj>y)) &&
-        (x<(xj-xi)*(y-yi)/((yj-yi)||.00001)+xi);
-
-      if (intersect) inside=!inside;
-
-    }
-
-    return inside;
-
-  }
-
-  /* ===================================================
-     CREATE BRAIN GEOMETRY
-  =================================================== */
-
-  function createBrain() {
-
-    nodes = [];
-    edges = [];
-    folds = [];
-
-    const mobile = W < 450;
-
-    const count = mobile ? 420 : 780;
-
-    let attempts = 0;
-
-    /*
-      Nodes occupy a volumetric brain shape.
-
-      Each x/y position receives a depth coordinate.
-      Nodes closer to the camera appear brighter
-      and slightly larger.
-    */
-
-    while (nodes.length < count && attempts < count*45) {
-
-      attempts++;
-
-      const x = rand(-.96,.96);
-      const y = rand(-.83,.90);
-
-      if (!insidePolygon(x,y)) continue;
-
-      /*
-        Elliptical depth envelope.
-
-        More volume near the center.
-        Narrower near the outline.
-      */
-
-      const envelope = Math.sqrt(
-        Math.max(
-          .05,
-          1 - .55*x*x - .65*y*y
-        )
-      );
-
-      const z = rand(-1,1)*envelope*.72;
-
-      /*
-        Cortical folds introduce subtle ripples
-        into the front surface.
-      */
-
-      const wrinkle =
-        Math.sin(x*21 + y*9) *
-        Math.cos(y*19 - x*7) *
-        .045;
-
-      const node = {
-
-        x:x,
-        y:y,
-        z:z+wrinkle,
-
-        size:rand(.65,1.65),
-
-        glow:Math.random(),
-
-        phase:rand(0,TAU),
-
-        speed:rand(.4,1.3),
-
-        cluster:
-          x<-.28 ? 0 :
-          x<.25 ? 1 : 2
-
-      };
-
-      nodes.push(node);
-
-    }
-
-    /*
-      Build a local three-dimensional graph.
-
-      Spatial hashing reduces connection checks.
-    */
-
-    const cell = .17;
-    const grid = new Map();
-
-    function key(x,y,z) {
-      return x+","+y+","+z;
-    }
-
-    function cellCoords(n) {
-      return [
-        Math.floor(n.x/cell),
-        Math.floor(n.y/cell),
-        Math.floor(n.z/cell)
-      ];
-    }
-
-    nodes.forEach(function(n,i) {
-
-      const c=cellCoords(n);
-      const k=key(c[0],c[1],c[2]);
-
-      if(!grid.has(k)) grid.set(k,[]);
-
-      grid.get(k).push(i);
-
-    });
-
-    const maxDist = mobile ? .18 : .155;
-
-    nodes.forEach(function(n,i) {
-
-      const c=cellCoords(n);
-
-      let links=0;
-
-      for(let dx=-1;dx<=1;dx++) {
-        for(let dy=-1;dy<=1;dy++) {
-          for(let dz=-1;dz<=1;dz++) {
-
-            const nearby=grid.get(
-              key(c[0]+dx,c[1]+dy,c[2]+dz)
-            );
-
-            if(!nearby) continue;
-
-            for(const j of nearby) {
-
-              if(j<=i || links>=5) continue;
-
-              const other=nodes[j];
-
-              const d=distance3(n,other);
-
-              if(d<maxDist && d>.035) {
-
-                edges.push({
-
-                  a:i,
-                  b:j,
-
-                  strength:1-d/maxDist,
-
-                  phase:rand(0,TAU),
-
-                  speed:rand(.4,1.1)
-
-                });
-
-                links++;
-
-              }
-
+  nodes.forEach((n,i)=>{
+    const c=coords(n),k=key(...c);
+    if(!grid.has(k))grid.set(k,[]);
+    grid.get(k).push(i);
+  });
+
+  const maxDist=mobile?.18:.155;
+  nodes.forEach((n,i)=>{
+    const c=coords(n);
+    let links=0;
+    for(let dx=-1;dx<=1;dx++){
+      for(let dy=-1;dy<=1;dy++){
+        for(let dz=-1;dz<=1;dz++){
+          const nearby=grid.get(key(c[0]+dx,c[1]+dy,c[2]+dz));
+          if(!nearby)continue;
+          for(const j of nearby){
+            if(j<=i||links>=5)continue;
+            const o=nodes[j];
+            const d=Math.hypot(n.x-o.x,n.y-o.y,n.z-o.z);
+            if(d<maxDist&&d>.035){
+              edges.push({
+                a:i,b:j,
+                strength:1-d/maxDist,
+                phase:rand(0,TAU),
+                speed:rand(.4,1.1)
+              });
+              links++;
             }
-
           }
         }
       }
-
-    });
-
-    /*
-      Cortical contour curves.
-
-      These create the suggestion of the brain's
-      folded outer surface.
-    */
-
-    for(let row=0;row<13;row++) {
-
-      const points=[];
-
-      const yBase=-.60+row*.105;
-
-      for(let i=0;i<=85;i++) {
-
-        const x=-.89+i/85*1.77;
-
-        const y=
-          yBase +
-          Math.sin(x*13+row*.85)*.045 +
-          Math.sin(x*26-row*.7)*.022;
-
-        if(!insidePolygon(x,y)) continue;
-
-        const z=
-          .55 +
-          Math.sin(x*10+row)*.04;
-
-        points.push({x,y,z});
-
-      }
-
-      if(points.length>5) {
-        folds.push(points);
-      }
-
     }
-
-  }
-
-  /* ===================================================
-     PROJECTION
-
-     Simulated 3D camera:
-     - small Y rotation
-     - small X rotation
-     - perspective depth
-  =================================================== */
-
-  function project(n,time) {
-
-    const rotY =
-      (reducedMotion ? 0 : Math.sin(time*.00016)*.13)
-      + currentX*.20;
-
-    const rotX =
-      (reducedMotion ? 0 : Math.cos(time*.00012)*.045)
-      + currentY*.12;
-
-    const cy=Math.cos(rotY);
-    const sy=Math.sin(rotY);
-
-    const cx=Math.cos(rotX);
-    const sx=Math.sin(rotX);
-
-    const x1=n.x*cy+n.z*sy;
-    const z1=-n.x*sy+n.z*cy;
-
-    const y2=n.y*cx-z1*sx;
-    const z2=n.y*sx+z1*cx;
-
-    const perspective=2.9/(2.9-z2*.32);
-
-    const scale=Math.min(W*.50,H*.53);
-
-    return {
-
-      x:W*.51+x1*scale*perspective,
-
-      y:H*.49+y2*scale*perspective*.95,
-
-      z:z2,
-
-      perspective:perspective
-
-    };
-
-  }
-
-  /* ===================================================
-     DRAWING
-  =================================================== */
-
-  function draw(time) {
-
-    ctx.clearRect(0,0,W,H);
-
-    const cx=W*.51;
-    const cy=H*.49;
-
-    const radius=Math.min(W,H)*.46;
-
-    /*
-      Ambient gold illumination.
-    */
-
-    const halo=ctx.createRadialGradient(
-      cx,cy,0,
-      cx,cy,radius*1.45
-    );
-
-    halo.addColorStop(0,"rgba(215,169,54,.085)");
-    halo.addColorStop(.5,"rgba(215,169,54,.025)");
-    halo.addColorStop(1,"rgba(215,169,54,0)");
-
-    ctx.fillStyle=halo;
-
-    ctx.beginPath();
-    ctx.arc(cx,cy,radius*1.45,0,TAU);
-    ctx.fill();
-
-    /*
-      Project all nodes once per frame.
-    */
-
-    const projected=nodes.map(function(n) {
-      return project(n,time);
-    });
-
-    /*
-      Cortical contour detailing.
-    */
-
-    ctx.lineWidth=.7;
-
-    folds.forEach(function(fold,index) {
-
-      ctx.beginPath();
-
-      let started=false;
-
-      fold.forEach(function(n) {
-
-        const p=project(n,time);
-
-        if(!started) {
-
-          ctx.moveTo(p.x,p.y);
-          started=true;
-
-        } else {
-
-          ctx.lineTo(p.x,p.y);
-
-        }
-
-      });
-
-      ctx.strokeStyle=
-        "rgba(215,169,54,"+
-        (.055+(index%3)*.015)+")";
-
-      ctx.stroke();
-
-    });
-
-    /*
-      Neural connections.
-      Depth affects opacity.
-    */
-
-    edges.forEach(function(e) {
-
-      const a=projected[e.a];
-      const b=projected[e.b];
-
-      const depth=(a.z+b.z)*.5;
-
-      const depthAlpha=clamp(
-        (depth+1.2)/2.4,
-        .15,
-        1
-      );
-
-      const pulse=reducedMotion
-        ? .5
-        : .5+.5*Math.sin(time*.001*e.speed+e.phase);
-
-      const alpha=clamp(
-        (.055+e.strength*.20+pulse*.045)*depthAlpha,
-        .025,
-        .35
-      );
-
-      ctx.strokeStyle=
-        `rgba(${GOLD[0]},${GOLD[1]},${GOLD[2]},${alpha})`;
-
-      ctx.lineWidth=.55+(depthAlpha*.35);
-
-      ctx.beginPath();
-
-      ctx.moveTo(a.x,a.y);
-      ctx.lineTo(b.x,b.y);
-
-      ctx.stroke();
-
-    });
-
-    /*
-      Animated information signals.
-    */
-
-    if(!reducedMotion && edges.length) {
-
-      const count=Math.min(45,edges.length);
-
-      for(let i=0;i<count;i++) {
-
-        const edge=edges[(i*43)%edges.length];
-
-        const a=projected[edge.a];
-        const b=projected[edge.b];
-
-        const t=(
-          time*.00015*(1+(i%4)*.18)+i*.173
-        )%1;
-
-        const x=a.x+(b.x-a.x)*t;
-        const y=a.y+(b.y-a.y)*t;
-
-        const depth=clamp(
-          ((a.z+b.z)*.5+1)/2,
-          .2,
-          1
-        );
-
-        ctx.fillStyle=
-          `rgba(243,215,139,${depth*.8})`;
-
-        ctx.beginPath();
-        ctx.arc(x,y,1.1,0,TAU);
-        ctx.fill();
-
-      }
-
+  });
+
+  for(let row=0;row<13;row++){
+    const points=[],yBase=-.60+row*.105;
+    for(let i=0;i<=85;i++){
+      const x=-.89+i/85*1.77;
+      const y=yBase+Math.sin(x*13+row*.85)*.045+
+        Math.sin(x*26-row*.7)*.022;
+      if(!insidePolygon(x,y))continue;
+      points.push({x,y,z:.55+Math.sin(x*10+row)*.04});
     }
+    if(points.length>5)folds.push(points);
+  }
+}
 
-    /*
-      Draw nodes back-to-front.
-    */
+function project(n,time){
+  const rotY=(reducedMotion?0:Math.sin(time*.00016)*.13)+currentX*.20;
+  const rotX=(reducedMotion?0:Math.cos(time*.00012)*.045)+currentY*.12;
+  const cy=Math.cos(rotY),sy=Math.sin(rotY);
+  const cx=Math.cos(rotX),sx=Math.sin(rotX);
+  const x1=n.x*cy+n.z*sy;
+  const z1=-n.x*sy+n.z*cy;
+  const y2=n.y*cx-z1*sx;
+  const z2=n.y*sx+z1*cx;
+  const perspective=2.9/(2.9-z2*.32);
+  const scale=Math.min(W*.50,H*.53);
+  return {
+    x:W*.51+x1*scale*perspective,
+    y:H*.49+y2*scale*perspective*.95,
+    z:z2,
+    perspective
+  };
+}
 
-    const order=nodes.map(function(n,i) {
-      return i;
-    });
+function draw(time){
+  ctx.clearRect(0,0,W,H);
+  const cx=W*.51,cy=H*.49;
+  const radius=Math.min(W,H)*.46;
 
-    order.sort(function(a,b) {
-      return projected[a].z-projected[b].z;
-    });
+  const halo=ctx.createRadialGradient(cx,cy,0,cx,cy,radius*1.45);
+  halo.addColorStop(0,"rgba(215,169,54,.085)");
+  halo.addColorStop(.5,"rgba(215,169,54,.025)");
+  halo.addColorStop(1,"rgba(215,169,54,0)");
+  ctx.fillStyle=halo;
+  ctx.beginPath();
+  ctx.arc(cx,cy,radius*1.45,0,TAU);
+  ctx.fill();
 
-    order.forEach(function(i) {
+  const projected=nodes.map(n=>project(n,time));
 
-      const n=nodes[i];
-      const p=projected[i];
-
-      const depth=clamp(
-        (p.z+1.1)/2.2,
-        .18,
-        1
-      );
-
-      const pulse=reducedMotion
-        ? .85
-        : .72+.28*Math.sin(
-            time*.0012*n.speed+n.phase
-          );
-
-      const alpha=clamp(
-        (.32+n.glow*.65)*depth*pulse,
-        .10,
-        1
-      );
-
-      const size=n.size*
-        (.65+depth*.65)*
-        p.perspective;
-
-      /*
-        Small luminous halo on brighter nodes.
-      */
-
-      if(n.glow>.965 && depth>.5) {
-
-        ctx.fillStyle=
-          `rgba(215,169,54,${alpha*.11})`;
-
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,size*6,0,TAU);
-        ctx.fill();
-
-      }
-
-      ctx.fillStyle=
-        `rgba(243,215,139,${alpha})`;
-
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,size,0,TAU);
-      ctx.fill();
-
-    });
-
-    /*
-      A subtle central neural division.
-    */
-
-    const p1=project({x:-.05,y:-.68,z:.57},time);
-    const p2=project({x:.08,y:-.25,z:.57},time);
-    const p3=project({x:-.04,y:.25,z:.57},time);
-    const p4=project({x:.06,y:.50,z:.50},time);
-
-    ctx.strokeStyle="rgba(243,215,139,.13)";
-    ctx.lineWidth=1;
-
+  ctx.lineWidth=.7;
+  folds.forEach((fold,index)=>{
     ctx.beginPath();
-    ctx.moveTo(p1.x,p1.y);
-
-    ctx.bezierCurveTo(
-      p2.x,p2.y,
-      p3.x,p3.y,
-      p4.x,p4.y
-    );
-
+    let started=false;
+    fold.forEach(n=>{
+      const p=project(n,time);
+      if(!started){ctx.moveTo(p.x,p.y);started=true}
+      else ctx.lineTo(p.x,p.y);
+    });
+    ctx.strokeStyle="rgba(215,169,54,"+(.055+(index%3)*.015)+")";
     ctx.stroke();
-
-  }
-
-  /* ===================================================
-     ANIMATION LOOP
-  =================================================== */
-
-  function animate(time) {
-
-    if(!running) {
-      frameId=null;
-      return;
-    }
-
-    if(time-lastFrame>=30) {
-
-      lastFrame=time;
-
-      currentX+=(mouseX-currentX)*.045;
-      currentY+=(mouseY-currentY)*.045;
-
-      draw(time);
-
-    }
-
-    frameId=requestAnimationFrame(animate);
-
-  }
-
-  function start() {
-
-    if(
-      reducedMotion ||
-      !visible ||
-      document.hidden ||
-      frameId!==null
-    ) return;
-
-    running=true;
-    frameId=requestAnimationFrame(animate);
-
-  }
-
-  function stop() {
-
-    running=false;
-
-    if(frameId!==null) {
-      cancelAnimationFrame(frameId);
-      frameId=null;
-    }
-
-  }
-
-  /* ===================================================
-     RESIZE
-  =================================================== */
-
-  function resize() {
-
-    const rect=canvas.getBoundingClientRect();
-
-    W=Math.max(1,rect.width);
-    H=Math.max(1,rect.height);
-
-    DPR=Math.min(window.devicePixelRatio||1,2);
-
-    canvas.width=Math.round(W*DPR);
-    canvas.height=Math.round(H*DPR);
-
-    ctx.setTransform(DPR,0,0,DPR,0,0);
-
-    createBrain();
-
-    draw(lastFrame);
-
-  }
-
-  /* ===================================================
-     POINTER INTERACTION
-  =================================================== */
-
-  stage.addEventListener("pointermove",function(event) {
-
-    if(reducedMotion) return;
-
-    const rect=stage.getBoundingClientRect();
-
-    mouseX=(
-      (event.clientX-rect.left)/rect.width-.5
-    )*2;
-
-    mouseY=(
-      (event.clientY-rect.top)/rect.height-.5
-    )*2;
-
   });
 
-  stage.addEventListener("pointerleave",function() {
-
-    mouseX=0;
-    mouseY=0;
-
+  edges.forEach(e=>{
+    const a=projected[e.a],b=projected[e.b];
+    const depth=(a.z+b.z)*.5;
+    const depthAlpha=clamp((depth+1.2)/2.4,.15,1);
+    const pulse=reducedMotion?.5:.5+.5*Math.sin(time*.001*e.speed+e.phase);
+    const alpha=clamp((.055+e.strength*.20+pulse*.045)*depthAlpha,.025,.35);
+    ctx.strokeStyle=`rgba(215,169,54,${alpha})`;
+    ctx.lineWidth=.55+depthAlpha*.35;
+    ctx.beginPath();
+    ctx.moveTo(a.x,a.y);
+    ctx.lineTo(b.x,b.y);
+    ctx.stroke();
   });
 
-  /* ===================================================
-     VISIBILITY MANAGEMENT
-  =================================================== */
-
-  if("IntersectionObserver" in window && !reducedMotion) {
-
-    const brainObserver=new IntersectionObserver(
-      function(entries) {
-
-        entries.forEach(function(entry) {
-
-          visible=entry.isIntersecting;
-
-          if(visible) start();
-          else stop();
-
-        });
-
-      },
-      {threshold:.05}
-    );
-
-    brainObserver.observe(stage);
-
-  }
-
-  document.addEventListener("visibilitychange",function() {
-
-    if(document.hidden) {
-      stop();
-    } else {
-      start();
+  if(!reducedMotion&&edges.length){
+    const count=Math.min(45,edges.length);
+    for(let i=0;i<count;i++){
+      const edge=edges[(i*43)%edges.length];
+      const a=projected[edge.a],b=projected[edge.b];
+      const t=(time*.00015*(1+(i%4)*.18)+i*.173)%1;
+      const x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t;
+      const depth=clamp(((a.z+b.z)*.5+1)/2,.2,1);
+      ctx.fillStyle=`rgba(243,215,139,${depth*.8})`;
+      ctx.beginPath();ctx.arc(x,y,1.1,0,TAU);ctx.fill();
     }
-
-  });
-
-  let resizeTimer;
-
-  window.addEventListener("resize",function() {
-
-    clearTimeout(resizeTimer);
-
-    resizeTimer=setTimeout(function() {
-
-      resize();
-
-      if(!reducedMotion) start();
-
-    },150);
-
-  });
-
-  /*
-    Initialize.
-  */
-
-  resize();
-
-  if(!reducedMotion) {
-    start();
   }
+
+  const order=nodes.map((n,i)=>i);
+  order.sort((a,b)=>projected[a].z-projected[b].z);
+
+  order.forEach(i=>{
+    const n=nodes[i],p=projected[i];
+    const depth=clamp((p.z+1.1)/2.2,.18,1);
+    const pulse=reducedMotion?.85:.72+.28*Math.sin(time*.0012*n.speed+n.phase);
+    const alpha=clamp((.32+n.glow*.65)*depth*pulse,.10,1);
+    const size=n.size*(.65+depth*.65)*p.perspective;
+    if(n.glow>.965&&depth>.5){
+      ctx.fillStyle=`rgba(215,169,54,${alpha*.11})`;
+      ctx.beginPath();ctx.arc(p.x,p.y,size*6,0,TAU);ctx.fill();
+    }
+    ctx.fillStyle=`rgba(243,215,139,${alpha})`;
+    ctx.beginPath();ctx.arc(p.x,p.y,size,0,TAU);ctx.fill();
+  });
+
+  const p1=project({x:-.05,y:-.68,z:.57},time);
+  const p2=project({x:.08,y:-.25,z:.57},time);
+  const p3=project({x:-.04,y:.25,z:.57},time);
+  const p4=project({x:.06,y:.50,z:.50},time);
+  ctx.strokeStyle="rgba(243,215,139,.13)";
+  ctx.lineWidth=1;
+  ctx.beginPath();
+  ctx.moveTo(p1.x,p1.y);
+  ctx.bezierCurveTo(p2.x,p2.y,p3.x,p3.y,p4.x,p4.y);
+  ctx.stroke();
+}
+
+function animate(time){
+  if(!running){frameId=null;return}
+  if(time-lastFrame>=30){
+    lastFrame=time;
+    currentX+=(mouseX-currentX)*.045;
+    currentY+=(mouseY-currentY)*.045;
+    draw(time);
+  }
+  frameId=requestAnimationFrame(animate);
+}
+
+function start(){
+  if(reducedMotion||!visible||document.hidden||frameId!==null)return;
+  running=true;
+  frameId=requestAnimationFrame(animate);
+}
+function stop(){
+  running=false;
+  if(frameId!==null){cancelAnimationFrame(frameId);frameId=null}
+}
+function resize(){
+  const rect=canvas.getBoundingClientRect();
+  W=Math.max(1,rect.width);
+  H=Math.max(1,rect.height);
+  DPR=Math.min(devicePixelRatio||1,2);
+  canvas.width=Math.round(W*DPR);
+  canvas.height=Math.round(H*DPR);
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  createBrain();
+  draw(lastFrame);
+}
+
+stage.addEventListener("pointermove",event=>{
+  if(reducedMotion)return;
+  const rect=stage.getBoundingClientRect();
+  mouseX=((event.clientX-rect.left)/rect.width-.5)*2;
+  mouseY=((event.clientY-rect.top)/rect.height-.5)*2;
+});
+stage.addEventListener("pointerleave",()=>{mouseX=0;mouseY=0});
+
+if("IntersectionObserver" in window&&!reducedMotion){
+  const brainObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      visible=entry.isIntersecting;
+      if(visible)start();else stop();
+    });
+  },{threshold:.05});
+  brainObserver.observe(stage);
+}
+
+document.addEventListener("visibilitychange",()=>{
+  if(document.hidden)stop();else start();
+});
+
+let resizeTimer;
+window.addEventListener("resize",()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer=setTimeout(()=>{
+    resize();
+    if(!reducedMotion)start();
+  },150);
+});
+
+resize();
+if(!reducedMotion)start();
 
 })();
 </script>
-
 </body>
 </html>
